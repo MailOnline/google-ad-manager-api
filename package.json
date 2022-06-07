@@ -1,9 +1,9 @@
 {
-  "name": "@johngeorgewright/ts-module",
+  "name": "@johngeorgewright/google-ad-manager-api",
   "version": "1.5.5",
   "description": "Compose and react upon redux actions",
   "private": true,
-  "main": "dist/ts-module.js",
+  "main": "dist/google-ad-manager-api.js",
   "scripts": {
     "build": "yarn clean && tsc",
     "clean": "rimraf dist",
@@ -15,15 +15,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/johngeorgewright/ts-module.git"
+    "url": "git+https://github.com/johngeorgewright/google-ad-manager-api.git"
   },
   "keywords": [],
   "author": "John Wright <johngeorge.wright@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/johngeorgewright/ts-module/issues"
+    "url": "https://github.com/johngeorgewright/google-ad-manager-api/issues"
   },
-  "homepage": "https://github.com/johngeorgewright/ts-module#readme",
+  "homepage": "https://github.com/johngeorgewright/google-ad-manager-api#readme",
   "devDependencies": {
     "@commitlint/cli": "17.0.2",
     "@commitlint/config-conventional": "17.0.2",

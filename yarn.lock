@@ -1210,9 +1210,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@johngeorgewright/ts-module@workspace:.":
+"@johngeorgewright/google-ad-manager-api@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@johngeorgewright/ts-module@workspace:."
+  resolution: "@johngeorgewright/google-ad-manager-api@workspace:."
   dependencies:
     "@commitlint/cli": 17.0.2
     "@commitlint/config-conventional": 17.0.2
