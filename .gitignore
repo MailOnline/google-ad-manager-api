@@ -1,6 +1,9 @@
 dist
 .env
 *.log
+src/api
+src/service
+src/wsdl
 .yarn/*
 !.yarn/cache
 !.yarn/patches
