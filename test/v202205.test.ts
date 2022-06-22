@@ -1,4 +1,8 @@
 import { v202205 } from '../src'
+import { load as dotenv } from 'dotenv-extended'
+
+dotenv()
+console.info(process.env.JWT_KEY)
 
 test('line items', async () => {
   const api = new v202205({
