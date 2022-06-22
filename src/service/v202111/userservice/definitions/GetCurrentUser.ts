@@ -1,0 +1,4 @@
+
+/** getCurrentUser */
+export interface GetCurrentUser {
+}

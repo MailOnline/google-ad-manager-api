@@ -1,0 +1,4 @@
+
+/** getDefaultThirdPartyDataDeclaration */
+export interface GetDefaultThirdPartyDataDeclaration {
+}

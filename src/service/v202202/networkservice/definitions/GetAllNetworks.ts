@@ -1,0 +1,4 @@
+
+/** getAllNetworks */
+export interface GetAllNetworks {
+}

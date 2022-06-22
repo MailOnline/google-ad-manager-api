@@ -1,0 +1,4 @@
+
+/** getYieldPartners */
+export interface GetYieldPartners {
+}

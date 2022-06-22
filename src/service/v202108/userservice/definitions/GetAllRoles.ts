@@ -1,0 +1,4 @@
+
+/** getAllRoles */
+export interface GetAllRoles {
+}

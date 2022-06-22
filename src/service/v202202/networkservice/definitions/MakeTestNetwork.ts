@@ -1,0 +1,4 @@
+
+/** makeTestNetwork */
+export interface MakeTestNetwork {
+}
