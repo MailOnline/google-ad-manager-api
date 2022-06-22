@@ -19,6 +19,5 @@ export interface LineItemServiceClient extends SoapClient {
 
 /** Create LineItemServiceClient */
 export function createClientAsync(...args: Parameters<typeof soapCreateClientAsync>): Promise<LineItemServiceClient> {
-    console.info(...args)
     return soapCreateClientAsync(args[0], args[1], args[2]) as any;
 }
