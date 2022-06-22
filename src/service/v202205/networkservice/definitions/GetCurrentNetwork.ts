@@ -1,4 +1,0 @@
-
-/** getCurrentNetwork */
-export interface GetCurrentNetwork {
-}
