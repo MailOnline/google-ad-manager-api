@@ -2,6 +2,8 @@ import { mkdirp } from 'mkdirp'
 import { readdir, writeFile } from 'node:fs/promises'
 import { basename, extname } from 'node:path'
 
+const WSDL_BASE_URL = 'https://ads.google.com/apis/ads/publisher'
+
 generateAPIs().then(generateIndex).catch(console.error)
 
 async function generateAPIs() {
@@ -9,16 +11,15 @@ async function generateAPIs() {
 
   for (const version of versions) {
     const services = (await readdir(`src/wsdl/${version}`)).map((wsdl) =>
-      wsdl.replace(/\.wsdl$/, '')
+      wsdl.replace(/\.wsdl$/, ''),
     )
     const template = /* ts */ `
-import { resolve as resolvePath } from 'node:path'
 import { JWT, JWTOptions } from 'google-auth-library'
 import { BearerSecurity, Client, createClientAsync } from 'soap'
 ${mapJoin(
   services,
   (service) =>
-    `import { createClientAsync as create${service}Client } from '../service/${version}/${service.toLowerCase()}'`
+    `import { createClientAsync as create${service}Client } from '../service/${version}/${service.toLowerCase()}'`,
 )}
 
 export interface GoogleAdManagerOptions {
@@ -44,7 +45,7 @@ export class GoogleAdManager {
   ${mapJoin(
     services,
     (service) =>
-      /* ts */ `create${service}Client = this.#wrapClientCreator(create${service}Client, resolvePath(__dirname, '..', 'wsdl', this.#version, '${service}.wsdl'))`
+      /* ts */ `create${service}Client = this.#wrapClientCreator(create${service}Client, '${WSDL_BASE_URL}/'+this.#version+'/${service}?wsdl')`,
   )}
 
   get #soapHeaders() {
@@ -105,9 +106,9 @@ async function generateIndex() {
       (api) =>
         `export { GoogleAdManager as ${basename(
           api,
-          extname(api)
-        )} } from './api/${basename(api, extname(api))}'`
-    )
+          extname(api),
+        )} } from './api/${basename(api, extname(api))}'`,
+    ),
   )
 }
 

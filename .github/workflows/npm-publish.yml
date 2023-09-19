@@ -20,13 +20,17 @@ jobs:
           node-version-file: .nvmrc
 
       - name: Setup
-        run: yarn --immutable
-
-      - name: Test
-        run: yarn test
+        run: yarn --frozen-lockfile
 
       - name: Build
         run: yarn build
+
+      - name: Test
+        run: yarn test
+        env:
+          JWT_EMAIL: ${{ secrets.JWT_EMAIL }}
+          JWT_KEY: ${{ secrets.JWT_KEY }}
+          NETWORK_CODE: ${{ secrets.NETWORK_CODE }}
 
       - name: Release
         run: yarn semantic-release
