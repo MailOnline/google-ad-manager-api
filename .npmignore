@@ -1,0 +1,12 @@
+.github
+.husky
+.vscode
+node_modules
+src/build
+test
+commitlint.config.ts
+jest.config.ts
+prettier.config.cjs
+renovate.json
+tsconfig.json
+tsconfig.test.json

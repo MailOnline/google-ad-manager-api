@@ -20,13 +20,13 @@ jobs:
           node-version-file: .nvmrc
 
       - name: Setup
-        run: yarn --immutable
-
-      - name: Test
-        run: yarn test
+        run: yarn --frozen-lockfile
 
       - name: Build
         run: yarn build
+
+      - name: Test
+        run: yarn test
 
       - name: Release
         run: yarn semantic-release
