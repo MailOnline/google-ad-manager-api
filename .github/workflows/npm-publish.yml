@@ -27,6 +27,10 @@ jobs:
 
       - name: Test
         run: yarn test
+        env:
+          JWT_EMAIL: ${{ secrets.JWT_EMAIL }}
+          JWT_KEY: ${{ secrets.JWT_KEY }}
+          NETWORK_CODE: ${{ secrets.NETWORK_CODE }}
 
       - name: Release
         run: yarn semantic-release
