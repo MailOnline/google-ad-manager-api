@@ -1,7 +1,12 @@
 import { v202308 } from '../src'
 import { load as dotenv } from 'dotenv-extended'
 
-beforeAll(() => dotenv())
+beforeAll(() =>
+  dotenv({
+    errorOnMissing: true,
+    includeProcessEnv: true,
+  }),
+)
 
 test('line items', async () => {
   const api = new v202308({
