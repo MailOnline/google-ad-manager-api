@@ -1,4 +1,4 @@
-import mkdirp from 'mkdirp'
+import { mkdirp } from 'mkdirp'
 import { readDir } from '@johngw/fs'
 import { parseAndGenerate } from 'wsdl-tsclient'
 ;(async () => {

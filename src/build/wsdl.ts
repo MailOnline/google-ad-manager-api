@@ -1,6 +1,6 @@
 import axios from 'axios'
 import Crawler from 'crawler'
-import mkdirp from 'mkdirp'
+import { mkdirp } from 'mkdirp'
 import { writeFile } from 'node:fs/promises'
 
 const baseURL = 'https://www.google.com'

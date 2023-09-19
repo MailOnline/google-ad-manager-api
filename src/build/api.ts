@@ -1,4 +1,4 @@
-import mkdirp from 'mkdirp'
+import { mkdirp } from 'mkdirp'
 import { readdir, writeFile } from 'node:fs/promises'
 import { basename, extname } from 'node:path'
 
@@ -98,12 +98,17 @@ export class GoogleAdManager {
 
 async function generateIndex() {
   const apis = await readdir('src/api')
-  const template = mapJoin(
-    apis,
-    (api) =>
-      `export { GoogleAdManager as ${basename(api, extname(api))} } from './api/${basename(api, extname(api))}'`
+  await writeFile(
+    `src/index.ts`,
+    mapJoin(
+      apis,
+      (api) =>
+        `export { GoogleAdManager as ${basename(
+          api,
+          extname(api)
+        )} } from './api/${basename(api, extname(api))}'`
+    )
   )
-  await writeFile(`src/index.ts`, template)
 }
 
 function mapJoin<T>(arr: T[], map: (item: T) => string) {
