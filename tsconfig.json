@@ -4,7 +4,7 @@
     "esModuleInterop": true,
     "importHelpers": true,
     "incremental": true,
-    "lib": ["es2020"],
+    "lib": ["ESNext"],
     "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitOverride": true,
@@ -15,7 +15,7 @@
     "resolveJsonModule": true,
     "sourceMap": true,
     "strict": true,
-    "target": "es6"
+    "target": "esnext"
   },
   "include": ["src"]
 }
