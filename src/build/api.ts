@@ -1,7 +1,6 @@
 import { mkdirp } from 'mkdirp'
 import { readdir, writeFile } from 'node:fs/promises'
 import { basename, extname } from 'node:path'
-import * as prettier from 'prettier'
 import { baseURL } from './wsdl'
 
 generateAPIs().then(generateIndex).catch(console.error)
@@ -92,9 +91,8 @@ export class GoogleAdManager {
 }
 `
 
-    const filePath = `src/api/${version}.ts`
     await mkdirp('src/api')
-    await writeFile(filePath, await format(template, filePath))
+    await writeFile(`src/api/${version}.ts`, template)
   }
 }
 
@@ -103,25 +101,17 @@ async function generateIndex() {
   const filePath = 'src/index.ts'
   await writeFile(
     filePath,
-    await format(
-      mapJoin(
-        apis,
-        (api) =>
-          `export { GoogleAdManager as ${basename(
-            api,
-            extname(api),
-          )} } from './api/${basename(api, extname(api))}'`,
-      ),
-      filePath,
+    mapJoin(
+      apis,
+      (api) =>
+        `export { GoogleAdManager as ${basename(
+          api,
+          extname(api),
+        )} } from './api/${basename(api, extname(api))}'`,
     ),
   )
 }
 
 function mapJoin<T>(arr: T[], map: (item: T) => string) {
   return arr.reduce((output, item) => output + map(item) + '\n', '')
-}
-
-async function format(str: string, filePath: string) {
-  const config = (await prettier.resolveConfig(filePath)) ?? undefined
-  return prettier.format(str, { ...config, parser: 'typescript' })
 }

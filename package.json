@@ -7,8 +7,8 @@
   "scripts": {
     "build": "yarn clean && yarn build:wsdl && yarn build:service && yarn build:api && tsc",
     "clean": "rimraf dist && rimraf src/index.ts && rimraf src/api && rimraf src/service && rimraf src/wsdl",
-    "build:api": "ts-node src/build/api.ts",
-    "build:service": "ts-node src/build/service.ts",
+    "build:api": "ts-node src/build/api.ts && prettier --ignore-path .prettierignore --write src/api",
+    "build:service": "ts-node src/build/service.ts && prettier --ignore-path .prettierignore --write src/service",
     "build:wsdl": "ts-node src/build/wsdl.ts",
     "start": "concurrently --names=build,test --prefix-colors=yellow,blue 'yarn start:build' 'yarn start:test'",
     "start:build": "tsc --watch --preserveWatchOutput",
@@ -62,7 +62,7 @@
   },
   "lint-staged": {
     "*.{md,json,js,jsx,ts,tsx,yml,yaml}": [
-      "yarn prettier --ignore-path .gitignore --write"
+      "yarn prettier --write"
     ]
   },
   "config": {
