@@ -1564,11 +1564,6 @@
     "@typescript-eslint/types" "5.62.0"
     eslint-visitor-keys "^3.3.0"
 
-"@xmldom/xmldom@^0.7.9":
-  version "0.7.13"
-  resolved "https://registry.yarnpkg.com/@xmldom/xmldom/-/xmldom-0.7.13.tgz#ff34942667a4e19a9f4a0996a76814daac364cf3"
-  integrity sha512-lm2GW5PkosIzccsaZIz7tp8cPADSIlIHWDFTR1N0SzfinhhYgeIQjFMz4rYzanCScr3DqQLeomUDArp6MWKm+g==
-
 "@xmldom/xmldom@^0.8.8":
   version "0.8.10"
   resolved "https://registry.yarnpkg.com/@xmldom/xmldom/-/xmldom-0.8.10.tgz#a1337ca426aa61cef9fe15b5b28e340a72f6fa99"
@@ -1872,13 +1867,6 @@ axios@1.5.0, axios@^1.3.2:
     follow-redirects "^1.15.0"
     form-data "^4.0.0"
     proxy-from-env "^1.1.0"
-
-axios@^0.21.1:
-  version "0.21.4"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.4.tgz#c67b90dc0568e5c1cf2b0b858c43ba28e2eda575"
-  integrity sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==
-  dependencies:
-    follow-redirects "^1.14.0"
 
 babel-jest@^29.7.0:
   version "29.7.0"
@@ -2474,11 +2462,6 @@ console-control-strings@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/console-control-strings/-/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
   integrity sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==
-
-content-type-parser@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/content-type-parser/-/content-type-parser-1.0.2.tgz#caabe80623e63638b2502fd4c7f12ff4ce2352e7"
-  integrity sha512-lM4l4CnMEwOLHAHr/P6MEZwZFPJFtAAKgL6pogbXmVZggIqXhdB6RbBtPOTsw2FcXwYhehRGERJmRrjOiIB8pQ==
 
 conventional-changelog-angular@^6.0.0:
   version "6.0.0"
@@ -3382,7 +3365,7 @@ flatted@^3.2.7:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.9.tgz#7eb4c67ca1ba34232ca9d2d93e9886e611ad7daf"
   integrity sha512-36yxDn5H7OFZQla0/jFJmbIKTdZAQHngCedGxiMmpNfEZM0sdEeT+WczLQrjK6D7o2aiyLYDnkw0R3JK0Qv1RQ==
 
-follow-redirects@^1.14.0, follow-redirects@^1.15.0:
+follow-redirects@^1.15.0:
   version "1.15.2"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.2.tgz#b460864144ba63f2681096f274c4e57026da2c13"
   integrity sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==
@@ -3417,11 +3400,6 @@ form-data@~2.3.2:
     asynckit "^0.4.0"
     combined-stream "^1.0.6"
     mime-types "^2.1.12"
-
-formidable@^1.2.2:
-  version "1.2.6"
-  resolved "https://registry.yarnpkg.com/formidable/-/formidable-1.2.6.tgz#d2a51d60162bbc9b4a055d8457a7c75315d1a168"
-  integrity sha512-KcpbcpuLNOwrEjnbpMC0gS+X8ciDoZE1kkqzat4a8vrprf+s9pKNQ/QIwWfbfs4ltgmFl3MD177SNTkve3BwGQ==
 
 formidable@^3.2.4:
   version "3.5.1"
@@ -6773,7 +6751,7 @@ smart-buffer@^4.2.0:
   resolved "https://registry.yarnpkg.com/smart-buffer/-/smart-buffer-4.2.0.tgz#6e1d71fa4f18c05f7d0ff216dd16a481d0e8d9ae"
   integrity sha512-94hK0Hh8rPqQl2xXc3HsaBoOXKV20MToPkcXvwbISWLEs+64sBq5kFgn2kJDHb1Pry9yrP0dxrCI9RRci7RXKg==
 
-soap@1.0.0:
+soap@1.0.0, soap@^0.43.0, soap@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/soap/-/soap-1.0.0.tgz#3273d8cb7bcbe99a69ad9a35fc6b087a9dc3a316"
   integrity sha512-GB5GuKjWFtAPP0IaM4tKUvdF4dFlaz4iujLPg0DsCy9qAAgm5/g+SI+P9e6igWWwXZ74CC5Uo0VEEz8lte0CJA==
@@ -6788,23 +6766,6 @@ soap@1.0.0:
     uuid "^8.3.2"
     whatwg-mimetype "3.0.0"
     xml-crypto "^3.0.0"
-
-soap@^0.43.0:
-  version "0.43.0"
-  resolved "https://registry.yarnpkg.com/soap/-/soap-0.43.0.tgz#3172b7de12011dfc6981db99be9bc1df2a05a94a"
-  integrity sha512-Dgp6TD9f3NXvKhBy95XXphiSlNIU2RSc9PP1NEgBOE1laUWP+bdF+8uT1lf1tFadFEAYurFg6/s2tNil6rlltw==
-  dependencies:
-    axios "^0.21.1"
-    axios-ntlm "^1.2.0"
-    content-type-parser "^1.0.2"
-    debug "^4.3.2"
-    formidable "^1.2.2"
-    get-stream "^6.0.1"
-    lodash "^4.17.21"
-    sax ">=0.6"
-    strip-bom "^3.0.0"
-    uuid "^8.3.2"
-    xml-crypto "^2.1.3"
 
 socks-proxy-agent@^7.0.0:
   version "7.0.0"
@@ -7619,10 +7580,9 @@ write-file-atomic@^5.0.0, write-file-atomic@^5.0.1:
     imurmurhash "^0.1.4"
     signal-exit "^4.0.1"
 
-wsdl-tsclient@1.4.0:
+wsdl-tsclient@johngeorgewright/wsdl-tsclient#node-soap-types:
   version "1.4.0"
-  resolved "https://registry.yarnpkg.com/wsdl-tsclient/-/wsdl-tsclient-1.4.0.tgz#5d273fb2c6fc4cf109d15c8af818141af6938b65"
-  integrity sha512-3Me8CKLAmG6QsMichaz1xsnPA/nTHI+pvgWwxxQLGglj4m+6bVZlbhRx4YiFpjPgcjc2dvaYqYJO3HDcw44icg==
+  resolved "https://codeload.github.com/johngeorgewright/wsdl-tsclient/tar.gz/103a72f79f905195bfe2fefbc322c4f938691785"
   dependencies:
     "@types/node" "^17.0.24"
     "@types/supports-color" "^8.1.0"
@@ -7639,14 +7599,6 @@ wsdl-tsclient@1.4.0:
     supports-color "^8.1.1"
     ts-morph "^14.0.0"
     yargs "^16.2.0"
-
-xml-crypto@^2.1.3:
-  version "2.1.5"
-  resolved "https://registry.yarnpkg.com/xml-crypto/-/xml-crypto-2.1.5.tgz#e201ee51dca18dd9ae158ac101b6e995c983dca8"
-  integrity sha512-xOSJmGFm+BTXmaPYk8pPV3duKo6hJuZ5niN4uMzoNcTlwYs0jAu/N3qY+ud9MhE4N7eMRuC1ayC7Yhmb7MmAWg==
-  dependencies:
-    "@xmldom/xmldom" "^0.7.9"
-    xpath "0.0.32"
 
 xml-crypto@^3.0.0:
   version "3.2.0"
