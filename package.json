@@ -5,7 +5,7 @@
   "private": true,
   "main": "dist/index.js",
   "scripts": {
-    "build": "yarn clean && yarn build:wsdl && yarn build:service && yarn build:api && tsc && cp -r src/wsdl dist/wsdl",
+    "build": "yarn clean && yarn build:wsdl && yarn build:service && yarn build:api && tsc",
     "clean": "rimraf dist && rimraf src/index.ts && rimraf src/api && rimraf src/service && rimraf src/wsdl",
     "build:api": "ts-node src/build/api.ts",
     "build:service": "ts-node src/build/service.ts",

@@ -3,6 +3,7 @@
 .vscode
 node_modules
 src/build
+src/wsdl
 test
 commitlint.config.ts
 jest.config.ts
