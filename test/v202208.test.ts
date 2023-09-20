@@ -1,4 +1,4 @@
-import { v202308 } from '../src'
+import { v202308 as GoogleAdManager } from '../src'
 import { load as dotenv } from 'dotenv-extended'
 
 beforeAll(() =>
@@ -8,8 +8,10 @@ beforeAll(() =>
   }),
 )
 
-test('line items', async () => {
-  const api = new v202308({
+let api: GoogleAdManager
+
+beforeEach(() => {
+  api = new GoogleAdManager({
     applicationName: 'google-ad-manager-api',
     networkCode: Number(process.env.NETWORK_CODE),
     jwtOptions: {
@@ -18,16 +20,17 @@ test('line items', async () => {
       scopes: ['https://www.googleapis.com/auth/dfp'],
     },
   })
+})
 
-  const [GetLineItemsByStatementResponse] = await api
-    .createLineItemServiceClient()
-    .then((client) =>
-      client.getLineItemsByStatementAsync({
-        filterStatement: {
-          query: 'LIMIT 10',
-        },
-      }),
-    )
+test('line items', async () => {
+  const lineItemServerClient = await api.createLineItemServiceClient()
+
+  const [GetLineItemsByStatementResponse] =
+    await lineItemServerClient.getLineItemsByStatementAsync({
+      filterStatement: {
+        query: 'LIMIT 10',
+      },
+    })
 
   expect(GetLineItemsByStatementResponse.rval?.results).toHaveLength(10)
 })
