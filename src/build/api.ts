@@ -1,8 +1,7 @@
 import { mkdirp } from 'mkdirp'
 import { readdir, writeFile } from 'node:fs/promises'
 import { basename, extname } from 'node:path'
-
-const WSDL_BASE_URL = 'https://ads.google.com/apis/ads/publisher'
+import { baseURL } from './wsdl'
 
 generateAPIs().then(generateIndex).catch(console.error)
 
@@ -45,7 +44,7 @@ export class GoogleAdManager {
   ${mapJoin(
     services,
     (service) =>
-      /* ts */ `create${service}Client = this.#wrapClientCreator(create${service}Client, '${WSDL_BASE_URL}/'+this.#version+'/${service}?wsdl')`,
+      /* ts */ `create${service}Client = this.#wrapClientCreator(create${service}Client, '${baseURL}/'+this.#version+'/${service}?wsdl')`,
   )}
 
   get #soapHeaders() {

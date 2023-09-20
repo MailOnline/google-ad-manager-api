@@ -3,7 +3,9 @@ import Crawler from 'crawler'
 import { mkdirp } from 'mkdirp'
 import { writeFile } from 'node:fs/promises'
 
-const baseURL = 'https://www.google.com'
+export const origin = 'https://ads.google.com'
+export const basePath = '/apis/ads/publisher'
+export const baseURL = origin + basePath
 
 const crawler = new Crawler({
   maxConnections: 1,
@@ -25,8 +27,8 @@ const crawler = new Crawler({
         elements.toArray().map(async (element) => {
           const $element = res.$(element)
           const title = $element.text()
-          const url = baseURL + $element.attr('href')
-          const versionRegExp = /\/apis\/ads\/publisher\/([v0-9]+)\//
+          const url = origin + $element.attr('href')
+          const versionRegExp = new RegExp(`${basePath}/([v0-9]+)/`)
           const versionMatch = versionRegExp.exec(url)
           if (!versionMatch) {
             console.error(`Could not find a version in ${url}`)
@@ -36,7 +38,7 @@ const crawler = new Crawler({
           await mkdirp(`src/wsdl/${version}`)
           const response = await axios.get(url)
           await writeFile(`src/wsdl/${version}/${title}.wsdl`, response.data)
-        })
+        }),
       )
     } catch (error) {
       console.error(error)
@@ -46,4 +48,4 @@ const crawler = new Crawler({
   },
 })
 
-crawler.queue(`${baseURL}/apis/ads/publisher`)
+crawler.queue(baseURL)
