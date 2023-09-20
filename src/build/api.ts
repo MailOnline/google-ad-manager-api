@@ -1,7 +1,7 @@
 import { mkdirp } from 'mkdirp'
 import { readdir, writeFile } from 'node:fs/promises'
 import { basename, extname } from 'node:path'
-import { baseURL } from './wsdl'
+import { baseURL } from './wsdl-path'
 
 generateAPIs().then(generateIndex).catch(console.error)
 

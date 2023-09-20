@@ -2,10 +2,7 @@ import axios from 'axios'
 import Crawler from 'crawler'
 import { mkdirp } from 'mkdirp'
 import { writeFile } from 'node:fs/promises'
-
-export const origin = 'https://ads.google.com'
-export const basePath = '/apis/ads/publisher'
-export const baseURL = origin + basePath
+import { basePath, baseURL, origin } from './wsdl-path'
 
 const crawler = new Crawler({
   maxConnections: 1,
