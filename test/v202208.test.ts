@@ -1,4 +1,4 @@
-import { v202308 as GoogleAdManager } from '../src'
+import { v202308, pql } from '../src'
 import { load as dotenv } from 'dotenv-extended'
 
 beforeAll(() =>
@@ -8,10 +8,10 @@ beforeAll(() =>
   }),
 )
 
-let api: GoogleAdManager
+let api: v202308.GoogleAdManager
 
 beforeEach(() => {
-  api = new GoogleAdManager({
+  api = new v202308.GoogleAdManager({
     applicationName: 'google-ad-manager-api',
     networkCode: Number(process.env.NETWORK_CODE),
     jwtOptions: {
@@ -25,12 +25,12 @@ beforeEach(() => {
 test('line items', async () => {
   const lineItemServerClient = await api.createLineItemServiceClient()
 
-  const [GetLineItemsByStatementResponse] =
+  const [getLineItemsByStatementResponse] =
     await lineItemServerClient.getLineItemsByStatementAsync({
       filterStatement: {
-        query: 'LIMIT 10',
+        query: pql<v202308.LineItemService.LineItems>({ limit: 10 }),
       },
     })
 
-  expect(GetLineItemsByStatementResponse.rval?.results).toHaveLength(10)
+  expect(getLineItemsByStatementResponse.rval?.results).toHaveLength(10)
 })

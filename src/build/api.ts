@@ -18,7 +18,13 @@ import { BearerSecurity, Client, createClientAsync } from 'soap'
 ${mapJoin(
   services,
   (service) =>
-    `import { createClientAsync as create${service}Client } from '../service/${version}/${service.toLowerCase()}'`,
+    /*ts*/ `import { createClientAsync as create${service}Client } from '../service/${version}/${service.toLowerCase()}'`,
+)}
+
+${mapJoin(
+  services,
+  (service) =>
+    /*ts*/ `export * as ${service} from '../service/${version}/${service.toLowerCase()}'`,
 )}
 
 export interface GoogleAdManagerOptions {
@@ -70,7 +76,7 @@ export class GoogleAdManager {
     ) => Promise<C>,
     wsdlPath: string
   ) {
-    return async () => {
+    return async (): Promise<C> => {
       const [token, client] = await Promise.all([
         this.#jwt.authorize(),
         createClient(wsdlPath, {
@@ -101,14 +107,15 @@ async function generateIndex() {
   const filePath = 'src/index.ts'
   await writeFile(
     filePath,
-    mapJoin(
-      apis,
-      (api) =>
-        `export { GoogleAdManager as ${basename(
-          api,
-          extname(api),
-        )} } from './api/${basename(api, extname(api))}'`,
-    ),
+    /* ts */ `export * from './query/pql'
+${mapJoin(
+  apis,
+  (api) =>
+    /* ts */ `export * as ${basename(api, extname(api))} from './api/${basename(
+      api,
+      extname(api),
+    )}'`,
+)}`,
   )
 }
 
