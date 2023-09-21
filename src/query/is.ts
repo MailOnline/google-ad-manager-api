@@ -2,9 +2,7 @@ import { Statement } from './condition'
 
 export type Comparable = boolean | string | number
 
-export class IsStatement<
-  T extends Comparable = Comparable,
-> extends Statement<T> {
+export class IsStatement<T extends Comparable> extends Statement<T> {
   override statement(prop: string): string {
     return `${prop} = ${this.formatValue()}`
   }

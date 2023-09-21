@@ -39,7 +39,7 @@ type _Where<T> = {
   [K in keyof T]?: T[K] extends Comparable ? WhereStatement<T[K]> : never
 }
 
-type StartDateTime = {
+interface StartDateTime {
   date?: Date
   hour?: number
   minute?: number
@@ -47,7 +47,7 @@ type StartDateTime = {
   timeZoneId?: string
 }
 
-export interface Date {
+interface Date {
   year?: number
   month?: number
   day?: number

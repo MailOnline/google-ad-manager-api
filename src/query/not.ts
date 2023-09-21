@@ -9,12 +9,13 @@ type NotStatementValue<T extends Comparable> =
   | InStatement<T>
   | LikeStatement
   | NullStatement
-  | T
+
+type NotValue<T extends Comparable> = NotStatementValue<T> | T
 
 export class NotStatement<T extends Comparable> extends Statement<
-  IsStatement<T> | InStatement<T> | LikeStatement | NullStatement
+  NotStatementValue<T>
 > {
-  constructor(value: NotStatementValue<T>) {
+  constructor(value: NotValue<T>) {
     super(value instanceof Statement ? value : new IsStatement(value))
   }
 
@@ -25,6 +26,6 @@ export class NotStatement<T extends Comparable> extends Statement<
   }
 }
 
-export function Not<T extends Comparable>(value: NotStatementValue<T>) {
+export function Not<T extends Comparable>(value: NotValue<T>) {
   return new NotStatement(value)
 }

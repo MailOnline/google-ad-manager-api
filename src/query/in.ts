@@ -1,7 +1,7 @@
 import { Statement } from './condition'
 import { Is, IsStatement, Comparable } from './is'
 
-export class InStatement<T extends Comparable = Comparable> extends Statement<
+export class InStatement<T extends Comparable> extends Statement<
   IsStatement<T>[]
 > {
   override statement(prop: string): string {
