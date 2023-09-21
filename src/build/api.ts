@@ -108,14 +108,10 @@ async function generateIndex() {
   await writeFile(
     filePath,
     /* ts */ `export * from './query'
-${mapJoin(
-  apis,
-  (api) =>
-    /* ts */ `export * as ${basename(api, extname(api))} from './api/${basename(
-      api,
-      extname(api),
-    )}'`,
-)}`,
+${mapJoin(apis, (api) => {
+  const version = basename(api, extname(api))
+  return /* ts */ `export * as ${version} from './api/${version}'`
+})}`,
   )
 }
 
