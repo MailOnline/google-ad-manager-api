@@ -11,7 +11,7 @@ npm install @johngw/google-ad-manager-api
 ## Usage
 
 ```typescript
-import { v202308, pql, not, like } from '@johngw/google-ad-manager-api'
+import { v202308, pql, In, Not, Like } from '@johngw/google-ad-manager-api'
 
 const api = new v202308.GoogleAdManager({
   applicationName: 'MY_APPLICATION_NAME',
@@ -30,8 +30,10 @@ const [response] = await client.getLineItemsByStatementAsync({
     query: pql<v202308.LineItemService.LineItems>({
       limit: 10,
       where: {
-        id: not(11222),
-        name: like('foo %'),
+        orderId: In(1, 2, 3),
+        id: Not(11222),
+        name: Like('foo %'),
+        orderName: 'Foo',
       },
     }),
   },
