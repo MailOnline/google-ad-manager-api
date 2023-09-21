@@ -3,7 +3,7 @@ import { readdir, writeFile } from 'node:fs/promises'
 import { basename, extname } from 'node:path'
 import { baseURL } from './wsdl-path'
 
-generateAPIs().then(generateIndex).catch(console.error)
+generateAPIs().then(generateIndex).then(updateState).catch(console.error)
 
 async function generateAPIs() {
   const versions = await readdir('src/wsdl')
@@ -121,4 +121,15 @@ ${mapJoin(
 
 function mapJoin<T>(arr: T[], map: (item: T) => string) {
   return arr.reduce((output, item) => output + map(item) + '\n', '')
+}
+
+async function updateState() {
+  const versions = await readdir('src/wsdl')
+  await writeFile(
+    'src/state.json',
+    JSON.stringify({
+      ...require('../state.json'),
+      versions: versions,
+    }),
+  )
 }
