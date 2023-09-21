@@ -43,3 +43,11 @@ export function pql<T extends Object>({
       .join(' AND ')
   }
 }
+
+/**
+ * Type a {@link pql} function.
+ *
+ * @remarks
+ * Easier when using JSDocs
+ */
+export type PQL<T extends Object> = typeof pql<T>
