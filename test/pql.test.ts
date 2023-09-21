@@ -1,4 +1,4 @@
-import { GT, In, Like, Not, Null, pql } from '../src'
+import { And, GT, In, LT, Like, Not, Null, Or, pql } from '../src'
 import { Creatives } from '../src/service/v202308/creativeservice'
 import { LineItems } from '../src/service/v202308/lineitemservice'
 
@@ -127,6 +127,14 @@ test('ands', () => {
       },
     }),
   ).toBe("WHERE name = 'foo' AND previewUrl = 'bar'")
+
+  expect(
+    pql<LineItems>({
+      where: {
+        creationDateTime: And([GT('2001'), LT('2022')]),
+      },
+    }),
+  ).toBe("WHERE (creationDateTime > '2001' AND creationDateTime < '2022')")
 })
 
 test('ors', () => {
@@ -145,5 +153,15 @@ test('ors', () => {
     }),
   ).toBe(
     "WHERE (name = 'foo' AND previewUrl = 'bar') OR (id = 123 AND advertiserId = 333)",
+  )
+
+  expect(
+    pql<LineItems>({
+      where: {
+        creationDateTime: Or(['2023', And([GT('2001'), LT('2022')])]),
+      },
+    }),
+  ).toBe(
+    "WHERE (creationDateTime = '2023' OR (creationDateTime > '2001' AND creationDateTime < '2022'))",
   )
 })
