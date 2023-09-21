@@ -23,14 +23,13 @@ beforeEach(() => {
 })
 
 test('line items', async () => {
-  const lineItemServerClient = await api.createLineItemServiceClient()
+  const client = await api.createLineItemServiceClient()
 
-  const [getLineItemsByStatementResponse] =
-    await lineItemServerClient.getLineItemsByStatementAsync({
-      filterStatement: {
-        query: pql<v202308.LineItemService.LineItems>({ limit: 10 }),
-      },
-    })
+  const [response] = await client.getLineItemsByStatementAsync({
+    filterStatement: {
+      query: pql<v202308.LineItemService.LineItems>({ limit: 10 }),
+    },
+  })
 
-  expect(getLineItemsByStatementResponse.rval?.results).toHaveLength(10)
+  expect(response.rval?.results).toHaveLength(10)
 })
