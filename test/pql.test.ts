@@ -1,4 +1,4 @@
-import { In, Like, Not, Null, pql } from '../src'
+import { GT, In, Like, Not, Null, pql } from '../src'
 import { Creatives } from '../src/service/v202308/creativeservice'
 import { LineItems } from '../src/service/v202308/lineitemservice'
 
@@ -34,6 +34,14 @@ test('positive', () => {
       },
     }),
   ).toBe('WHERE allowOverbook = TRUE')
+
+  expect(
+    pql<LineItems>({
+      where: {
+        startDateTime: GT('DATES ARE COMPARABLE'),
+      },
+    }),
+  ).toBe("WHERE startDateTime > 'DATES ARE COMPARABLE'")
 
   expect(
     pql<LineItems>({

@@ -1,7 +1,7 @@
 import { Statement } from './condition'
-import { Is, IsStatement, Isable } from './is'
+import { Is, IsStatement, Comparable } from './is'
 
-export class InStatement<T extends Isable = Isable> extends Statement<
+export class InStatement<T extends Comparable = Comparable> extends Statement<
   IsStatement<T>[]
 > {
   override statement(prop: string): string {
@@ -9,6 +9,6 @@ export class InStatement<T extends Isable = Isable> extends Statement<
   }
 }
 
-export function In<T extends Isable>(values: T[]) {
+export function In<T extends Comparable>(values: T[]) {
   return new InStatement(values.map(Is))
 }

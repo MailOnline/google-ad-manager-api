@@ -1,17 +1,17 @@
 import { Statement } from './condition'
 import { InStatement } from './in'
-import { IsStatement, Isable } from './is'
+import { IsStatement, Comparable } from './is'
 import { LikeStatement } from './like'
 import { NullStatement } from './null'
 
-type NotStatementValue<T extends Isable> =
+type NotStatementValue<T extends Comparable> =
   | IsStatement<T>
   | InStatement<T>
   | LikeStatement
   | NullStatement
   | T
 
-export class NotStatement<T extends Isable> extends Statement<
+export class NotStatement<T extends Comparable> extends Statement<
   IsStatement<T> | InStatement<T> | LikeStatement | NullStatement
 > {
   constructor(value: NotStatementValue<T>) {
@@ -25,6 +25,6 @@ export class NotStatement<T extends Isable> extends Statement<
   }
 }
 
-export function Not<T extends Isable>(value: NotStatementValue<T>) {
+export function Not<T extends Comparable>(value: NotStatementValue<T>) {
   return new NotStatement(value)
 }

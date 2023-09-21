@@ -1,8 +1,10 @@
 import { Statement } from './condition'
 
-export type Isable = boolean | string | number
+export type Comparable = boolean | string | number
 
-export class IsStatement<T extends Isable = Isable> extends Statement<T> {
+export class IsStatement<
+  T extends Comparable = Comparable,
+> extends Statement<T> {
   override statement(prop: string): string {
     return `${prop} = ${this.formatValue()}`
   }
@@ -19,6 +21,6 @@ export class IsStatement<T extends Isable = Isable> extends Statement<T> {
   }
 }
 
-export function Is<T extends Isable>(value: T) {
+export function Is<T extends Comparable>(value: T) {
   return new IsStatement(value)
 }

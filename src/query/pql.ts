@@ -1,6 +1,6 @@
 import { entries } from '../lang/Object'
 import { Statement, Where } from './condition'
-import { Is, Isable } from './is'
+import { Is, Comparable } from './is'
 
 export function pql<T extends Object>({
   limit,
@@ -35,9 +35,10 @@ export function pql<T extends Object>({
     return entries(condition)
       .filter(([, value]) => value !== undefined)
       .map(([key, value]) =>
-        (value instanceof Statement ? value : Is(value as Isable)).statement(
-          key.toString(),
-        ),
+        (value instanceof Statement
+          ? value
+          : Is(value as Comparable)
+        ).statement(key.toString()),
       )
       .join(' AND ')
   }
