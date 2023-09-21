@@ -12,7 +12,7 @@ let api: v202308.GoogleAdManager
 
 beforeEach(() => {
   api = new v202308.GoogleAdManager({
-    applicationName: 'google-ad-manager-api',
+    applicationName: 'google-ad-manager-api CI test',
     networkCode: Number(process.env.NETWORK_CODE),
     jwtOptions: {
       key: process.env.JWT_KEY,
