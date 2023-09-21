@@ -1,4 +1,4 @@
-import { like, not, pql } from '../src/query/pql'
+import { In, Like, Not, Null, pql } from '../src'
 import { Creatives } from '../src/service/v202308/creativeservice'
 import { LineItems } from '../src/service/v202308/lineitemservice'
 
@@ -38,6 +38,14 @@ test('positive', () => {
   expect(
     pql<LineItems>({
       where: {
+        costType: Null(),
+      },
+    }),
+  ).toBe('WHERE costType IS NULL')
+
+  expect(
+    pql<LineItems>({
+      where: {
         allowOverbook: false,
       },
     }),
@@ -46,7 +54,7 @@ test('positive', () => {
   expect(
     pql<Creatives>({
       where: {
-        name: ['foo', 'bar'],
+        name: In(['foo', 'bar']),
       },
     }),
   ).toBe("WHERE name IN ('foo','bar')")
@@ -54,7 +62,7 @@ test('positive', () => {
   expect(
     pql<Creatives>({
       where: {
-        name: like('foo %'),
+        name: Like('foo %'),
       },
     }),
   ).toBe("WHERE name LIKE 'foo %'")
@@ -64,7 +72,7 @@ test('negative', () => {
   expect(
     pql<Creatives>({
       where: {
-        name: not('foo'),
+        name: Not('foo'),
       },
     }),
   ).toBe("WHERE name != 'foo'")
@@ -72,7 +80,7 @@ test('negative', () => {
   expect(
     pql<Creatives>({
       where: {
-        id: not(1234),
+        id: Not(1234),
       },
     }),
   ).toBe('WHERE id != 1234')
@@ -80,7 +88,7 @@ test('negative', () => {
   expect(
     pql<Creatives>({
       where: {
-        name: not(['foo', 'bar']),
+        name: Not(In(['foo', 'bar'])),
       },
     }),
   ).toBe("WHERE NOT name IN ('foo','bar')")
@@ -88,10 +96,18 @@ test('negative', () => {
   expect(
     pql<Creatives>({
       where: {
-        name: not(like('foo %')),
+        name: Not(Like('foo %')),
       },
     }),
   ).toBe("WHERE NOT name LIKE 'foo %'")
+
+  expect(
+    pql<LineItems>({
+      where: {
+        costType: Not(Null()),
+      },
+    }),
+  ).toBe('WHERE NOT costType IS NULL')
 })
 
 test('ands', () => {
