@@ -107,7 +107,7 @@ async function generateIndex() {
   const filePath = 'src/index.ts'
   await writeFile(
     filePath,
-    /* ts */ `export * from './query/pql'
+    /* ts */ `export * from './query'
 ${mapJoin(
   apis,
   (api) =>
