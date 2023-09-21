@@ -10,6 +10,7 @@
     "build:api": "ts-node src/build/api.ts && prettier --ignore-path .prettierignore --write src/api",
     "build:service": "ts-node src/build/service.ts && prettier --ignore-path .prettierignore --write src/service",
     "build:wsdl": "ts-node src/build/wsdl.ts",
+    "commit:state": "ts-node src/build/state.ts",
     "start": "concurrently --names=build,test --prefix-colors=yellow,blue 'yarn start:build' 'yarn start:test'",
     "start:build": "tsc --watch --preserveWatchOutput",
     "start:test": "jest --watch",
