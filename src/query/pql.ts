@@ -2,15 +2,17 @@ import { entries } from '../lang/Object'
 import { Statement, Where } from './condition'
 import { Is, Comparable } from './is'
 
+interface PQLOptions<T extends Object> {
+  limit?: number
+  offset?: number
+  where?: Where<T> | Where<T>[]
+}
+
 export function pql<T extends Object>({
   limit,
   offset,
   where: conditions,
-}: {
-  limit?: number
-  offset?: number
-  where?: Where<T> | Where<T>[]
-}): string {
+}: PQLOptions<T>): string {
   let pql = ''
 
   if (conditions) {
