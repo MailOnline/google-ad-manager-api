@@ -7,8 +7,8 @@ import { OrStatement } from './or'
 
 type AndStatementValueItem<T extends Comparable> =
   | NotStatement<T>
-  | GTStatement
-  | LTStatement
+  | GTStatement<T>
+  | LTStatement<T>
   | OrStatement<T>
 
 type AndStatementValue<T extends Comparable> = AndStatementValueItem<T>[]
