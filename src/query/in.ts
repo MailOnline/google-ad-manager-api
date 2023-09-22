@@ -1,14 +1,13 @@
 import { Statement } from './condition'
-import { Is, IsStatement, Comparable } from './is'
+import { formatValue } from './format'
+import { Comparable } from './is'
 
-export class InStatement<T extends Comparable> extends Statement<
-  IsStatement<T>[]
-> {
+export class InStatement<T extends Comparable> extends Statement<T[]> {
   override statement(prop: string): string {
-    return `${prop} IN (${this.value.map((value) => value.formatValue())})`
+    return `${prop} IN (${this.value.map(formatValue)})`
   }
 }
 
 export function In<T extends Comparable>(values: T[]) {
-  return new InStatement(values.map(Is))
+  return new InStatement(values)
 }

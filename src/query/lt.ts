@@ -1,15 +1,10 @@
 import { Statement } from './condition'
-import { Comparable, Is, IsStatement } from './is'
+import { formatValue } from './format'
+import { Comparable } from './is'
 
-export class LTStatement<T extends Comparable> extends Statement<
-  IsStatement<T>
-> {
-  constructor(value: T) {
-    super(Is(value))
-  }
-
+export class LTStatement<T extends Comparable> extends Statement<T> {
   override statement(prop: string): string {
-    return `${prop} < ${this.value.formatValue()}`
+    return `${prop} < ${formatValue(this.value)}`
   }
 }
 

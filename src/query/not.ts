@@ -1,4 +1,5 @@
 import { Statement } from './condition'
+import { formatValue } from './format'
 import { InStatement } from './in'
 import { IsStatement, Comparable } from './is'
 import { LikeStatement } from './like'
@@ -20,8 +21,8 @@ export class NotStatement<T extends Comparable> extends Statement<
   }
 
   override statement(prop: string): string {
-    return this.value instanceof IsStatement && this.value.value !== null
-      ? `${prop} != ${this.value.formatValue()}`
+    return this.value instanceof IsStatement
+      ? `${prop} != ${formatValue(this.value.value)}`
       : `NOT ${this.value.statement(prop)}`
   }
 }
