@@ -2,7 +2,7 @@ import { pullAll } from 'lodash'
 import { SpawnOptionsWithoutStdio, spawn as spawnCB } from 'node:child_process'
 import { readdir, writeFile } from 'node:fs/promises'
 
-commit().then(updateState).catch(console.error)
+commit().catch(console.error)
 
 async function commit() {
   const message = await commitMessage()
@@ -12,6 +12,7 @@ async function commit() {
     return
   }
 
+  await updateState()
   await spawn('git', ['add', 'src/state.json'])
   await spawn('git', ['commit', '-m', message])
 }
