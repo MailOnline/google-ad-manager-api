@@ -28,8 +28,8 @@ export type WhereStatement<T extends Comparable> =
   | NotStatement<T>
   | InStatement<T>
   | NullStatement
-  | GTStatement
-  | LTStatement
+  | GTStatement<T>
+  | LTStatement<T>
 
 export type Where<T extends Object> = _Where<
   O.Select<O.Replace<Required<T>, StartDateTime, string>, Comparable>
