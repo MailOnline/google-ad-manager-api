@@ -43,7 +43,7 @@
     "@types/lodash": "^4.14.198",
     "@types/node": "18.17.19",
     "@types/sax": "1.2.5",
-    "@types/source-map-support": "0.5.7",
+    "@types/source-map-support": "0.5.8",
     "axios": "1.5.0",
     "commitizen": "4.3.0",
     "concurrently": "8.2.1",
