@@ -38,10 +38,10 @@ test('positive', () => {
   expect(
     pql<LineItems>({
       where: {
-        startDateTime: GT('DATES ARE COMPARABLE'),
+        startDateTime: GT(new Date('2020-01-01')),
       },
     }),
-  ).toBe("WHERE startDateTime > 'DATES ARE COMPARABLE'")
+  ).toBe("WHERE startDateTime > '2020-01-01T00:00:00.000Z'")
 
   expect(
     pql<LineItems>({
