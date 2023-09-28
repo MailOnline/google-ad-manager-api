@@ -8,6 +8,6 @@ export class LTStatement<T extends Comparable> extends Statement<T> {
   }
 }
 
-export function LT<T extends string | number>(value: T) {
+export function LT<T extends string | number | Date>(value: T) {
   return new LTStatement(value)
 }

@@ -8,6 +8,6 @@ export class GTStatement<T extends Comparable> extends Statement<T> {
   }
 }
 
-export function GT<T extends string | number>(value: T) {
+export function GT<T extends string | number | Date>(value: T) {
   return new GTStatement(value)
 }

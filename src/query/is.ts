@@ -1,7 +1,7 @@
 import { Statement } from './condition'
 import { formatValue } from './format'
 
-export type Comparable = boolean | string | number
+export type Comparable = boolean | string | number | Date
 
 export class IsStatement<T extends Comparable> extends Statement<T> {
   override statement(prop: string): string {

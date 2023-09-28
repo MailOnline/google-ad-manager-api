@@ -32,7 +32,7 @@ export type WhereStatement<T extends Comparable> =
   | LTStatement<T>
 
 export type Where<T extends Object> = _Where<
-  O.Select<O.Replace<Required<T>, StartDateTime, string>, Comparable>
+  O.Select<O.Replace<Required<T>, StartDateTime, string | Date>, Comparable>
 >
 
 type _Where<T> = {
@@ -40,14 +40,14 @@ type _Where<T> = {
 }
 
 interface StartDateTime {
-  date?: Date
+  date?: StartDate
   hour?: number
   minute?: number
   second?: number
   timeZoneId?: string
 }
 
-interface Date {
+interface StartDate {
   year?: number
   month?: number
   day?: number

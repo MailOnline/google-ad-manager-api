@@ -27,7 +27,9 @@ test('line items', async () => {
 
   const [response] = await client.getLineItemsByStatementAsync({
     filterStatement: {
-      query: pql<v202308.LineItemService.LineItems>({ limit: 10 }),
+      query: pql<v202308.LineItemService.LineItems>({
+        limit: 10,
+      }),
     },
   })
 
