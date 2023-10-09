@@ -2,16 +2,19 @@ import { entries } from '../lang/Object'
 import { Is } from './is'
 import { Condition } from './condition'
 import { Where } from './where'
+import { Order } from './order'
 
 interface PQLOptions<T extends Object> {
   limit?: number
   offset?: number
+  orderBy?: Order<T>
   where?: Where<T> | Where<T>[]
 }
 
 export function pql<T extends Object>({
   limit,
   offset,
+  orderBy,
   where: conditions,
 }: PQLOptions<T>): string {
   let pql = ''
@@ -22,6 +25,10 @@ export function pql<T extends Object>({
         ? `(${conditions.map(where).join(') OR (')})`
         : where(conditions)
     }`
+  }
+
+  if (orderBy) {
+    pql += `ORDER BY ${orderBy.format()}`
   }
 
   if (limit) {

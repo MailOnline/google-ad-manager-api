@@ -1,4 +1,5 @@
 import { And, GT, In, LT, Like, Not, Null, Or, pql } from '../src'
+import { Asc, Desc } from '../src/query'
 import { Creatives } from '../src/service/v202308/creativeservice'
 import { LineItems } from '../src/service/v202308/lineitemservice'
 
@@ -164,4 +165,18 @@ test('ors', () => {
   ).toBe(
     "WHERE (creationDateTime = '2023' OR (creationDateTime > '2001' AND creationDateTime < '2022'))",
   )
+})
+
+test('order by', () => {
+  expect(
+    pql<LineItems>({
+      orderBy: Asc('status'),
+    }),
+  ).toBe('ORDER BY status ASC')
+
+  expect(
+    pql<LineItems>({
+      orderBy: Desc('status'),
+    }),
+  ).toBe('ORDER BY status DESC')
 })

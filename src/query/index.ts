@@ -1,4 +1,6 @@
 export { And } from './and'
+export { Asc } from './asc'
+export { Desc } from './desc'
 export { GT } from './gt'
 export { In } from './in'
 export { Like, IsLikeString } from './like'
