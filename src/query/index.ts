@@ -1,7 +1,6 @@
 export { And } from './and'
 export { GT } from './gt'
 export { In } from './in'
-export { Is } from './is'
 export { Like, IsLikeString } from './like'
 export { LT } from './lt'
 export { Not } from './not'

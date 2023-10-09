@@ -1,6 +1,7 @@
 import { entries } from '../lang/Object'
-import { Statement, Where } from './condition'
-import { Is, Comparable } from './is'
+import { Is } from './is'
+import { Condition } from './condition'
+import { Where } from './where'
 
 interface PQLOptions<T extends Object> {
   limit?: number
@@ -36,11 +37,10 @@ export function pql<T extends Object>({
   function where(condition: Where<T>) {
     return entries(condition)
       .filter(([, value]) => value !== undefined)
-      .map(([key, value]) =>
-        (value instanceof Statement
-          ? value
-          : Is(value as Comparable)
-        ).statement(key.toString()),
+      .map(([key, condition]) =>
+        (condition instanceof Condition ? condition : Is(condition!)).format(
+          key.toString(),
+        ),
       )
       .join(' AND ')
   }

@@ -1,35 +1,16 @@
-import { AndStatement } from './and'
-import { Statement } from './condition'
-import { GTStatement } from './gt'
-import { Comparable, Is, IsStatement } from './is'
-import { LTStatement } from './lt'
-import { NotStatement } from './not'
+import { Comparable } from './comparable'
+import { Condition } from './condition'
+import { Is } from './is'
 
-type OrStatementValueItem<T extends Comparable> =
-  | IsStatement<T>
-  | NotStatement<T>
-  | GTStatement<T>
-  | LTStatement<T>
-  | AndStatement<T>
-
-type OrStatementValue<T extends Comparable> = OrStatementValueItem<T>[]
-
-type OrValue<T extends Comparable> = (OrStatementValueItem<T> | T)[]
-
-export class OrStatement<T extends Comparable> extends Statement<
-  OrStatementValue<T>
-> {
-  constructor(values: OrValue<T>) {
-    super(
-      values.map((value) => (value instanceof Statement ? value : Is(value))),
-    )
-  }
-
-  override statement(prop: string): string {
-    return `(${this.value.map((value) => value.statement(prop)).join(' OR ')})`
-  }
-}
-
-export function Or<T extends Comparable>(values: OrValue<T>) {
-  return new OrStatement(values)
+export function Or<T extends Comparable>(
+  values: (T | Condition<T>)[],
+): Condition<T> {
+  const conditions: Condition<T>[] = values.map((value) =>
+    value instanceof Condition ? value : Is(value),
+  )
+  return new Condition(
+    conditions,
+    (prop) =>
+      `(${conditions.map((condition) => condition.format(prop)).join(' OR ')})`,
+  )
 }
