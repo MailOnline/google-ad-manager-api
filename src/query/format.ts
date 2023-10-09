@@ -1,5 +1,5 @@
 import assetNever from 'assert-never'
-import { Comparable } from './is'
+import { Comparable } from './comparable'
 
 export function formatValue(value: Comparable): string {
   switch (typeof value) {

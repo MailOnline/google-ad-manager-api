@@ -1,13 +1,8 @@
-import { Statement } from './condition'
+import { Condition } from './condition'
+import { formatValue } from './format'
 
 export type IsLikeString = `${string}%${string}`
 
-export class LikeStatement extends Statement<string> {
-  override statement(prop: string) {
-    return `${prop} LIKE '${this.value}'`
-  }
-}
-
-export function Like(value: IsLikeString) {
-  return new LikeStatement(value)
+export function Like(value: IsLikeString): Condition<string> {
+  return new Condition(value, (prop) => `${prop} LIKE ${formatValue(value)}`)
 }
