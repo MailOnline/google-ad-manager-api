@@ -1,13 +1,6 @@
-import { Statement } from './condition'
 import { formatValue } from './format'
-import { Comparable } from './is'
+import { Condition } from './condition'
 
-export class LTStatement<T extends Comparable> extends Statement<T> {
-  override statement(prop: string): string {
-    return `${prop} < ${formatValue(this.value)}`
-  }
-}
-
-export function LT<T extends string | number | Date>(value: T) {
-  return new LTStatement(value)
+export function LT<T extends string | number | Date>(value: T): Condition<T> {
+  return new Condition(value, (prop) => `${prop} < ${formatValue(value)}`)
 }

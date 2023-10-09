@@ -1,14 +1,7 @@
-import { Statement } from './condition'
+import { Comparable } from './comparable'
 import { formatValue } from './format'
+import { Condition } from './condition'
 
-export type Comparable = boolean | string | number | Date
-
-export class IsStatement<T extends Comparable> extends Statement<T> {
-  override statement(prop: string): string {
-    return `${prop} = ${formatValue(this.value)}`
-  }
-}
-
-export function Is<T extends Comparable>(value: T) {
-  return new IsStatement(value)
+export function Is<T extends Comparable>(value: T): Condition<T> {
+  return new Condition(value, (prop) => `${prop} = ${formatValue(value)}`)
 }

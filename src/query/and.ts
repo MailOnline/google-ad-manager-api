@@ -1,28 +1,18 @@
-import { Statement } from './condition'
-import { GTStatement } from './gt'
-import { Comparable } from './is'
-import { LTStatement } from './lt'
-import { NotStatement } from './not'
-import { OrStatement } from './or'
+import { Comparable } from './comparable'
+import { Condition } from './condition'
+import { Is } from './is'
 
-type AndStatementValueItem<T extends Comparable> =
-  | NotStatement<T>
-  | GTStatement<T>
-  | LTStatement<T>
-  | OrStatement<T>
-
-type AndStatementValue<T extends Comparable> = AndStatementValueItem<T>[]
-
-export class AndStatement<T extends Comparable> extends Statement<
-  AndStatementValue<T>
-> {
-  override statement(prop: string): string {
-    return `(${this.value
-      .map((value) => `${value.statement(prop)}`)
-      .join(' AND ')})`
-  }
-}
-
-export function And<T extends Comparable>(values: AndStatementValue<T>) {
-  return new AndStatement(values)
+export function And<T extends Comparable>(
+  values: (T | Condition<T>)[],
+): Condition<T> {
+  const conditions: Condition<T>[] = values.map((value) =>
+    value instanceof Condition ? value : Is(value),
+  )
+  return new Condition(
+    conditions,
+    (prop) =>
+      `(${conditions
+        .map((condition) => condition.format(prop))
+        .join(' AND ')})`,
+  )
 }

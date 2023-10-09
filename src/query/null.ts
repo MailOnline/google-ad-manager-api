@@ -1,11 +1,5 @@
-import { Statement } from './condition'
+import { Condition } from './condition'
 
-export class NullStatement extends Statement<any> {
-  override statement(prop: string): string {
-    return `${prop} IS NULL`
-  }
-}
-
-export function Null(): NullStatement {
-  return new NullStatement(null)
+export function Null(): Condition<any> {
+  return new Condition(null as any, (prop) => `${prop} IS NULL`)
 }
