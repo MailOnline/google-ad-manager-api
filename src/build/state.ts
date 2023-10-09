@@ -1,6 +1,7 @@
-import { pullAll } from 'lodash'
+import { difference } from 'lodash'
 import { SpawnOptionsWithoutStdio, spawn as spawnCB } from 'node:child_process'
 import { readdir, writeFile } from 'node:fs/promises'
+import path from 'node:path'
 
 commit().catch(console.error)
 
@@ -43,31 +44,39 @@ async function commitMessage() {
   let body = ''
   if (added.length) {
     type = 'feat'
-    body += `\n\nAdded version(s) ${added}`
+    body += `\n\nAdded version${added.length > 1 ? 's' : ''} ${added.join(' ')}`
   }
   if (removed.length) {
     type = 'feat!'
-    body += `\n\nBREAKING CHANGE: Removed version(s) ${removed}`
+    body += `\n\nBREAKING CHANGE: Removed version${
+      removed.length > 1 ? 's' : ''
+    } ${removed}`
   }
   return type && `${type}(state): update${body}`
 }
 
 async function checkState() {
   const state = require('../state.json')
-  const versions = await readdir('src/wsdl')
+  const versions = await getVersions()
   return {
-    removed: pullAll([...state.versions], versions),
-    added: pullAll([...versions], state.versions),
+    removed: difference(state.versions, versions),
+    added: difference(versions, state.versions),
   }
 }
 
 async function updateState() {
-  const versions = await readdir('src/wsdl')
   await writeFile(
     'src/state.json',
     JSON.stringify({
       ...require('../state.json'),
-      versions: versions,
+      versions: await getVersions(),
     }),
   )
+}
+
+async function getVersions() {
+  const versions = await readdir('src/api')
+  return versions
+    .map((version) => path.basename(version, path.extname(version)))
+    .sort()
 }
