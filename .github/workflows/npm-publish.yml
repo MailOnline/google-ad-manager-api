@@ -32,6 +32,9 @@ jobs:
           JWT_KEY: ${{ secrets.JWT_KEY }}
           NETWORK_CODE: ${{ secrets.NETWORK_CODE }}
 
+      - name: Check for new/removed versions
+        run: yarn commit:state
+
       - name: Release
         run: yarn semantic-release
         env:
