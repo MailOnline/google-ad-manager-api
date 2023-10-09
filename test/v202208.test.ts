@@ -1,5 +1,6 @@
-import { v202308, pql } from '../src'
+import { v202308, pql, paginate } from '../src'
 import { load as dotenv } from 'dotenv-extended'
+import { LineItems } from '../src/service/v202308/lineitemservice'
 
 beforeAll(() =>
   dotenv({
@@ -34,4 +35,26 @@ test('line items', async () => {
   })
 
   expect(response.rval?.results).toHaveLength(10)
+})
+
+test('pagination', async () => {
+  const client = await api.createLineItemServiceClient()
+  const results: LineItems[] = []
+
+  for await (const result of paginate(async (limit, offset) => {
+    const [response] = await client.getLineItemsByStatementAsync({
+      filterStatement: {
+        query: pql<v202308.LineItemService.LineItems>({
+          limit,
+          offset,
+        }),
+      },
+    })
+    return response
+  }, 10)) {
+    results.push(result)
+    if (results.length === 20) break
+  }
+
+  expect(results).toHaveLength(20)
 })
