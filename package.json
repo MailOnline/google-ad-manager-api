@@ -2,7 +2,6 @@
   "name": "@johngw/google-ad-manager-api",
   "version": "3.3.1",
   "description": "Compose and react upon redux actions",
-  "private": true,
   "main": "dist/index.js",
   "scripts": {
     "build": "yarn clean && yarn build:wsdl && yarn build:service && yarn build:api && tsc",
