@@ -41,3 +41,27 @@ const [response] = await client.getLineItemsByStatementAsync({
 
 expect(response.rval?.results).toHaveLength(10)
 ```
+
+You can also type the `pql` function with JSDocs:
+
+```javascript
+/**
+ * @typedef {import('@johngw/google-ad-manager-api').PQL<
+ *  import('@johngw/google-ad-manager-api').v202308.LineItemService.LineItems
+ * >} LineItemsPQL
+ */
+
+const [response] = await client.getLineItemsByStatementAsync({
+  filterStatement: {
+    query: /** @type {LineItemsPQL} */ (pql)({
+      limit: 10,
+      where: {
+        orderId: In(1, 2, 3),
+        id: Not(11222),
+        name: Like('foo %'),
+        orderName: 'Foo',
+      },
+    }),
+  },
+})
+```
