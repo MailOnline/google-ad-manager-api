@@ -28,8 +28,8 @@
   },
   "homepage": "https://github.com/johngeorgewright/google-ad-manager-api#readme",
   "devDependencies": {
-    "@commitlint/cli": "17.7.2",
-    "@commitlint/config-conventional": "17.7.0",
+    "@commitlint/cli": "17.8.0",
+    "@commitlint/config-conventional": "17.8.0",
     "@commitlint/types": "17.4.4",
     "@jest/types": "29.6.3",
     "@semantic-release/commit-analyzer": "11.0.0",
