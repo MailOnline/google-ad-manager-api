@@ -1415,10 +1415,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/crawler@1.2.3":
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/@types/crawler/-/crawler-1.2.3.tgz#18fc22112ffcceef98260eeac4edc8aeeb0645cc"
-  integrity sha512-2hvxnm5sa5tYKGB+t7zeNQAZ4pw1LMb0eVqjEpNUSTgIr7u993M92JVofO/QIVCK3lu+YkzYr0ZTcF2haHu4Jg==
+"@types/crawler@1.2.4":
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/@types/crawler/-/crawler-1.2.4.tgz#a2f962018789dd694a91bcbc7d3ec2536391e840"
+  integrity sha512-R1lYNisUJI7UKgE27XYBmrrlloRF5+wZ/uTpCdzWm9WAcsdOX2SN2KYi0erpZQiG9Muo0MuVYir0/ZBjT03E3g==
   dependencies:
     "@types/cheerio" "*"
 
