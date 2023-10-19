@@ -45,7 +45,7 @@
     "@types/source-map-support": "0.5.9",
     "axios": "1.5.1",
     "commitizen": "4.3.0",
-    "concurrently": "8.2.1",
+    "concurrently": "8.2.2",
     "crawler": "1.4.0",
     "cz-conventional-changelog": "3.3.0",
     "dotenv-extended": "2.9.0",
