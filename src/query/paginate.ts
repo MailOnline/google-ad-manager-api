@@ -7,7 +7,7 @@ export async function* paginate<T>(
     const response = await executeQuery(limit, offset)
     if (response.rval?.results?.length) {
       for (const result of response.rval.results) yield result
-      if (response.rval?.results?.length < limit) break
+      if (response.rval.results.length < limit) break
       else yield* paginate(executeQuery, limit, offset + limit)
     } else {
       break
