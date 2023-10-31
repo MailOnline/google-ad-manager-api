@@ -1,4 +1,4 @@
-import { v202308, pql, paginate } from '../src'
+import { v202308, paginate, query } from '../src'
 import { load as dotenv } from 'dotenv-extended'
 import { LineItems } from '../src/service/v202308/lineitemservice'
 
@@ -6,7 +6,7 @@ beforeAll(() =>
   dotenv({
     errorOnMissing: true,
     includeProcessEnv: true,
-  }),
+  })
 )
 
 let api: v202308.GoogleAdManager
@@ -26,12 +26,8 @@ beforeEach(() => {
 test('line items', async () => {
   const client = await api.createLineItemServiceClient()
 
-  const [response] = await client.getLineItemsByStatementAsync({
-    filterStatement: {
-      query: pql<v202308.LineItemService.LineItems>({
-        limit: 10,
-      }),
-    },
+  const [response] = await query(client, 'getLineItemsByStatementAsync', {
+    limit: 10,
   })
 
   expect(response.rval?.results).toHaveLength(10)
@@ -42,13 +38,9 @@ test('pagination', async () => {
   const results: LineItems[] = []
 
   for await (const result of paginate(async (limit, offset) => {
-    const [response] = await client.getLineItemsByStatementAsync({
-      filterStatement: {
-        query: pql<v202308.LineItemService.LineItems>({
-          limit,
-          offset,
-        }),
-      },
+    const [response] = await query(client, 'getLineItemsByStatementAsync', {
+      limit,
+      offset,
     })
     return response
   }, 10)) {

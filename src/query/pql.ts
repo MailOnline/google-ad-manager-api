@@ -4,7 +4,7 @@ import { Condition } from './condition'
 import { Where } from './where'
 import { Order } from './order'
 
-interface PQLOptions<T extends Object> {
+export interface PQLOptions<T extends Object> {
   limit?: number
   offset?: number
   orderBy?: Order<T>
@@ -46,8 +46,8 @@ export function pql<T extends Object>({
       .filter(([, value]) => value !== undefined)
       .map(([key, condition]) =>
         (condition instanceof Condition ? condition : Is(condition!)).format(
-          key.toString(),
-        ),
+          key.toString()
+        )
       )
       .join(' AND ')
   }
