@@ -1,6 +1,6 @@
 import { O } from 'ts-toolbelt'
-import { Comparable } from './comparable'
-import { Condition } from './condition'
+import { Comparable } from './condition/comparable'
+import { Condition } from './condition/condition'
 
 export type Where<T extends Object> = _Where<PickComparableValues<T>>
 

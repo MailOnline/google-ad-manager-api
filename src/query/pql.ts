@@ -1,8 +1,8 @@
 import { entries } from '../lang/Object'
-import { Is } from './is'
-import { Condition } from './condition'
+import { Is } from './condition/is'
+import { Condition } from './condition/condition'
 import { Where } from './where'
-import { Order } from './order'
+import { Order } from './order/order'
 
 export interface PQLOptions<T extends Object> {
   limit?: number

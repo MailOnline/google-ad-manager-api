@@ -1,5 +1,5 @@
 import { Condition } from './condition'
-import { formatValue } from './format'
+import { formatValue } from '../format'
 
 export type IsLikeString = `${string}%${string}`
 

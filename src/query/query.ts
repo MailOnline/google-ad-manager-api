@@ -26,6 +26,7 @@ import { PQLOptions, pql } from './pql'
  *     })
  *   }
  * })
+ * ```
  */
 export function query<C extends Client, M extends keyof C>(
   client: C,
