@@ -1,5 +1,23 @@
 import { GetByStatementResponse } from './statement'
 
+/**
+ * Paginate queries and receive each item as it arrives.
+ *
+ * @example
+ * ```
+ * async function getLineItems(limit: number, offset: number) {
+ *   return query(
+ *     client,
+ *     'getLineItemsByStatementAsync',
+ *     { limit, offset }
+ *   )
+ * }
+ *
+ * for await (const result of paginate(getLineItems, 10)) {
+ *   console.info(result)
+ * }
+ * ```
+ */
 export async function* paginate<T>(
   executeQuery: (
     limit: number,
