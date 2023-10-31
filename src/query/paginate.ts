@@ -1,8 +1,12 @@
+import { GetByStatementResponse } from './statement'
+
 export async function* paginate<T>(
   executeQuery: (
     limit: number,
     offset: number
-  ) => Promise<Response<T>> | Promise<[Response<T>, ...any[]]>,
+  ) =>
+    | Promise<GetByStatementResponse<T>>
+    | Promise<[GetByStatementResponse<T>, ...any[]]>,
   limit: number,
   offset = 0
 ): AsyncGenerator<T> {
@@ -13,14 +17,4 @@ export async function* paginate<T>(
     if (response.rval.results.length >= limit)
       yield* paginate(executeQuery, limit, offset + limit)
   }
-}
-
-interface Response<T> {
-  rval?: Rval<T>
-}
-
-interface Rval<T> {
-  totalResultSetSize?: number
-  startIndex?: number
-  results?: Array<T>
 }
