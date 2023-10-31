@@ -11,7 +11,7 @@ npm install @johngw/google-ad-manager-api
 ## Usage
 
 ```typescript
-import { v202308, pql, In, Not, Like } from '@johngw/google-ad-manager-api'
+import { v202308, In, Not, Like, query } from '@johngw/google-ad-manager-api'
 
 const api = new v202308.GoogleAdManager({
   applicationName: 'MY_APPLICATION_NAME',
@@ -24,6 +24,24 @@ const api = new v202308.GoogleAdManager({
 })
 
 const client = await api.createLineItemServiceClient()
+
+const [response] = await query(client, 'getLineItemsByStatementAsync', {
+  limit: 10,
+  where: {
+    orderId: In(1, 2, 3),
+    id: Not(11222),
+    name: Like('foo %'),
+    orderName: 'Foo',
+  },
+})
+
+expect(response.rval?.results).toHaveLength(10)
+```
+
+The following will produce the same result albeit more verbose:
+
+```typescript
+import { v202308, In, Not, Like, pql } from '@johngw/google-ad-manager-api'
 
 const [response] = await client.getLineItemsByStatementAsync({
   filterStatement: {
@@ -38,8 +56,6 @@ const [response] = await client.getLineItemsByStatementAsync({
     }),
   },
 })
-
-expect(response.rval?.results).toHaveLength(10)
 ```
 
 You can also type the `pql` function with JSDocs:
