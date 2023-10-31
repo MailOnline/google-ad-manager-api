@@ -15,7 +15,7 @@ import { PQLOptions, pql } from './pql'
  *   }
  * })
  * ```
- * Is syntacial sugar for:
+ * Is syntactical sugar for:
  * ```
  * client.getLineItemsByStatementAsync({
  *   filterStatement: {
