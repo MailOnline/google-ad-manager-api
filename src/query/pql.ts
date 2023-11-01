@@ -28,7 +28,7 @@ export function pql<T extends Object>({
   }
 
   if (orderBy) {
-    pql += `ORDER BY ${orderBy.format()}`
+    pql += ` ORDER BY ${orderBy.format()}`
   }
 
   if (limit) {
