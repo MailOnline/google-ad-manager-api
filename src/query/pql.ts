@@ -17,29 +17,31 @@ export function pql<T extends Object>({
   orderBy,
   where: conditions,
 }: PQLOptions<T>): string {
-  let pql = ''
+  const pqlParts: string[] = []
 
   if (conditions) {
-    pql += `WHERE ${
-      Array.isArray(conditions)
-        ? `(${conditions.map(where).join(') OR (')})`
-        : where(conditions)
-    }`
+    pqlParts.push(
+      `WHERE ${
+        Array.isArray(conditions)
+          ? `(${conditions.map(where).join(') OR (')})`
+          : where(conditions)
+      }`
+    )
   }
 
   if (orderBy) {
-    pql += ` ORDER BY ${orderBy.format()}`
+    pqlParts.push(`ORDER BY ${orderBy.format()}`)
   }
 
   if (limit) {
-    pql += ` LIMIT ${limit}`
+    pqlParts.push(`LIMIT ${limit}`)
   }
 
   if (offset) {
-    pql += ` OFFSET ${offset}`
+    pqlParts.push(`OFFSET ${offset}`)
   }
 
-  return pql
+  return pqlParts.join(' ')
 
   function where(condition: Where<T>) {
     return entries(condition)

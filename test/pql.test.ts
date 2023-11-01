@@ -9,7 +9,7 @@ test('positive', () => {
       where: {
         name: 'foo',
       },
-    }),
+    })
   ).toBe("WHERE name = 'foo'")
 
   expect(
@@ -17,7 +17,7 @@ test('positive', () => {
       where: {
         name: "foo's",
       },
-    }),
+    })
   ).toBe("WHERE name = 'foo\\'s'")
 
   expect(
@@ -25,7 +25,7 @@ test('positive', () => {
       where: {
         id: 1234,
       },
-    }),
+    })
   ).toBe('WHERE id = 1234')
 
   expect(
@@ -33,7 +33,7 @@ test('positive', () => {
       where: {
         allowOverbook: true,
       },
-    }),
+    })
   ).toBe('WHERE allowOverbook = TRUE')
 
   expect(
@@ -41,7 +41,7 @@ test('positive', () => {
       where: {
         startDateTime: GT(new Date('2020-01-01')),
       },
-    }),
+    })
   ).toBe("WHERE startDateTime > '2020-01-01T00:00:00.000Z'")
 
   expect(
@@ -49,7 +49,7 @@ test('positive', () => {
       where: {
         costType: Null(),
       },
-    }),
+    })
   ).toBe('WHERE costType IS NULL')
 
   expect(
@@ -57,7 +57,7 @@ test('positive', () => {
       where: {
         allowOverbook: false,
       },
-    }),
+    })
   ).toBe('WHERE allowOverbook = FALSE')
 
   expect(
@@ -65,7 +65,7 @@ test('positive', () => {
       where: {
         name: In(['foo', 'bar']),
       },
-    }),
+    })
   ).toBe("WHERE name IN ('foo','bar')")
 
   expect(
@@ -73,7 +73,7 @@ test('positive', () => {
       where: {
         name: Like('foo %'),
       },
-    }),
+    })
   ).toBe("WHERE name LIKE 'foo %'")
 })
 
@@ -83,7 +83,7 @@ test('negative', () => {
       where: {
         name: Not('foo'),
       },
-    }),
+    })
   ).toBe("WHERE name != 'foo'")
 
   expect(
@@ -91,7 +91,7 @@ test('negative', () => {
       where: {
         id: Not(1234),
       },
-    }),
+    })
   ).toBe('WHERE id != 1234')
 
   expect(
@@ -99,7 +99,7 @@ test('negative', () => {
       where: {
         name: Not(In(['foo', 'bar'])),
       },
-    }),
+    })
   ).toBe("WHERE NOT name IN ('foo','bar')")
 
   expect(
@@ -107,7 +107,7 @@ test('negative', () => {
       where: {
         name: Not(Like('foo %')),
       },
-    }),
+    })
   ).toBe("WHERE NOT name LIKE 'foo %'")
 
   expect(
@@ -115,7 +115,7 @@ test('negative', () => {
       where: {
         costType: Not(Null()),
       },
-    }),
+    })
   ).toBe('WHERE NOT costType IS NULL')
 })
 
@@ -126,7 +126,7 @@ test('ands', () => {
         name: 'foo',
         previewUrl: 'bar',
       },
-    }),
+    })
   ).toBe("WHERE name = 'foo' AND previewUrl = 'bar'")
 
   expect(
@@ -134,7 +134,7 @@ test('ands', () => {
       where: {
         creationDateTime: And([GT('2001'), LT('2022')]),
       },
-    }),
+    })
   ).toBe("WHERE (creationDateTime > '2001' AND creationDateTime < '2022')")
 })
 
@@ -151,9 +151,9 @@ test('ors', () => {
           advertiserId: 333,
         },
       ],
-    }),
+    })
   ).toBe(
-    "WHERE (name = 'foo' AND previewUrl = 'bar') OR (id = 123 AND advertiserId = 333)",
+    "WHERE (name = 'foo' AND previewUrl = 'bar') OR (id = 123 AND advertiserId = 333)"
   )
 
   expect(
@@ -161,9 +161,9 @@ test('ors', () => {
       where: {
         creationDateTime: Or(['2023', And([GT('2001'), LT('2022')])]),
       },
-    }),
+    })
   ).toBe(
-    "WHERE (creationDateTime = '2023' OR (creationDateTime > '2001' AND creationDateTime < '2022'))",
+    "WHERE (creationDateTime = '2023' OR (creationDateTime > '2001' AND creationDateTime < '2022'))"
   )
 })
 
@@ -171,12 +171,12 @@ test('order by', () => {
   expect(
     pql<LineItems>({
       orderBy: Asc('status'),
-    }),
+    })
   ).toBe('ORDER BY status ASC')
 
   expect(
     pql<LineItems>({
       orderBy: Desc('status'),
-    }),
+    })
   ).toBe('ORDER BY status DESC')
 })
