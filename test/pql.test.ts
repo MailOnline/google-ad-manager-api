@@ -180,3 +180,25 @@ test('order by', () => {
     })
   ).toBe('ORDER BY status DESC')
 })
+
+test('all together now', () => {
+  expect(
+    pql<Creatives>({
+      limit: 12,
+      orderBy: Asc('name'),
+      offset: 6,
+      where: [
+        {
+          name: 'foo',
+          previewUrl: 'bar',
+        },
+        {
+          id: 123,
+          advertiserId: 333,
+        },
+      ],
+    })
+  ).toBe(
+    "WHERE (name = 'foo' AND previewUrl = 'bar') OR (id = 123 AND advertiserId = 333) ORDER BY name ASC LIMIT 12 OFFSET 6"
+  )
+})
