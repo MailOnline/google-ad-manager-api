@@ -1,4 +1,4 @@
-import { entries } from '../lang/Object'
+import { requiredEntries } from '../lang/Object'
 import { Is } from './condition/is'
 import { Condition } from './condition/condition'
 import { Where } from './where'
@@ -44,10 +44,9 @@ export function pql<T extends Object>({
   return pqlParts.join(' ')
 
   function where(condition: Where<T>) {
-    return entries(condition)
-      .filter(([, value]) => value !== undefined)
+    return requiredEntries(condition)
       .map(([key, condition]) =>
-        (condition instanceof Condition ? condition : Is(condition!)).format(
+        (condition instanceof Condition ? condition : Is(condition)).format(
           key.toString()
         )
       )
