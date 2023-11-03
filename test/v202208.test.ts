@@ -1,4 +1,4 @@
-import { v202308, paginate, query } from '../src'
+import { v202308, iterate, query } from '../src'
 import { load as dotenv } from 'dotenv-extended'
 import { LineItems } from '../src/service/v202308/lineitemservice'
 
@@ -37,13 +37,14 @@ test('pagination', async () => {
   const client = await api.createLineItemServiceClient()
   const results: LineItems[] = []
 
-  for await (const result of paginate(async (limit, offset) => {
-    const [response] = await query(client, 'getLineItemsByStatementAsync', {
-      limit,
-      offset,
-    })
-    return response
-  }, 10)) {
+  for await (const result of iterate({
+    querySize: 10,
+    executeQuery: (limit, offset) =>
+      query(client, 'getLineItemsByStatementAsync', {
+        limit,
+        offset,
+      }),
+  })) {
     results.push(result)
     if (results.length === 20) break
   }

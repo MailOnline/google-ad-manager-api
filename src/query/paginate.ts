@@ -3,6 +3,7 @@ import { GetByStatementResponse } from './statement'
 /**
  * Paginate queries and receive each item as it arrives.
  *
+ * @deprecated Use {@link iterate:function} instead
  * @example
  * ```
  * async function getLineItems(limit: number, offset: number) {

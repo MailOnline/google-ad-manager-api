@@ -10,6 +10,8 @@ npm install @johngw/google-ad-manager-api
 
 ## Usage
 
+### Simple queries
+
 ```typescript
 import { v202308, In, Not, Like, query } from '@johngw/google-ad-manager-api'
 
@@ -80,4 +82,33 @@ const [response] = await client.getLineItemsByStatementAsync({
     }),
   },
 })
+```
+
+### Paginated queries
+
+When quering large amounts of data, you'd generally want to use GAM's pagination feature. Use the `paginate` function to help iterate through all individual items in paginated queries.
+
+```typescript
+import { v202308, paginate, query } from '@johngw/google-ad-manager-api'
+
+const api = new v202308.GoogleAdManager({
+  applicationName: 'MY_APPLICATION_NAME',
+  networkCode: 123456789,
+  jwtOptions: {
+    key: 'MY_JWT_KEY',
+    email: 'MY_JWT_EMAIL',
+    scopes: ['https://www.googleapis.com/auth/dfp'],
+  },
+})
+
+const client = await api.createLineItemServiceClient()
+
+for await (const result of paginate(10, async (limit, offset) =>
+  query(client, 'getLineItemsByStatementAsync', {
+    limit,
+    offset,
+  })
+)) {
+  console.info(result)
+}
 ```
