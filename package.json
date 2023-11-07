@@ -37,7 +37,7 @@
     "@semantic-release/github": "9.2.1",
     "@semantic-release/npm": "11.0.1",
     "@semantic-release/release-notes-generator": "12.1.0",
-    "@types/crawler": "1.2.4",
+    "@types/crawler": "1.2.5",
     "@types/jest": "29.5.7",
     "@types/lodash": "^4.14.198",
     "@types/node": "18.18.8",
