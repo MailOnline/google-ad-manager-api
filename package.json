@@ -38,7 +38,7 @@
     "@semantic-release/npm": "11.0.1",
     "@semantic-release/release-notes-generator": "12.1.0",
     "@types/crawler": "1.2.5",
-    "@types/jest": "29.5.7",
+    "@types/jest": "29.5.8",
     "@types/lodash": "^4.14.198",
     "@types/node": "18.18.8",
     "@types/sax": "1.2.7",
