@@ -39,8 +39,8 @@
     "@semantic-release/release-notes-generator": "12.1.0",
     "@types/crawler": "1.2.5",
     "@types/jest": "29.5.8",
-    "@types/lodash": "^4.14.198",
-    "@types/node": "18.18.9",
+    "@types/lodash": "^4.14.201",
+    "@types/node": "20.9.0",
     "@types/sax": "1.2.7",
     "@types/source-map-support": "0.5.10",
     "axios": "1.6.2",
@@ -79,9 +79,10 @@
     "soap": "1.0.0",
     "ts-toolbelt": "9.6.0",
     "tslib": "2.6.2",
-    "wsdl-tsclient": "johngeorgewright/wsdl-tsclient#node-soap-types"
+    "wsdl-tsclient": "https://github.com/johngeorgewright/wsdl-tsclient.git#commit=103a72f79f905195bfe2fefbc322c4f938691785"
   },
   "resolutions": {
     "soap": "^1.0.0"
-  }
+  },
+  "packageManager": "yarn@4.0.2"
 }

@@ -2,7 +2,7 @@ import { Config } from 'jest'
 
 const config: Config = {
   transform: {
-    '^.+\\.tsx?$': ['ts-jest', { tsconfig: 'tsconfig.test.json' }],
+    '^.+\\.tsx?$': ['ts-jest', { tsconfig: 'test/tsconfig.json' }],
   },
 }
 
