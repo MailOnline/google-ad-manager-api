@@ -1069,7 +1069,7 @@ __metadata:
     "@semantic-release/github": "npm:9.2.3"
     "@semantic-release/npm": "npm:11.0.1"
     "@semantic-release/release-notes-generator": "npm:12.1.0"
-    "@types/crawler": "npm:1.2.5"
+    "@types/crawler": "npm:1.2.6"
     "@types/jest": "npm:29.5.8"
     "@types/lodash": "npm:^4.14.201"
     "@types/node": "npm:20.9.2"
@@ -1969,12 +1969,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/crawler@npm:1.2.5":
-  version: 1.2.5
-  resolution: "@types/crawler@npm:1.2.5"
+"@types/crawler@npm:1.2.6":
+  version: 1.2.6
+  resolution: "@types/crawler@npm:1.2.6"
   dependencies:
     "@types/cheerio": "npm:*"
-  checksum: 76ff55a67cecc494b721baaba669a3d2ade6fb4818e918d92ef8795168632fb9728264bf111811432855d4f532be8c2a445f12bb535d516c3e277c7a708316ef
+  checksum: f60c8b62a66e29bec37525e056303245d05df4e5fbb0a25ad2d361ddc95bb38cd618d2c13a36349bfdbd648f49208a0519e583f16546f6112014e454de0112fb
   languageName: node
   linkType: hard
 
