@@ -1082,7 +1082,7 @@ __metadata:
     crawler: "npm:1.4.0"
     cz-conventional-changelog: "npm:3.3.0"
     dotenv-extended: "npm:2.9.0"
-    google-auth-library: "npm:9.3.0"
+    google-auth-library: "npm:9.4.0"
     husky: "npm:8.0.3"
     jest: "npm:29.7.0"
     lint-staged: "npm:15.1.0"
@@ -4892,13 +4892,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gcp-metadata@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "gcp-metadata@npm:6.0.0"
+"gcp-metadata@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "gcp-metadata@npm:6.1.0"
   dependencies:
     gaxios: "npm:^6.0.0"
     json-bigint: "npm:^1.0.0"
-  checksum: 291d3e8a4f95ea2ff822f0b2c0d678d254313073a28f5dbc09223a9ea173567ca375c0bcefe53ec1c525df6277207a174c655c10597873a6d9da7f199dc5dc96
+  checksum: 0f84f8c0b974e79d0da0f3063023486e53d7982ce86c4b5871e4ee3b1fc4e7f76fcc05f6342aa0ded5023f1a499c21ab97743a498b31f3aa299905226d1f66ab
   languageName: node
   linkType: hard
 
@@ -5149,17 +5149,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"google-auth-library@npm:9.3.0":
-  version: 9.3.0
-  resolution: "google-auth-library@npm:9.3.0"
+"google-auth-library@npm:9.4.0":
+  version: 9.4.0
+  resolution: "google-auth-library@npm:9.4.0"
   dependencies:
     base64-js: "npm:^1.3.0"
     ecdsa-sig-formatter: "npm:^1.0.11"
     gaxios: "npm:^6.0.0"
-    gcp-metadata: "npm:^6.0.0"
+    gcp-metadata: "npm:^6.1.0"
     gtoken: "npm:^7.0.0"
     jws: "npm:^4.0.0"
-  checksum: d3572339b3da554d9d9ef9f144583be14eafe7facd80adbfdbe3ce1cf06d48e8aa72ed3c62b765fc054ec2baeff86ac358c32d7013eea32498aae696d4da6053
+  checksum: dcc58fb3f914e612e9e044e46c8ee729d8ef4f4924f406c10307d39498e212434ebcaff0a9bbb10490cbc699e2ab056a57cf68b64ace7e6919c7afb3139832a2
   languageName: node
   linkType: hard
 
