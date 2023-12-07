@@ -1066,8 +1066,8 @@ __metadata:
     "@johngw/fs": "npm:3.0.1"
     "@semantic-release/commit-analyzer": "npm:11.1.0"
     "@semantic-release/git": "npm:10.0.1"
-    "@semantic-release/github": "npm:9.2.4"
-    "@semantic-release/npm": "npm:11.0.1"
+    "@semantic-release/github": "npm:9.2.5"
+    "@semantic-release/npm": "npm:11.0.2"
     "@semantic-release/release-notes-generator": "npm:12.1.0"
     "@types/crawler": "npm:1.2.6"
     "@types/jest": "npm:29.5.11"
@@ -1641,9 +1641,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/github@npm:9.2.4":
-  version: 9.2.4
-  resolution: "@semantic-release/github@npm:9.2.4"
+"@semantic-release/github@npm:9.2.5":
+  version: 9.2.5
+  resolution: "@semantic-release/github@npm:9.2.5"
   dependencies:
     "@octokit/core": "npm:^5.0.0"
     "@octokit/plugin-paginate-rest": "npm:^9.0.0"
@@ -1663,7 +1663,7 @@ __metadata:
     url-join: "npm:^5.0.0"
   peerDependencies:
     semantic-release: ">=20.1.0"
-  checksum: 3a2dde2556c9efe8728db42c8cf178149e152e7bfb888b005d6821f4b267e2e66ecd5e809d507d454b416136ccd953af7c57db11856b41763015281f29b19aad
+  checksum: b6f136afff3ad62837ab2ed235e98594d1c770a028e1432ad31e8e2d1d88873029cc82372f8d6d101de8808dd01d9e5c681f2bd703908bd7702d469b05043413
   languageName: node
   linkType: hard
 
@@ -1693,9 +1693,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/npm@npm:11.0.1":
-  version: 11.0.1
-  resolution: "@semantic-release/npm@npm:11.0.1"
+"@semantic-release/npm@npm:11.0.2":
+  version: 11.0.2
+  resolution: "@semantic-release/npm@npm:11.0.2"
   dependencies:
     "@semantic-release/error": "npm:^4.0.0"
     aggregate-error: "npm:^5.0.0"
@@ -1712,7 +1712,7 @@ __metadata:
     tempy: "npm:^3.0.0"
   peerDependencies:
     semantic-release: ">=20.1.0"
-  checksum: 62b37a80cc79af1b608e3982da0f4972b3fd97ca24af4ed528e7b316bf5f3bd22a5f74677cd38f354a02127c3df887d3207f12de821e935067aa2a927530797a
+  checksum: ffd29adf44b051c1e0973b7fc5b99996ae4c5f2dd80079d50787eb1a4cdbbbd4c5b609c7b00dab4c566678ed2c620118014044f5e2f5b19c9d7d6961dfd57bc4
   languageName: node
   linkType: hard
 
