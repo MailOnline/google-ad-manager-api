@@ -40,7 +40,7 @@
     "@types/crawler": "1.2.6",
     "@types/jest": "29.5.11",
     "@types/lodash": "^4.14.201",
-    "@types/node": "20.10.4",
+    "@types/node": "20.10.5",
     "@types/sax": "1.2.7",
     "@types/source-map-support": "0.5.10",
     "axios": "1.6.2",
