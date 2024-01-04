@@ -1079,7 +1079,7 @@ __metadata:
     axios: "npm:1.6.4"
     commitizen: "npm:4.3.0"
     concurrently: "npm:8.2.2"
-    crawler: "npm:1.4.0"
+    crawler: "npm:1.5.0"
     cz-conventional-changelog: "npm:3.3.0"
     dotenv-extended: "npm:2.9.0"
     google-auth-library: "npm:9.4.1"
@@ -3618,9 +3618,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"crawler@npm:1.4.0":
-  version: 1.4.0
-  resolution: "crawler@npm:1.4.0"
+"crawler@npm:1.5.0":
+  version: 1.5.0
+  resolution: "crawler@npm:1.5.0"
   dependencies:
     bottleneckp: "npm:~1.1.3"
     cheerio: "npm:^0.22.0"
@@ -3629,7 +3629,7 @@ __metadata:
     request: "npm:~2.88.0"
     seenreq: "npm:^3.0.0"
     type-is: "npm:^1.6.14"
-  checksum: 144c45b5f0d58196e1300234ce2ecf088e072a1613e97842c46054de2d9f49f66cad4ea31a34d3d9ddf5fd4f79305eb4b5eecee444a1544d0dde955f450ab19e
+  checksum: 79bc64008540a5095812e700dea120449417f814c26c13d01c33630b9bc7cef2d0fcbb631de75635f29b5cc222788609d1cf579c91b51b090a8693f1d95b3ba2
   languageName: node
   linkType: hard
 
