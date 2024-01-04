@@ -46,7 +46,7 @@ const RAW_RUNTIME_STATE =
           ["axios", "npm:1.6.4"],\
           ["commitizen", "npm:4.3.0"],\
           ["concurrently", "npm:8.2.2"],\
-          ["crawler", "npm:1.4.0"],\
+          ["crawler", "npm:1.5.0"],\
           ["cz-conventional-changelog", "npm:3.3.0"],\
           ["dotenv-extended", "npm:2.9.0"],\
           ["google-auth-library", "npm:9.4.1"],\
@@ -1610,7 +1610,7 @@ const RAW_RUNTIME_STATE =
           ["axios", "npm:1.6.4"],\
           ["commitizen", "npm:4.3.0"],\
           ["concurrently", "npm:8.2.2"],\
-          ["crawler", "npm:1.4.0"],\
+          ["crawler", "npm:1.5.0"],\
           ["cz-conventional-changelog", "npm:3.3.0"],\
           ["dotenv-extended", "npm:2.9.0"],\
           ["google-auth-library", "npm:9.4.1"],\
@@ -4733,10 +4733,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["crawler", [\
-      ["npm:1.4.0", {\
-        "packageLocation": "../../../../cache/others/berry/cache/crawler-npm-1.4.0-f1dc135502-10c0.zip/node_modules/crawler/",\
+      ["npm:1.5.0", {\
+        "packageLocation": "../../../../cache/others/berry/cache/crawler-npm-1.5.0-d17372374d-10c0.zip/node_modules/crawler/",\
         "packageDependencies": [\
-          ["crawler", "npm:1.4.0"],\
+          ["crawler", "npm:1.5.0"],\
           ["bottleneckp", "npm:1.1.3"],\
           ["cheerio", "npm:0.22.0"],\
           ["iconv-lite", "npm:0.4.24"],\
