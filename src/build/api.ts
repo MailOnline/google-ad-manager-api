@@ -1,7 +1,7 @@
 import { mkdirp } from 'mkdirp'
 import { readdir, writeFile } from 'node:fs/promises'
-import { basename, extname } from 'node:path'
 import { baseURL } from './wsdl-path'
+import { basename, extname } from 'node:path'
 
 generateAPIs().then(generateIndex).catch(console.error)
 
@@ -10,7 +10,7 @@ async function generateAPIs() {
 
   for (const version of versions) {
     const services = (await readdir(`src/wsdl/${version}`)).map((wsdl) =>
-      wsdl.replace(/\.wsdl$/, ''),
+      wsdl.replace(/\.wsdl$/, '')
     )
     const template = /* ts */ `
 import { JWT, JWTOptions } from 'google-auth-library'
@@ -18,13 +18,13 @@ import { BearerSecurity, Client, createClientAsync } from 'soap'
 ${mapJoin(
   services,
   (service) =>
-    /*ts*/ `import { createClientAsync as create${service}Client } from '../service/${version}/${service.toLowerCase()}'`,
+    `import { createClientAsync as create${service}Client } from '../service/${version}/${service.toLowerCase()}'`
 )}
 
 ${mapJoin(
   services,
   (service) =>
-    /*ts*/ `export * as ${service} from '../service/${version}/${service.toLowerCase()}'`,
+    /*ts*/ `export * as ${service} from '../service/${version}/${service.toLowerCase()}'`
 )}
 
 export interface GoogleAdManagerOptions {
@@ -50,7 +50,7 @@ export class GoogleAdManager {
   ${mapJoin(
     services,
     (service) =>
-      /* ts */ `create${service}Client = this.#wrapClientCreator(create${service}Client, '${baseURL}/'+this.#version+'/${service}?wsdl')`,
+      /* ts */ `create${service}Client = this.#wrapClientCreator(create${service}Client, '${baseURL}/'+this.#version+'/${service}?wsdl')`
   )}
 
   get #soapHeaders() {
@@ -104,14 +104,13 @@ export class GoogleAdManager {
 
 async function generateIndex() {
   const apis = await readdir('src/api')
+  const latestAPI = apis[apis.length - 1]
   const filePath = 'src/index.ts'
   await writeFile(
     filePath,
     /* ts */ `export * from './query'
-${mapJoin(apis, (api) => {
-  const version = basename(api, extname(api))
-  return /* ts */ `export * as ${version} from './api/${version}'`
-})}`,
+export * from './api/${basename(latestAPI, extname(latestAPI))}'
+`
   )
 }
 
