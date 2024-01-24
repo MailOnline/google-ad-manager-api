@@ -2,16 +2,14 @@ import { GoogleAdManager, iterate, query } from '../src'
 import { load as dotenv } from 'dotenv-extended'
 import { LineItems } from '../src/service/v202308/lineitemservice'
 
-beforeAll(() =>
+let api: GoogleAdManager
+
+beforeAll(() => {
   dotenv({
     errorOnMissing: true,
     includeProcessEnv: true,
   })
-)
 
-let api: GoogleAdManager
-
-beforeEach(() => {
   api = new GoogleAdManager({
     applicationName: 'google-ad-manager-api CI test',
     networkCode: Number(process.env.NETWORK_CODE),
@@ -50,4 +48,4 @@ test('pagination', async () => {
   }
 
   expect(results).toHaveLength(20)
-})
+}, 10_000)
