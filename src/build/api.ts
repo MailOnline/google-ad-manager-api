@@ -10,21 +10,21 @@ async function generateAPIs() {
 
   for (const version of versions) {
     const services = (await readdir(`src/wsdl/${version}`)).map((wsdl) =>
-      wsdl.replace(/\.wsdl$/, '')
+      wsdl.replace(/\.wsdl$/, ''),
     )
     const template = /* ts */ `
-import { JWT, JWTOptions } from 'google-auth-library'
+import { Credentials, JWT, JWTOptions } from 'google-auth-library'
 import { BearerSecurity, Client, createClientAsync } from 'soap'
 ${mapJoin(
   services,
   (service) =>
-    `import { createClientAsync as create${service}Client } from '../service/${version}/${service.toLowerCase()}'`
+    `import { createClientAsync as create${service}Client } from '../service/${version}/${service.toLowerCase()}'`,
 )}
 
 ${mapJoin(
   services,
   (service) =>
-    /*ts*/ `export * as ${service} from '../service/${version}/${service.toLowerCase()}'`
+    /*ts*/ `export * as ${service} from '../service/${version}/${service.toLowerCase()}'`,
 )}
 
 export interface GoogleAdManagerOptions {
@@ -35,6 +35,7 @@ export interface GoogleAdManagerOptions {
 
 export class GoogleAdManager {
   #applicationName: string
+  #credentialsPromise: Promise<Credentials>
   #jwt: JWT
   #networkCode: string
   #version = '${version}'
@@ -44,13 +45,19 @@ export class GoogleAdManager {
   constructor(options: GoogleAdManagerOptions) {
     this.#applicationName = options.applicationName
     this.#jwt = new JWT(options.jwtOptions)
+    this.#credentialsPromise = this.authorize()
     this.#networkCode = options.networkCode.toString()
+  }
+
+  authorize() {
+    this.#credentialsPromise = this.#jwt.authorize()
+    return this.#credentialsPromise
   }
 
   ${mapJoin(
     services,
     (service) =>
-      /* ts */ `create${service}Client = this.#wrapClientCreator(create${service}Client, '${baseURL}/'+this.#version+'/${service}?wsdl')`
+      /* ts */ `create${service}Client = this.#wrapClientCreator(create${service}Client, '${baseURL}/'+this.#version+'/${service}?wsdl')`,
   )}
 
   get #soapHeaders() {
@@ -78,7 +85,7 @@ export class GoogleAdManager {
   ) {
     return async (): Promise<C> => {
       const [token, client] = await Promise.all([
-        this.#jwt.authorize(),
+        this.#credentialsPromise,
         createClient(wsdlPath, {
           ignoredNamespaces: {
             namespaces: ['tns'],
@@ -110,7 +117,7 @@ async function generateIndex() {
     filePath,
     /* ts */ `export * from './query'
 export * from './api/${basename(latestAPI, extname(latestAPI))}'
-`
+`,
   )
 }
 
