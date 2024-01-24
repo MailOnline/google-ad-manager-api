@@ -33,6 +33,9 @@ jobs:
           JWT_KEY: ${{ secrets.JWT_KEY }}
           NETWORK_CODE: ${{ secrets.NETWORK_CODE }}
 
+      - name: Setup git user
+        uses: fregante/setup-git-user@v2
+
       - name: Update state
         run: yarn commit:state
 

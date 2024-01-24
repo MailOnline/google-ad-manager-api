@@ -47,7 +47,7 @@ async function commitMessage() {
     body += `\n\nAdded version${added.length > 1 ? 's' : ''} ${added.join(' ')}`
   }
   if (removed.length) {
-    type = 'feat!'
+    type = 'feat'
     body += `\n\nBREAKING CHANGE: Removed version${
       removed.length > 1 ? 's' : ''
     } ${removed}`
