@@ -21,7 +21,7 @@ jobs:
           node-version-file: .nvmrc
 
       - name: Setup
-        run: yarn --frozen-lockfile
+        run: yarn --immutable
 
       - name: Build
         run: yarn build
