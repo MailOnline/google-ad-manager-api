@@ -50,7 +50,7 @@ const RAW_RUNTIME_STATE =
           ["cz-conventional-changelog", "npm:3.3.0"],\
           ["dotenv-extended", "npm:2.9.0"],\
           ["google-auth-library", "npm:9.5.0"],\
-          ["husky", "npm:9.0.6"],\
+          ["husky", "npm:9.0.7"],\
           ["jest", "virtual:d9229f1b7c5a259acf00d7e72e1268ab77ed605086423c334fd3d275d6b9fcf6ddafca867e00be62f2246f0e1f1bf28fa65d683eb7fa3d5ba69ec29da92ea5fb#npm:29.7.0"],\
           ["lint-staged", "npm:15.2.0"],\
           ["lodash", "npm:4.17.21"],\
@@ -1612,7 +1612,7 @@ const RAW_RUNTIME_STATE =
           ["cz-conventional-changelog", "npm:3.3.0"],\
           ["dotenv-extended", "npm:2.9.0"],\
           ["google-auth-library", "npm:9.5.0"],\
-          ["husky", "npm:9.0.6"],\
+          ["husky", "npm:9.0.7"],\
           ["jest", "virtual:d9229f1b7c5a259acf00d7e72e1268ab77ed605086423c334fd3d275d6b9fcf6ddafca867e00be62f2246f0e1f1bf28fa65d683eb7fa3d5ba69ec29da92ea5fb#npm:29.7.0"],\
           ["lint-staged", "npm:15.2.0"],\
           ["lodash", "npm:4.17.21"],\
@@ -6772,10 +6772,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["husky", [\
-      ["npm:9.0.6", {\
-        "packageLocation": "../../../../cache/others/berry/cache/husky-npm-9.0.6-8bf1af02c7-10c0.zip/node_modules/husky/",\
+      ["npm:9.0.7", {\
+        "packageLocation": "../../../../cache/others/berry/cache/husky-npm-9.0.7-b26fc41da3-10c0.zip/node_modules/husky/",\
         "packageDependencies": [\
-          ["husky", "npm:9.0.6"]\
+          ["husky", "npm:9.0.7"]\
         ],\
         "linkType": "HARD"\
       }]\
