@@ -1080,7 +1080,7 @@ __metadata:
     crawler: "npm:1.5.0"
     cz-conventional-changelog: "npm:3.3.0"
     dotenv-extended: "npm:2.9.0"
-    google-auth-library: "npm:9.5.0"
+    google-auth-library: "npm:9.6.0"
     husky: "npm:9.0.7"
     jest: "npm:29.7.0"
     lint-staged: "npm:15.2.0"
@@ -5170,9 +5170,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"google-auth-library@npm:9.5.0":
-  version: 9.5.0
-  resolution: "google-auth-library@npm:9.5.0"
+"google-auth-library@npm:9.6.0":
+  version: 9.6.0
+  resolution: "google-auth-library@npm:9.6.0"
   dependencies:
     base64-js: "npm:^1.3.0"
     ecdsa-sig-formatter: "npm:^1.0.11"
@@ -5180,7 +5180,7 @@ __metadata:
     gcp-metadata: "npm:^6.1.0"
     gtoken: "npm:^7.0.0"
     jws: "npm:^4.0.0"
-  checksum: 56a112900ec1363c7abab2c6d9923722fd0563120d57de14a30cec115cb1a037e8174f1570653e0cd459a5b8ae834c55106e94655d1939dc5eb35c397cb75ad6
+  checksum: 5656bb2cf6060c0266ba9834015bed502e5ecccb83ba4211533b0b8b6b58ffda0f4010806b8f731aa3029e0d957b7c3a8c1a5e35bcf6188dff185738dd8c5e9f
   languageName: node
   linkType: hard
 
