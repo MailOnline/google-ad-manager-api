@@ -52,7 +52,7 @@ const RAW_RUNTIME_STATE =
           ["google-auth-library", "npm:9.6.0"],\
           ["husky", "npm:9.0.7"],\
           ["jest", "virtual:d9229f1b7c5a259acf00d7e72e1268ab77ed605086423c334fd3d275d6b9fcf6ddafca867e00be62f2246f0e1f1bf28fa65d683eb7fa3d5ba69ec29da92ea5fb#npm:29.7.0"],\
-          ["lint-staged", "npm:15.2.0"],\
+          ["lint-staged", "npm:15.2.1"],\
           ["lodash", "npm:4.17.21"],\
           ["mkdirp", "npm:3.0.1"],\
           ["prettier", "npm:3.2.4"],\
@@ -1614,7 +1614,7 @@ const RAW_RUNTIME_STATE =
           ["google-auth-library", "npm:9.6.0"],\
           ["husky", "npm:9.0.7"],\
           ["jest", "virtual:d9229f1b7c5a259acf00d7e72e1268ab77ed605086423c334fd3d275d6b9fcf6ddafca867e00be62f2246f0e1f1bf28fa65d683eb7fa3d5ba69ec29da92ea5fb#npm:29.7.0"],\
-          ["lint-staged", "npm:15.2.0"],\
+          ["lint-staged", "npm:15.2.1"],\
           ["lodash", "npm:4.17.21"],\
           ["mkdirp", "npm:3.0.1"],\
           ["prettier", "npm:3.2.4"],\
@@ -8375,16 +8375,16 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["lint-staged", [\
-      ["npm:15.2.0", {\
-        "packageLocation": "../../../../cache/others/berry/cache/lint-staged-npm-15.2.0-2aacd96825-10c0.zip/node_modules/lint-staged/",\
+      ["npm:15.2.1", {\
+        "packageLocation": "../../../../cache/others/berry/cache/lint-staged-npm-15.2.1-89ca526fd0-10c0.zip/node_modules/lint-staged/",\
         "packageDependencies": [\
-          ["lint-staged", "npm:15.2.0"],\
+          ["lint-staged", "npm:15.2.1"],\
           ["chalk", "npm:5.3.0"],\
           ["commander", "npm:11.1.0"],\
           ["debug", "virtual:4b12ba5111caf7e8338099bdbc7cb046a9f8e079a44e74d0c03dca469876e3071ebbe671c5e90ae6b78ae33e22c205fa5ed32169a4aabd1404b13c56d09986e1#npm:4.3.4"],\
           ["execa", "npm:8.0.1"],\
           ["lilconfig", "npm:3.0.0"],\
-          ["listr2", "npm:8.0.0"],\
+          ["listr2", "npm:8.0.1"],\
           ["micromatch", "npm:4.0.5"],\
           ["pidtree", "npm:0.6.0"],\
           ["string-argv", "npm:0.3.2"],\
@@ -8394,10 +8394,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["listr2", [\
-      ["npm:8.0.0", {\
-        "packageLocation": "../../../../cache/others/berry/cache/listr2-npm-8.0.0-24640e7d69-10c0.zip/node_modules/listr2/",\
+      ["npm:8.0.1", {\
+        "packageLocation": "../../../../cache/others/berry/cache/listr2-npm-8.0.1-634f89e3e8-10c0.zip/node_modules/listr2/",\
         "packageDependencies": [\
-          ["listr2", "npm:8.0.0"],\
+          ["listr2", "npm:8.0.1"],\
           ["cli-truncate", "npm:4.0.0"],\
           ["colorette", "npm:2.0.20"],\
           ["eventemitter3", "npm:5.0.1"],\
