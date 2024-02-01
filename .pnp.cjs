@@ -37,7 +37,7 @@ const RAW_RUNTIME_STATE =
           ["@semantic-release/npm", "virtual:d9229f1b7c5a259acf00d7e72e1268ab77ed605086423c334fd3d275d6b9fcf6ddafca867e00be62f2246f0e1f1bf28fa65d683eb7fa3d5ba69ec29da92ea5fb#npm:11.0.2"],\
           ["@semantic-release/release-notes-generator", "virtual:d9229f1b7c5a259acf00d7e72e1268ab77ed605086423c334fd3d275d6b9fcf6ddafca867e00be62f2246f0e1f1bf28fa65d683eb7fa3d5ba69ec29da92ea5fb#npm:12.1.0"],\
           ["@types/crawler", "npm:1.2.6"],\
-          ["@types/jest", "npm:29.5.11"],\
+          ["@types/jest", "npm:29.5.12"],\
           ["@types/lodash", "npm:4.14.202"],\
           ["@types/node", "npm:20.11.14"],\
           ["@types/sax", "npm:1.2.7"],\
@@ -1599,7 +1599,7 @@ const RAW_RUNTIME_STATE =
           ["@semantic-release/npm", "virtual:d9229f1b7c5a259acf00d7e72e1268ab77ed605086423c334fd3d275d6b9fcf6ddafca867e00be62f2246f0e1f1bf28fa65d683eb7fa3d5ba69ec29da92ea5fb#npm:11.0.2"],\
           ["@semantic-release/release-notes-generator", "virtual:d9229f1b7c5a259acf00d7e72e1268ab77ed605086423c334fd3d275d6b9fcf6ddafca867e00be62f2246f0e1f1bf28fa65d683eb7fa3d5ba69ec29da92ea5fb#npm:12.1.0"],\
           ["@types/crawler", "npm:1.2.6"],\
-          ["@types/jest", "npm:29.5.11"],\
+          ["@types/jest", "npm:29.5.12"],\
           ["@types/lodash", "npm:4.14.202"],\
           ["@types/node", "npm:20.11.14"],\
           ["@types/sax", "npm:1.2.7"],\
@@ -2778,10 +2778,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/jest", [\
-      ["npm:29.5.11", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@types-jest-npm-29.5.11-1ede28257d-10c0.zip/node_modules/@types/jest/",\
+      ["npm:29.5.12", {\
+        "packageLocation": "../../../../cache/others/berry/cache/@types-jest-npm-29.5.12-6459b9d012-10c0.zip/node_modules/@types/jest/",\
         "packageDependencies": [\
-          ["@types/jest", "npm:29.5.11"],\
+          ["@types/jest", "npm:29.5.12"],\
           ["expect", "npm:29.7.0"],\
           ["pretty-format", "npm:29.7.0"]\
         ],\
@@ -11833,7 +11833,7 @@ const RAW_RUNTIME_STATE =
           ["@types/babel-jest", null],\
           ["@types/babel__core", null],\
           ["@types/esbuild", null],\
-          ["@types/jest", "npm:29.5.11"],\
+          ["@types/jest", "npm:29.5.12"],\
           ["@types/jest__types", null],\
           ["@types/typescript", null],\
           ["babel-jest", null],\
