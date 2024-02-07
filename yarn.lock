@@ -1096,7 +1096,7 @@ __metadata:
     ts-toolbelt: "npm:9.6.0"
     tslib: "npm:2.6.2"
     typescript: "npm:5.3.3"
-    wsdl-tsclient: "https://github.com/johngeorgewright/wsdl-tsclient.git#commit=103a72f79f905195bfe2fefbc322c4f938691785"
+    wsdl-tsclient: "github:johngeorgewright/wsdl-tsclient#node-soap-types"
   languageName: unknown
   linkType: soft
 
@@ -10661,7 +10661,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wsdl-tsclient@https://github.com/johngeorgewright/wsdl-tsclient.git#commit=103a72f79f905195bfe2fefbc322c4f938691785":
+"wsdl-tsclient@github:johngeorgewright/wsdl-tsclient#node-soap-types":
   version: 1.4.0
   resolution: "wsdl-tsclient@https://github.com/johngeorgewright/wsdl-tsclient.git#commit=103a72f79f905195bfe2fefbc322c4f938691785"
   dependencies:
