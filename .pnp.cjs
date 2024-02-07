@@ -49,7 +49,7 @@ const RAW_RUNTIME_STATE =
           ["crawler", "npm:1.5.0"],\
           ["cz-conventional-changelog", "npm:3.3.0"],\
           ["dotenv-extended", "npm:2.9.0"],\
-          ["google-auth-library", "npm:9.6.2"],\
+          ["google-auth-library", "npm:9.6.3"],\
           ["husky", "npm:9.0.10"],\
           ["jest", "virtual:d9229f1b7c5a259acf00d7e72e1268ab77ed605086423c334fd3d275d6b9fcf6ddafca867e00be62f2246f0e1f1bf28fa65d683eb7fa3d5ba69ec29da92ea5fb#npm:29.7.0"],\
           ["lint-staged", "npm:15.2.2"],\
@@ -1611,7 +1611,7 @@ const RAW_RUNTIME_STATE =
           ["crawler", "npm:1.5.0"],\
           ["cz-conventional-changelog", "npm:3.3.0"],\
           ["dotenv-extended", "npm:2.9.0"],\
-          ["google-auth-library", "npm:9.6.2"],\
+          ["google-auth-library", "npm:9.6.3"],\
           ["husky", "npm:9.0.10"],\
           ["jest", "virtual:d9229f1b7c5a259acf00d7e72e1268ab77ed605086423c334fd3d275d6b9fcf6ddafca867e00be62f2246f0e1f1bf28fa65d683eb7fa3d5ba69ec29da92ea5fb#npm:29.7.0"],\
           ["lint-staged", "npm:15.2.2"],\
@@ -6482,10 +6482,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["google-auth-library", [\
-      ["npm:9.6.2", {\
-        "packageLocation": "../../../../cache/others/berry/cache/google-auth-library-npm-9.6.2-7844a2b222-10c0.zip/node_modules/google-auth-library/",\
+      ["npm:9.6.3", {\
+        "packageLocation": "../../../../cache/others/berry/cache/google-auth-library-npm-9.6.3-91c4be5def-10c0.zip/node_modules/google-auth-library/",\
         "packageDependencies": [\
-          ["google-auth-library", "npm:9.6.2"],\
+          ["google-auth-library", "npm:9.6.3"],\
           ["base64-js", "npm:1.5.1"],\
           ["ecdsa-sig-formatter", "npm:1.0.11"],\
           ["gaxios", "npm:6.1.1"],\
