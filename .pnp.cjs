@@ -27,7 +27,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@commitlint/cli", "npm:18.6.1"],\
-          ["@commitlint/config-conventional", "npm:18.6.1"],\
+          ["@commitlint/config-conventional", "npm:18.6.2"],\
           ["@commitlint/types", "npm:18.6.1"],\
           ["@jest/types", "npm:29.6.3"],\
           ["@johngw/fs", "npm:3.0.1"],\
@@ -909,10 +909,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@commitlint/config-conventional", [\
-      ["npm:18.6.1", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@commitlint-config-conventional-npm-18.6.1-1dec1a01a2-10c0.zip/node_modules/@commitlint/config-conventional/",\
+      ["npm:18.6.2", {\
+        "packageLocation": "../../../../cache/others/berry/cache/@commitlint-config-conventional-npm-18.6.2-d59698bbcc-10c0.zip/node_modules/@commitlint/config-conventional/",\
         "packageDependencies": [\
-          ["@commitlint/config-conventional", "npm:18.6.1"],\
+          ["@commitlint/config-conventional", "npm:18.6.2"],\
           ["@commitlint/types", "npm:18.6.1"],\
           ["conventional-changelog-conventionalcommits", "npm:7.0.2"]\
         ],\
@@ -1590,7 +1590,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@johngw/google-ad-manager-api", "workspace:."],\
           ["@commitlint/cli", "npm:18.6.1"],\
-          ["@commitlint/config-conventional", "npm:18.6.1"],\
+          ["@commitlint/config-conventional", "npm:18.6.2"],\
           ["@commitlint/types", "npm:18.6.1"],\
           ["@jest/types", "npm:29.6.3"],\
           ["@johngw/fs", "npm:3.0.1"],\
