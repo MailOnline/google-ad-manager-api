@@ -1,6 +1,6 @@
 {
   "name": "@johngw/google-ad-manager-api",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Compose and react upon redux actions",
   "main": "dist/index.js",
   "scripts": {
