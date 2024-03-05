@@ -8,7 +8,7 @@ export function formatValue(value: Comparable): string {
     case 'number':
       return value.toString()
     case 'string':
-      return `'${value.replace("'", "\\'")}'`
+      return `'${value.replaceAll("'", "\\'")}'`
     case 'object':
       return `'${value.toISOString()}'`
     default:
