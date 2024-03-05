@@ -35,7 +35,12 @@ jobs:
 
       - name: Update state
         id: state
-        run: echo 'commit=$(yarn commit:state)' >> $GITHUB_OUTPUT
+        run: | # shell
+          COMMIT="$(yarn commit:state)"
+          COMMIT="${COMMIT//'%'/'%25'}"
+          COMMIT="${COMMIT//$'\n'/'%0A'}"
+          COMMIT="${COMMIT//$'\r'/'%0D'}"
+          echo "commit=${COMMIT}" >> $GITHUB_OUTPUT
 
       - name: Create Pull Request
         if: steps.state.outputs.commit != ''
