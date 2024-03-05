@@ -49,4 +49,5 @@ jobs:
           body: ${{ fromJson(steps.state.outputs.commit).prBody }}
           branch: ${{ fromJson(steps.state.outputs.commit).branch }}
           commit-message: ${{ fromJson(steps.state.outputs.commit).commitMessage }}
+          labels: ${{ fromJson(steps.state.outputs.commit).labels }}
           title: ${{ fromJson(steps.state.outputs.commit).prTitle }}

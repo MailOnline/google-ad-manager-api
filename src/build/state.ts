@@ -20,17 +20,20 @@ async function commitInfo() {
   const { added, removed } = await checkState()
   let type = ''
   const body: string[] = []
+  const labels: string[] = []
   if (added.length) {
     type = 'feat'
     body.push(`Added version${added.length > 1 ? 's' : ''} ${added.join(' ')}`)
+    labels.push('enhancement')
   }
   if (removed.length) {
-    type = 'feat'
+    type = 'feat!'
     body.push(
       `BREAKING CHANGE: Removed version${
         removed.length > 1 ? 's' : ''
       } ${removed}`,
     )
+    labels.push('breaking change')
   }
   return type
     ? {
@@ -43,6 +46,7 @@ async function commitInfo() {
               : type),
         commitType: type,
         commitMessage: `${type}(state): update gam api${body.length ? `\n\n${body.join('\n\n')}` : ''}`,
+        labels: labels.join(','),
         prTitle: `GAM API Updates`,
         prBody: body.join('\n\n'),
       }
