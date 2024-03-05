@@ -33,13 +33,15 @@ jobs:
           JWT_KEY: ${{ secrets.JWT_KEY }}
           NETWORK_CODE: ${{ secrets.NETWORK_CODE }}
 
-      - name: Setup git user
-        uses: fregante/setup-git-user@v2
-
       - name: Update state
-        run: yarn commit:state
+        id: state
+        run: echo "commit=$(yarn commit:state)" >> $GITHUB_OUTPUT
 
-      - name: Push changes
-        uses: ad-m/github-push-action@master
+      - name: Create Pull Request
+        if: steps.state.outputs.commit != ''
+        uses: peter-evans/create-pull-request@v6
         with:
-          github_token: ${{ secrets.PUSH_TOKEN }}
+          body: ${{ fromJson(steps.state.outputs.commit).prBody }}
+          branch: ${{ fromJson(steps.state.outputs.commit).branch }}
+          commit-message: ${{ fromJson(steps.state.outputs.commit).commitMessage }}
+          title: ${{ fromJson(steps.state.outputs.commit).prTitle }}

@@ -1,44 +1,22 @@
 import { difference } from 'lodash'
-import { SpawnOptionsWithoutStdio, spawn as spawnCB } from 'node:child_process'
 import { readdir, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 
-commit().catch(console.error)
+commit().then((message) => message && console.info(JSON.stringify(message)))
 
 async function commit() {
-  const message = await commitMessage()
+  const commit = await commitInfo()
 
-  if (!message) {
-    console.info('no change to state')
+  if (!commit) {
+    console.warn('no change to state')
     return
   }
 
   await updateState()
-  await spawn('git', ['add', 'src/state.json'])
-  await spawn('git', ['commit', '-m', message])
+  return commit
 }
 
-function spawn(
-  command: string,
-  args: ReadonlyArray<string>,
-  options?: SpawnOptionsWithoutStdio,
-) {
-  return new Promise<void>((resolve, reject) => {
-    spawnCB(command, args, {
-      ...options,
-      stdio: [process.stdin, process.stdout, process.stderr],
-    })
-      .on('error', (error) => {
-        reject(error)
-      })
-      .on('close', (code) => {
-        if (code === 0) resolve()
-        else reject(code)
-      })
-  })
-}
-
-async function commitMessage() {
+async function commitInfo() {
   const { added, removed } = await checkState()
   let type = ''
   let body = ''
@@ -52,7 +30,21 @@ async function commitMessage() {
       removed.length > 1 ? 's' : ''
     } ${removed}`
   }
-  return type && `${type}(state): update${body}`
+  return type
+    ? {
+        branch:
+          'gam/' +
+          (added.length
+            ? added.join('-')
+            : removed.length
+              ? `removed-${removed.join('-removed-')}`
+              : type),
+        commitType: type,
+        commitMessage: `${type}(state): update gam api${body}`,
+        prTitle: `GAM API Updates`,
+        prBody: body,
+      }
+    : null
 }
 
 async function checkState() {
