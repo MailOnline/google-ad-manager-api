@@ -43,7 +43,7 @@
     "@types/node": "20.11.28",
     "@types/sax": "1.2.7",
     "@types/source-map-support": "0.5.10",
-    "axios": "1.6.7",
+    "axios": "1.6.8",
     "commitizen": "4.3.0",
     "concurrently": "8.2.2",
     "crawler": "1.5.0",
