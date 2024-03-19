@@ -26,7 +26,7 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
-          ["@commitlint/cli", "npm:19.2.0"],\
+          ["@commitlint/cli", "npm:19.2.1"],\
           ["@commitlint/config-conventional", "npm:19.1.0"],\
           ["@commitlint/types", "npm:19.0.3"],\
           ["@jest/types", "npm:29.6.3"],\
@@ -890,14 +890,14 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@commitlint/cli", [\
-      ["npm:19.2.0", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@commitlint-cli-npm-19.2.0-b86526b2ed-10c0.zip/node_modules/@commitlint/cli/",\
+      ["npm:19.2.1", {\
+        "packageLocation": "../../../../cache/others/berry/cache/@commitlint-cli-npm-19.2.1-0d4999d187-10c0.zip/node_modules/@commitlint/cli/",\
         "packageDependencies": [\
-          ["@commitlint/cli", "npm:19.2.0"],\
+          ["@commitlint/cli", "npm:19.2.1"],\
           ["@commitlint/format", "npm:19.0.3"],\
           ["@commitlint/lint", "npm:19.1.0"],\
           ["@commitlint/load", "npm:19.2.0"],\
-          ["@commitlint/read", "npm:19.2.0"],\
+          ["@commitlint/read", "npm:19.2.1"],\
           ["@commitlint/types", "npm:19.0.3"],\
           ["execa", "npm:8.0.1"],\
           ["yargs", "npm:17.7.2"]\
@@ -1064,10 +1064,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@commitlint/read", [\
-      ["npm:19.2.0", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@commitlint-read-npm-19.2.0-c466719a33-10c0.zip/node_modules/@commitlint/read/",\
+      ["npm:19.2.1", {\
+        "packageLocation": "../../../../cache/others/berry/cache/@commitlint-read-npm-19.2.1-3909353ecc-10c0.zip/node_modules/@commitlint/read/",\
         "packageDependencies": [\
-          ["@commitlint/read", "npm:19.2.0"],\
+          ["@commitlint/read", "npm:19.2.1"],\
           ["@commitlint/top-level", "npm:19.0.0"],\
           ["@commitlint/types", "npm:19.0.3"],\
           ["execa", "npm:8.0.1"],\
@@ -1587,7 +1587,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@johngw/google-ad-manager-api", "workspace:."],\
-          ["@commitlint/cli", "npm:19.2.0"],\
+          ["@commitlint/cli", "npm:19.2.1"],\
           ["@commitlint/config-conventional", "npm:19.1.0"],\
           ["@commitlint/types", "npm:19.0.3"],\
           ["@jest/types", "npm:29.6.3"],\
