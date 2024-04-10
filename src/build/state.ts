@@ -22,12 +22,12 @@ async function commitInfo() {
   const body: string[] = []
   const labels: string[] = []
   if (added.length) {
-    type = 'feat'
+    type = 'feat(state)'
     body.push(`Added version${added.length > 1 ? 's' : ''} ${added.join(' ')}`)
     labels.push('enhancement')
   }
   if (removed.length) {
-    type = 'feat!'
+    type = 'feat(state)!'
     body.push(
       `BREAKING CHANGE: Removed version${
         removed.length > 1 ? 's' : ''
@@ -45,7 +45,7 @@ async function commitInfo() {
               ? `removed-${removed.join('-removed-')}`
               : type),
         commitType: type,
-        commitMessage: `${type}(state): update gam api${body.length ? `\n\n${body.join('\n\n')}` : ''}`,
+        commitMessage: `${type}: update gam api${body.length ? `\n\n${body.join('\n\n')}` : ''}`,
         labels: labels.join(','),
         prTitle: `GAM API Updates`,
         prBody: body.join('\n\n'),
