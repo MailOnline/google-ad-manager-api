@@ -29,7 +29,7 @@ test('line items', async () => {
   })
 
   expect(response.rval?.results).toHaveLength(10)
-})
+}, 10_000)
 
 test('pagination', async () => {
   const client = await api.createLineItemServiceClient()

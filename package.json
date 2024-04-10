@@ -1,6 +1,6 @@
 {
   "name": "@johngw/google-ad-manager-api",
-  "version": "4.0.1",
+  "version": "5.0.2",
   "description": "Compose and react upon redux actions",
   "main": "dist/index.js",
   "scripts": {
@@ -28,38 +28,41 @@
   },
   "homepage": "https://github.com/johngeorgewright/google-ad-manager-api#readme",
   "devDependencies": {
-    "@commitlint/cli": "18.5.0",
-    "@commitlint/config-conventional": "18.5.0",
-    "@commitlint/types": "18.4.4",
+    "@commitlint/cli": "19.2.1",
+    "@commitlint/config-conventional": "19.1.0",
+    "@commitlint/types": "19.0.3",
     "@jest/types": "29.6.3",
-    "@semantic-release/commit-analyzer": "11.1.0",
+    "@johngw/fs": "3.0.1",
+    "@semantic-release/commit-analyzer": "12.0.0",
     "@semantic-release/git": "10.0.1",
-    "@semantic-release/github": "9.2.6",
-    "@semantic-release/npm": "11.0.2",
-    "@semantic-release/release-notes-generator": "12.1.0",
+    "@semantic-release/github": "10.0.3",
+    "@semantic-release/npm": "12.0.0",
+    "@semantic-release/release-notes-generator": "13.0.0",
     "@types/crawler": "1.2.6",
-    "@types/jest": "29.5.11",
+    "@types/jest": "29.5.12",
     "@types/lodash": "^4.14.201",
-    "@types/node": "20.11.6",
+    "@types/node": "20.12.7",
     "@types/sax": "1.2.7",
     "@types/source-map-support": "0.5.10",
-    "axios": "1.6.5",
+    "axios": "1.6.8",
     "commitizen": "4.3.0",
     "concurrently": "8.2.2",
     "crawler": "1.5.0",
     "cz-conventional-changelog": "3.3.0",
     "dotenv-extended": "2.9.0",
-    "husky": "8.0.3",
+    "husky": "9.0.11",
     "jest": "29.7.0",
-    "lint-staged": "15.2.0",
+    "lint-staged": "15.2.2",
+    "lodash": "^4.17.21",
     "mkdirp": "3.0.1",
-    "prettier": "3.2.4",
+    "prettier": "3.2.5",
     "rimraf": "5.0.5",
-    "semantic-release": "23.0.0",
+    "semantic-release": "23.0.8",
     "source-map-support": "0.5.21",
     "ts-jest": "29.1.2",
     "ts-node": "10.9.2",
-    "typescript": "5.3.3"
+    "typescript": "5.4.4",
+    "wsdl-tsclient": "github:johngeorgewright/wsdl-tsclient#node-soap-types"
   },
   "lint-staged": {
     "*.{md,json,js,jsx,ts,tsx,yml,yaml}": [
@@ -72,17 +75,14 @@
     }
   },
   "dependencies": {
-    "@johngw/fs": "3.0.1",
     "assert-never": "^1.2.1",
-    "google-auth-library": "9.4.2",
-    "lodash": "^4.17.21",
+    "google-auth-library": "9.7.0",
     "soap": "1.0.0",
     "ts-toolbelt": "9.6.0",
-    "tslib": "2.6.2",
-    "wsdl-tsclient": "https://github.com/johngeorgewright/wsdl-tsclient.git#commit=103a72f79f905195bfe2fefbc322c4f938691785"
+    "tslib": "2.6.2"
   },
   "resolutions": {
     "soap": "^1.0.0"
   },
-  "packageManager": "yarn@4.0.2"
+  "packageManager": "yarn@4.1.1"
 }

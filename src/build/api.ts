@@ -24,7 +24,7 @@ ${mapJoin(
 ${mapJoin(
   services,
   (service) =>
-    /*ts*/ `export * as ${service} from '../service/${version}/${service.toLowerCase()}'`,
+    `export * as ${service} from '../service/${version}/${service.toLowerCase()}'`,
 )}
 
 export interface GoogleAdManagerOptions {
@@ -57,7 +57,7 @@ export class GoogleAdManager {
   ${mapJoin(
     services,
     (service) =>
-      /* ts */ `create${service}Client = this.#wrapClientCreator(create${service}Client, '${baseURL}/'+this.#version+'/${service}?wsdl')`,
+      `create${service}Client = this.#wrapClientCreator(create${service}Client, '${baseURL}/'+this.#version+'/${service}?wsdl')`,
   )}
 
   get #soapHeaders() {
