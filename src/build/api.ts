@@ -35,7 +35,7 @@ export interface GoogleAdManagerOptions {
 
 export class GoogleAdManager {
   #applicationName: string
-  #credentialsPromise: Promise<Credentials>
+  #credentialsPromise!: Promise<Credentials>
   #jwt: JWT
   #networkCode: string
   #version = '${version}'
@@ -49,7 +49,7 @@ export class GoogleAdManager {
   }
 
   get credentials() {
-    if (!this.#credentialsPromise) this.#credentialsPromise = this.authorize()
+    if (!this.#credentialsPromise) this.authorize()
     return this.#credentialsPromise
   }
 
