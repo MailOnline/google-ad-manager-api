@@ -14,7 +14,7 @@
     "start:build": "tsc --watch --preserveWatchOutput",
     "start:test": "jest --watch",
     "test": "jest",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
