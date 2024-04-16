@@ -45,8 +45,12 @@ export class GoogleAdManager {
   constructor(options: GoogleAdManagerOptions) {
     this.#applicationName = options.applicationName
     this.#jwt = new JWT(options.jwtOptions)
-    this.#credentialsPromise = this.authorize()
     this.#networkCode = options.networkCode.toString()
+  }
+
+  get credentials() {
+    if (!this.#credentialsPromise) this.#credentialsPromise = this.authorize()
+    return this.#credentialsPromise
   }
 
   authorize() {
@@ -85,7 +89,7 @@ export class GoogleAdManager {
   ) {
     return async (): Promise<C> => {
       const [token, client] = await Promise.all([
-        this.#credentialsPromise,
+        this.credentials,
         createClient(wsdlPath, {
           ignoredNamespaces: {
             namespaces: ['tns'],
