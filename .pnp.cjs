@@ -58,7 +58,7 @@ const RAW_RUNTIME_STATE =
           ["prettier", "npm:3.2.5"],\
           ["rimraf", "npm:5.0.5"],\
           ["semantic-release", "npm:23.0.8"],\
-          ["soap", "virtual:d9229f1b7c5a259acf00d7e72e1268ab77ed605086423c334fd3d275d6b9fcf6ddafca867e00be62f2246f0e1f1bf28fa65d683eb7fa3d5ba69ec29da92ea5fb#npm:1.0.1"],\
+          ["soap", "npm:1.0.2"],\
           ["source-map-support", "npm:0.5.21"],\
           ["ts-jest", "virtual:d9229f1b7c5a259acf00d7e72e1268ab77ed605086423c334fd3d275d6b9fcf6ddafca867e00be62f2246f0e1f1bf28fa65d683eb7fa3d5ba69ec29da92ea5fb#npm:29.1.2"],\
           ["ts-node", "virtual:d9229f1b7c5a259acf00d7e72e1268ab77ed605086423c334fd3d275d6b9fcf6ddafca867e00be62f2246f0e1f1bf28fa65d683eb7fa3d5ba69ec29da92ea5fb#npm:10.9.2"],\
@@ -1619,7 +1619,7 @@ const RAW_RUNTIME_STATE =
           ["prettier", "npm:3.2.5"],\
           ["rimraf", "npm:5.0.5"],\
           ["semantic-release", "npm:23.0.8"],\
-          ["soap", "virtual:d9229f1b7c5a259acf00d7e72e1268ab77ed605086423c334fd3d275d6b9fcf6ddafca867e00be62f2246f0e1f1bf28fa65d683eb7fa3d5ba69ec29da92ea5fb#npm:1.0.1"],\
+          ["soap", "npm:1.0.2"],\
           ["source-map-support", "npm:0.5.21"],\
           ["ts-jest", "virtual:d9229f1b7c5a259acf00d7e72e1268ab77ed605086423c334fd3d275d6b9fcf6ddafca867e00be62f2246f0e1f1bf28fa65d683eb7fa3d5ba69ec29da92ea5fb#npm:29.1.2"],\
           ["ts-node", "virtual:d9229f1b7c5a259acf00d7e72e1268ab77ed605086423c334fd3d275d6b9fcf6ddafca867e00be62f2246f0e1f1bf28fa65d683eb7fa3d5ba69ec29da92ea5fb#npm:10.9.2"],\
@@ -10945,41 +10945,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["soap", [\
-      ["npm:1.0.1", {\
-        "packageLocation": "../../../../cache/others/berry/cache/soap-npm-1.0.1-5e75cf23d7-10c0.zip/node_modules/soap/",\
+      ["npm:1.0.2", {\
+        "packageLocation": "../../../../cache/others/berry/cache/soap-npm-1.0.2-9815e645f5-10c0.zip/node_modules/soap/",\
         "packageDependencies": [\
-          ["soap", "npm:1.0.1"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["virtual:84ceecb419d7df8f246d24196264d3208bcda8bb0bf61b71e9c8645d645a5923f5454404c981795e69b8ed6c163afe0829c63c95cccc8197124e661f6d405981#npm:1.0.1", {\
-        "packageLocation": "./.yarn/__virtual__/soap-virtual-f49e391538/5/cache/others/berry/cache/soap-npm-1.0.1-5e75cf23d7-10c0.zip/node_modules/soap/",\
-        "packageDependencies": [\
-          ["soap", "virtual:84ceecb419d7df8f246d24196264d3208bcda8bb0bf61b71e9c8645d645a5923f5454404c981795e69b8ed6c163afe0829c63c95cccc8197124e661f6d405981#npm:1.0.1"],\
-          ["@types/axios", null],\
-          ["axios", null],\
-          ["axios-ntlm", "npm:1.4.2"],\
-          ["debug", "virtual:4b12ba5111caf7e8338099bdbc7cb046a9f8e079a44e74d0c03dca469876e3071ebbe671c5e90ae6b78ae33e22c205fa5ed32169a4aabd1404b13c56d09986e1#npm:4.3.4"],\
-          ["formidable", "npm:3.5.1"],\
-          ["get-stream", "npm:6.0.1"],\
-          ["lodash", "npm:4.17.21"],\
-          ["sax", "npm:1.2.4"],\
-          ["strip-bom", "npm:3.0.0"],\
-          ["uuid", "npm:8.3.2"],\
-          ["whatwg-mimetype", "npm:3.0.0"],\
-          ["xml-crypto", "npm:3.2.0"]\
-        ],\
-        "packagePeers": [\
-          "@types/axios",\
-          "axios"\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["virtual:d9229f1b7c5a259acf00d7e72e1268ab77ed605086423c334fd3d275d6b9fcf6ddafca867e00be62f2246f0e1f1bf28fa65d683eb7fa3d5ba69ec29da92ea5fb#npm:1.0.1", {\
-        "packageLocation": "./.yarn/__virtual__/soap-virtual-3a0515df05/5/cache/others/berry/cache/soap-npm-1.0.1-5e75cf23d7-10c0.zip/node_modules/soap/",\
-        "packageDependencies": [\
-          ["soap", "virtual:d9229f1b7c5a259acf00d7e72e1268ab77ed605086423c334fd3d275d6b9fcf6ddafca867e00be62f2246f0e1f1bf28fa65d683eb7fa3d5ba69ec29da92ea5fb#npm:1.0.1"],\
-          ["@types/axios", null],\
+          ["soap", "npm:1.0.2"],\
           ["axios", "npm:1.6.8"],\
           ["axios-ntlm", "npm:1.4.2"],\
           ["debug", "virtual:4b12ba5111caf7e8338099bdbc7cb046a9f8e079a44e74d0c03dca469876e3071ebbe671c5e90ae6b78ae33e22c205fa5ed32169a4aabd1404b13c56d09986e1#npm:4.3.4"],\
@@ -10991,10 +10960,6 @@ const RAW_RUNTIME_STATE =
           ["uuid", "npm:8.3.2"],\
           ["whatwg-mimetype", "npm:3.0.0"],\
           ["xml-crypto", "npm:3.2.0"]\
-        ],\
-        "packagePeers": [\
-          "@types/axios",\
-          "axios"\
         ],\
         "linkType": "HARD"\
       }]\
@@ -12364,7 +12329,7 @@ const RAW_RUNTIME_STATE =
           ["eslint", "npm:8.49.0"],\
           ["eslint-plugin-prettier", "virtual:84ceecb419d7df8f246d24196264d3208bcda8bb0bf61b71e9c8645d645a5923f5454404c981795e69b8ed6c163afe0829c63c95cccc8197124e661f6d405981#npm:4.2.1"],\
           ["sanitize-filename", "npm:1.6.3"],\
-          ["soap", "virtual:84ceecb419d7df8f246d24196264d3208bcda8bb0bf61b71e9c8645d645a5923f5454404c981795e69b8ed6c163afe0829c63c95cccc8197124e661f6d405981#npm:1.0.1"],\
+          ["soap", "npm:1.0.2"],\
           ["supports-color", "npm:8.1.1"],\
           ["ts-morph", "npm:14.0.0"],\
           ["yargs", "npm:16.2.0"]\
