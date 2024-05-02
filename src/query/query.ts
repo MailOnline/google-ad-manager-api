@@ -1,6 +1,6 @@
 import { Client } from 'soap'
 import { PQLOptions, pql } from './pql'
-import { GetByStatementResponseResult } from './statement'
+import { GetByStatement, GetByStatementResponseResult } from './statement'
 
 /**
  * Query a service wth PQL options.
@@ -31,8 +31,8 @@ import { GetByStatementResponseResult } from './statement'
  */
 export function query<C extends Client, M extends keyof C>(
   client: C,
-  methodName: M,
-  query: PQLOptions<GetByStatementResponseResult<C[M]>>
+  methodName: Parameters<C[M]> extends [GetByStatement] ? M : never,
+  query: PQLOptions<GetByStatementResponseResult<C[M]>>,
 ): ReturnType<C[M]> {
   return client[methodName]({
     filterStatement: {

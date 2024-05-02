@@ -1,6 +1,5 @@
-import { GoogleAdManager, iterate, query } from '../src'
+import { GoogleAdManager, LineItemService, iterate, query } from '../src'
 import { load as dotenv } from 'dotenv-extended'
-import { LineItems } from '../src/service/v202308/lineitemservice'
 
 let api: GoogleAdManager
 
@@ -33,7 +32,7 @@ test('line items', async () => {
 
 test('pagination', async () => {
   const client = await api.createLineItemServiceClient()
-  const items: LineItems[] = []
+  const items: LineItemService.LineItems[] = []
 
   for await (const result of iterate({
     pageSize: 10,
