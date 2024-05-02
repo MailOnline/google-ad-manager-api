@@ -442,11 +442,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/cli@npm:19.2.2":
-  version: 19.2.2
-  resolution: "@commitlint/cli@npm:19.2.2"
+"@commitlint/cli@npm:19.3.0":
+  version: 19.3.0
+  resolution: "@commitlint/cli@npm:19.3.0"
   dependencies:
-    "@commitlint/format": "npm:^19.0.3"
+    "@commitlint/format": "npm:^19.3.0"
     "@commitlint/lint": "npm:^19.2.2"
     "@commitlint/load": "npm:^19.2.0"
     "@commitlint/read": "npm:^19.2.1"
@@ -455,7 +455,7 @@ __metadata:
     yargs: "npm:^17.0.0"
   bin:
     commitlint: cli.js
-  checksum: 10c0/25f4acaaafd089ceee0d5e1fe670eec85999b5dbcf20eb93cd053d9e42de0bec69d18f4f6c9d68be448fcf8889ef3eca91302d828f8b601fddf00180d7ae6396
+  checksum: 10c0/12049b6ccb1fd3939c5713fdc9b2aa9054985f3ced465e9494ce7c23b3c69a9e9ea25c84fffa5ba147b6bb5cd086a29000dfac2218a7592494b007bab592e057
   languageName: node
   linkType: hard
 
@@ -517,13 +517,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/format@npm:^19.0.3":
-  version: 19.0.3
-  resolution: "@commitlint/format@npm:19.0.3"
+"@commitlint/format@npm:^19.3.0":
+  version: 19.3.0
+  resolution: "@commitlint/format@npm:19.3.0"
   dependencies:
     "@commitlint/types": "npm:^19.0.3"
     chalk: "npm:^5.3.0"
-  checksum: 10c0/9d8a5b55ca8e35351c6f1dbbec8f749fe3f7c66f01ba0e248574530fa1dac944b87ee5bd63153a14e3748068a2e9b0b8341cec21c768f384bb5a5c8124902a1f
+  checksum: 10c0/857a1784481edad9013514cbcc9ec93af33acc8bd491f5d23625c53fb93841566ce110e3004ecaab7f4f89c9331940fe63b83922a4a81f419e67b70e0dc90e41
   languageName: node
   linkType: hard
 
@@ -1056,7 +1056,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@johngw/google-ad-manager-api@workspace:."
   dependencies:
-    "@commitlint/cli": "npm:19.2.2"
+    "@commitlint/cli": "npm:19.3.0"
     "@commitlint/config-conventional": "npm:19.2.2"
     "@commitlint/types": "npm:19.0.3"
     "@jest/types": "npm:29.6.3"
@@ -1069,7 +1069,7 @@ __metadata:
     "@types/crawler": "npm:1.2.6"
     "@types/jest": "npm:29.5.12"
     "@types/lodash": "npm:^4.14.201"
-    "@types/node": "npm:20.12.7"
+    "@types/node": "npm:20.12.8"
     "@types/sax": "npm:1.2.7"
     "@types/source-map-support": "npm:0.5.10"
     assert-never: "npm:^1.2.1"
@@ -1079,7 +1079,7 @@ __metadata:
     crawler: "npm:1.5.0"
     cz-conventional-changelog: "npm:3.3.0"
     dotenv-extended: "npm:2.9.0"
-    google-auth-library: "npm:9.8.0"
+    google-auth-library: "npm:9.9.0"
     husky: "npm:9.0.11"
     jest: "npm:29.7.0"
     lint-staged: "npm:15.2.2"
@@ -1088,7 +1088,7 @@ __metadata:
     prettier: "npm:3.2.5"
     rimraf: "npm:5.0.5"
     semantic-release: "npm:23.0.8"
-    soap: "npm:1.0.0"
+    soap: "npm:1.0.2"
     source-map-support: "npm:0.5.21"
     ts-jest: "npm:29.1.2"
     ts-node: "npm:10.9.2"
@@ -2069,12 +2069,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.12.7":
-  version: 20.12.7
-  resolution: "@types/node@npm:20.12.7"
+"@types/node@npm:20.12.8":
+  version: 20.12.8
+  resolution: "@types/node@npm:20.12.8"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10c0/dce80d63a3b91892b321af823d624995c61e39c6a223cc0ac481a44d337640cc46931d33efb3beeed75f5c85c3bda1d97cef4c5cd4ec333caf5dee59cff6eca0
+  checksum: 10c0/840002d20654e38a9af8cdffa215598fdb28ac4f96c5701ed672ec365ed6ccc66da299edddaa409baf13cd71bbf1128901f633b5e44e070fc236e26415805b78
   languageName: node
   linkType: hard
 
@@ -2667,19 +2667,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios-ntlm@npm:^1.2.0":
-  version: 1.4.1
-  resolution: "axios-ntlm@npm:1.4.1"
+"axios-ntlm@npm:^1.4.2":
+  version: 1.4.2
+  resolution: "axios-ntlm@npm:1.4.2"
   dependencies:
-    axios: "npm:^1.3.2"
-    des.js: "npm:^1.0.1"
+    axios: "npm:^1.6.1"
+    des.js: "npm:^1.1.0"
     dev-null: "npm:^0.1.1"
     js-md4: "npm:^0.3.2"
-  checksum: 10c0/cbc8739a1b5ed39a7a8c692385e49e152dc638803712c4d8ae1f888e17d80bc58312866da66e9c0471f597c4a1e34a5610bc2b426095ae71fbc4303e9cd665ed
+  checksum: 10c0/21b1a5ce488937c0e90129840655833ed721e8e20e00d72ba72ff9c2ce2455343f37a95b5475ec46455e183260f658d2e72df705c23f9629655d6de742da9221
   languageName: node
   linkType: hard
 
-"axios@npm:1.6.8":
+"axios@npm:1.6.8, axios@npm:^1.6.1, axios@npm:^1.6.8":
   version: 1.6.8
   resolution: "axios@npm:1.6.8"
   dependencies:
@@ -2687,17 +2687,6 @@ __metadata:
     form-data: "npm:^4.0.0"
     proxy-from-env: "npm:^1.1.0"
   checksum: 10c0/0f22da6f490335479a89878bc7d5a1419484fbb437b564a80c34888fc36759ae4f56ea28d55a191695e5ed327f0bad56e7ff60fb6770c14d1be6501505d47ab9
-  languageName: node
-  linkType: hard
-
-"axios@npm:^1.3.2":
-  version: 1.5.0
-  resolution: "axios@npm:1.5.0"
-  dependencies:
-    follow-redirects: "npm:^1.15.0"
-    form-data: "npm:^4.0.0"
-    proxy-from-env: "npm:^1.1.0"
-  checksum: 10c0/a3e11e53ff10fa02defb17c82672599a5ef31f8a6f2b0ea1564a61271226a924baef3a899a03c6850bddb0e9a614acdf615e07b30f382403b5e1fc7ec2eef464
   languageName: node
   linkType: hard
 
@@ -3849,7 +3838,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"des.js@npm:^1.0.1":
+"des.js@npm:^1.1.0":
   version: 1.1.0
   resolution: "des.js@npm:1.1.0"
   dependencies:
@@ -4697,16 +4686,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:^1.15.0":
-  version: 1.15.2
-  resolution: "follow-redirects@npm:1.15.2"
-  peerDependenciesMeta:
-    debug:
-      optional: true
-  checksum: 10c0/da5932b70e63944d38eecaa16954bac4347036f08303c913d166eda74809d8797d38386e3a0eb1d2fe37d2aaff2764cce8e9dbd99459d860cf2cdfa237923b5f
-  languageName: node
-  linkType: hard
-
 "follow-redirects@npm:^1.15.6":
   version: 1.15.6
   resolution: "follow-redirects@npm:1.15.6"
@@ -5169,9 +5148,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"google-auth-library@npm:9.8.0":
-  version: 9.8.0
-  resolution: "google-auth-library@npm:9.8.0"
+"google-auth-library@npm:9.9.0":
+  version: 9.9.0
+  resolution: "google-auth-library@npm:9.9.0"
   dependencies:
     base64-js: "npm:^1.3.0"
     ecdsa-sig-formatter: "npm:^1.0.11"
@@ -5179,7 +5158,7 @@ __metadata:
     gcp-metadata: "npm:^6.1.0"
     gtoken: "npm:^7.0.0"
     jws: "npm:^4.0.0"
-  checksum: 10c0/2802722fe5dcd1e3c4cdba827177abf4ef5355c29967acf47d037e96182da9f34e9574e635535c42ac08bb091e8e414e4326c611572cb35c6b455ed9b1a11b7e
+  checksum: 10c0/4dcd2b3542fb8cf68db00c46b65a386bdfdc3e4f6e626197e497fe9fbc1b92d9ea1ff2c28fcfe9653a79828e5cc90f904afbb48a6b189e19ea54d209c71efbd6
   languageName: node
   linkType: hard
 
@@ -9241,11 +9220,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"soap@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "soap@npm:1.0.0"
+"soap@npm:1.0.2":
+  version: 1.0.2
+  resolution: "soap@npm:1.0.2"
   dependencies:
-    axios-ntlm: "npm:^1.2.0"
+    axios: "npm:^1.6.8"
+    axios-ntlm: "npm:^1.4.2"
     debug: "npm:^4.3.2"
     formidable: "npm:^3.2.4"
     get-stream: "npm:^6.0.1"
@@ -9255,9 +9235,7 @@ __metadata:
     uuid: "npm:^8.3.2"
     whatwg-mimetype: "npm:3.0.0"
     xml-crypto: "npm:^3.0.0"
-  peerDependencies:
-    axios: ^0.27.2
-  checksum: 10c0/efa8e1ba654d09e6b9c17eb2a24f52bffa461c0edd0c5c141168fc85ff39ab33988985aa13ef93d2642c0ac510b7bc9a9bb0bb9e1f3ae89c6f240e8a907c14b1
+  checksum: 10c0/34c8b81dca5d9a0f750c5ed8dc75bc76a4751cf79d51c4ebb23df6f6c42a8c6f62bc8b9cea5b14f947529fd64c028e7e01e4eb04e42c4213310a951fc4001394
   languageName: node
   linkType: hard
 
