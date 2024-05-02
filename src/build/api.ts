@@ -120,6 +120,7 @@ async function generateIndex() {
   await writeFile(
     filePath,
     /* ts */ `export * from './query'
+export * from './report/runReport'
 export * from './api/${basename(latestAPI, extname(latestAPI))}'
 `,
   )
