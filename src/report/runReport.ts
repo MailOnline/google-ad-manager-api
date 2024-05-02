@@ -6,6 +6,7 @@ import { Entry, entries } from '../lang/Object'
 
 export interface RunAndDownloadReportOpts {
   exportFormat: 'TSV' | 'TSV_EXCEL' | 'CSV_DUMP' | 'XML' | 'XLSX'
+  statusCheckInterval?: number
   query: ReportService.ReportQuery
 }
 
@@ -70,7 +71,7 @@ export async function runAndDownloadReport(
 
     if (status === 'FAILED') throw new Error(`Report failed.\n\n${rawResponse}`)
 
-    await setTimeout(1_000)
+    await setTimeout(opts.statusCheckInterval || 2_000)
   }
 
   const [urlResult] = await client.getReportDownloadURLAsync({
@@ -79,8 +80,6 @@ export async function runAndDownloadReport(
   })
 
   if (!urlResult.rval) throw new Error('GAM did not provide a download url')
-
-  console.info(urlResult.rval)
 
   return new Promise<IncomingMessage>((resolve) => {
     https.get(urlResult.rval!, (response) => {
