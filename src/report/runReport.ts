@@ -54,39 +54,9 @@ export async function runAndDownloadReport(
   }: RunAndDownloadReportOpts,
 ): Promise<IncomingMessage> {
   const client = await api.createReportServiceClient()
-
-  const [reportJob] = await client.runReportJobAsync({
-    reportJob: {
-      reportQuery: ensureCorrectOrderOfReportQueryParameters(query),
-    },
-  })
-
-  let status = 'IN_PROGRESS'
-
-  while (status === 'IN_PROGRESS') {
-    const [result, rawResponse] = await client.getReportJobStatusAsync({
-      reportJobId: reportJob.rval?.id,
-    })
-
-    if (!result.rval) throw new Error('No status received')
-
-    status = result.rval
-
-    if (status === 'FAILED') throw new Error(`Report failed.\n\n${rawResponse}`)
-
-    await setTimeout(statusCheckInterval)
-  }
-
-  const [urlResult] = await client.getReportDownloadURLAsync({
-    reportJobId: reportJob.rval?.id,
-    exportFormat,
-  })
-
-  if (!urlResult.rval) throw new Error('GAM did not provide a download url')
-
-  return new Promise<IncomingMessage>((resolve) => {
-    https.get(urlResult.rval!, resolve)
-  })
+  const jobId = await runReport(client, query)
+  await waitForReportToFinish(client, jobId, statusCheckInterval)
+  return streamReportResult(client, jobId, exportFormat)
 }
 
 /**
@@ -99,4 +69,58 @@ export function ensureCorrectOrderOfReportQueryParameters(
   query: ReportService.ReportQuery,
 ): ReportService.ReportQuery {
   return prioritiseKeys(query, ['dimensions', 'adUnitView'])
+}
+
+export async function runReport(
+  client: ReportService.ReportServiceClient,
+  query: ReportService.ReportQuery,
+): Promise<number> {
+  const [reportJob] = await client.runReportJobAsync({
+    reportJob: {
+      reportQuery: ensureCorrectOrderOfReportQueryParameters(query),
+    },
+  })
+
+  if (!reportJob.rval?.id) throw new Error('The job never ran.')
+
+  return reportJob.rval.id
+}
+
+export async function waitForReportToFinish(
+  client: ReportService.ReportServiceClient,
+  jobId: number,
+  statusCheckInterval: number,
+): Promise<void> {
+  let status = 'IN_PROGRESS'
+
+  while (status === 'IN_PROGRESS') {
+    const [result, rawResponse] = await client.getReportJobStatusAsync({
+      reportJobId: jobId,
+    })
+
+    if (!result.rval) throw new Error('No status received')
+
+    status = result.rval
+
+    if (status === 'FAILED') throw new Error(`Report failed.\n\n${rawResponse}`)
+
+    await setTimeout(statusCheckInterval)
+  }
+}
+
+export async function streamReportResult(
+  client: ReportService.ReportServiceClient,
+  jobId: number,
+  exportFormat: RunAndDownloadReportOpts['exportFormat'],
+): Promise<IncomingMessage> {
+  const [urlResult] = await client.getReportDownloadURLAsync({
+    reportJobId: jobId,
+    exportFormat,
+  })
+
+  if (!urlResult.rval) throw new Error('GAM did not provide a download url')
+
+  return new Promise<IncomingMessage>((resolve) => {
+    https.get(urlResult.rval!, resolve)
+  })
 }
