@@ -2,7 +2,7 @@ import { IncomingMessage } from 'node:http'
 import https from 'node:https'
 import { setTimeout } from 'node:timers/promises'
 import { GoogleAdManager, ReportService } from '..'
-import { Entry, entries } from '../lang/Object'
+import { prioritiseKeys } from '../lang/Object'
 
 export interface RunAndDownloadReportOpts {
   exportFormat: 'TSV' | 'TSV_EXCEL' | 'CSV_DUMP' | 'XML' | 'XLSX'
@@ -98,17 +98,5 @@ export async function runAndDownloadReport(
 export function ensureCorrectOrderOfReportQueryParameters(
   query: ReportService.ReportQuery,
 ): ReportService.ReportQuery {
-  const queryEntries = entries(query).filter(
-    (x): x is Exclude<Entry<ReportService.ReportQuery>, undefined> => !!x,
-  )
-
-  const newQueryEntries = [
-    ...queryEntries.filter(([key]) => key === 'dimensions'),
-    ...queryEntries.filter(([key]) => key === 'adUnitView'),
-    ...queryEntries.filter(
-      ([key]) => key !== 'dimensions' && key !== 'adUnitView',
-    ),
-  ]
-
-  return Object.fromEntries(newQueryEntries)
+  return prioritiseKeys(query, ['dimensions', 'adUnitView'])
 }
