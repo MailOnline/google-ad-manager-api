@@ -85,9 +85,7 @@ export async function runAndDownloadReport(
   if (!urlResult.rval) throw new Error('GAM did not provide a download url')
 
   return new Promise<IncomingMessage>((resolve) => {
-    https.get(urlResult.rval!, (response) => {
-      resolve(response)
-    })
+    https.get(urlResult.rval!, resolve)
   })
 }
 
