@@ -47,13 +47,17 @@ export interface RunAndDownloadReportOpts {
  */
 export async function runAndDownloadReport(
   api: GoogleAdManager,
-  opts: RunAndDownloadReportOpts,
+  {
+    exportFormat,
+    query,
+    statusCheckInterval = 2_000,
+  }: RunAndDownloadReportOpts,
 ): Promise<IncomingMessage> {
   const client = await api.createReportServiceClient()
 
   const [reportJob] = await client.runReportJobAsync({
     reportJob: {
-      reportQuery: ensureCorrectOrderOfReportQueryParameters(opts.query),
+      reportQuery: ensureCorrectOrderOfReportQueryParameters(query),
     },
   })
 
@@ -70,12 +74,12 @@ export async function runAndDownloadReport(
 
     if (status === 'FAILED') throw new Error(`Report failed.\n\n${rawResponse}`)
 
-    await setTimeout(opts.statusCheckInterval || 2_000)
+    await setTimeout(statusCheckInterval)
   }
 
   const [urlResult] = await client.getReportDownloadURLAsync({
     reportJobId: reportJob.rval?.id,
-    exportFormat: opts.exportFormat,
+    exportFormat,
   })
 
   if (!urlResult.rval) throw new Error('GAM did not provide a download url')
