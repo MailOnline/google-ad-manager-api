@@ -1096,7 +1096,7 @@ __metadata:
     ts-toolbelt: "npm:9.6.0"
     tslib: "npm:2.6.2"
     typescript: "npm:5.4.5"
-    wsdl-tsclient: "github:johngeorgewright/wsdl-tsclient#node-soap-types"
+    wsdl-tsclient: "npm:1.5.0"
   languageName: unknown
   linkType: soft
 
@@ -10466,9 +10466,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wsdl-tsclient@github:johngeorgewright/wsdl-tsclient#node-soap-types":
-  version: 1.4.0
-  resolution: "wsdl-tsclient@https://github.com/johngeorgewright/wsdl-tsclient.git#commit=103a72f79f905195bfe2fefbc322c4f938691785"
+"wsdl-tsclient@npm:1.5.0":
+  version: 1.5.0
+  resolution: "wsdl-tsclient@npm:1.5.0"
   dependencies:
     "@types/node": "npm:^17.0.24"
     "@types/supports-color": "npm:^8.1.0"
@@ -10481,13 +10481,13 @@ __metadata:
     eslint: "npm:^8.13.0"
     eslint-plugin-prettier: "npm:^4.0.0"
     sanitize-filename: "npm:^1.6.3"
-    soap: "npm:^0.43.0"
+    soap: "npm:1.0.0"
     supports-color: "npm:^8.1.1"
     ts-morph: "npm:^14.0.0"
     yargs: "npm:^16.2.0"
   bin:
     wsdl-tsclient: dist/src/cli.js
-  checksum: 10c0/5385b8e5ebcf90a06226782be1acdbd378ec677d50fb2d0d52d695678827e9c4d32ec1c3369e547289863606c13127fe77f57421bf367b14e9107468e33085a1
+  checksum: 10c0/17c194fcece1ca2a9853a5e2dbf7b01177b6d924beb615ecc8bbe11687b21729dff5deb1e270d36109a9add3b46830c2e87179b697a70201b12f0740c2954041
   languageName: node
   linkType: hard
 
