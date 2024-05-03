@@ -1,7 +1,7 @@
 import { IncomingMessage } from 'node:http'
 import https from 'node:https'
 import { setTimeout } from 'node:timers/promises'
-import { GoogleAdManager, ReportService } from '../api/v202402'
+import { GoogleAdManager, ReportService } from '..'
 import { Entry, entries } from '../lang/Object'
 
 export interface RunAndDownloadReportOpts {
@@ -49,8 +49,7 @@ export async function runAndDownloadReport(
   api: GoogleAdManager,
   opts: RunAndDownloadReportOpts,
 ): Promise<IncomingMessage> {
-  const client: ReportService.ReportServiceClient =
-    await api.createReportServiceClient()
+  const client = await api.createReportServiceClient()
 
   const [reportJob] = await client.runReportJobAsync({
     reportJob: {

@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 /* eslint-disable */
+// @ts-nocheck
 "use strict";
 
 const RAW_RUNTIME_STATE =
@@ -56,6 +57,10 @@ const RAW_RUNTIME_STATE =
           ["lodash", "npm:4.17.21"],\
           ["mkdirp", "npm:3.0.1"],\
           ["prettier", "npm:3.2.5"],\
+          ["prettier-2", [\
+            "prettier",\
+            "npm:2.8.8"\
+          ]],\
           ["rimraf", "npm:5.0.5"],\
           ["semantic-release", "npm:23.0.8"],\
           ["soap", "npm:1.0.2"],\
@@ -1617,6 +1622,10 @@ const RAW_RUNTIME_STATE =
           ["lodash", "npm:4.17.21"],\
           ["mkdirp", "npm:3.0.1"],\
           ["prettier", "npm:3.2.5"],\
+          ["prettier-2", [\
+            "prettier",\
+            "npm:2.8.8"\
+          ]],\
           ["rimraf", "npm:5.0.5"],\
           ["semantic-release", "npm:23.0.8"],\
           ["soap", "npm:1.0.2"],\
@@ -10084,6 +10093,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["prettier", [\
+      ["npm:2.8.8", {\
+        "packageLocation": "../../.yarn/berry/cache/prettier-npm-2.8.8-430828a36c-10c0.zip/node_modules/prettier/",\
+        "packageDependencies": [\
+          ["prettier", "npm:2.8.8"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:3.2.5", {\
         "packageLocation": "./.yarn/unplugged/prettier-npm-3.2.5-6859110d6a/node_modules/prettier/",\
         "packageDependencies": [\
