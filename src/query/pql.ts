@@ -4,14 +4,14 @@ import { Condition } from './condition/condition'
 import { Where } from './where'
 import { Order } from './order/order'
 
-export interface PQLOptions<T extends Object> {
+export interface PQLOptions<T extends Record<keyof unknown, unknown>> {
   limit?: number
   offset?: number
   orderBy?: Order<T>
   where?: Where<T> | Where<T>[]
 }
 
-export function pql<T extends Object>({
+export function pql<T extends Record<keyof unknown, unknown>>({
   limit,
   offset,
   orderBy,
@@ -25,7 +25,7 @@ export function pql<T extends Object>({
         Array.isArray(conditions)
           ? `(${conditions.map(where).join(') OR (')})`
           : where(conditions)
-      }`
+      }`,
     )
   }
 
@@ -47,8 +47,8 @@ export function pql<T extends Object>({
     return requiredEntries(condition)
       .map(([key, condition]) =>
         (condition instanceof Condition ? condition : Is(condition)).format(
-          key.toString()
-        )
+          key.toString(),
+        ),
       )
       .join(' AND ')
   }
@@ -60,4 +60,4 @@ export function pql<T extends Object>({
  * @remarks
  * Easier when using JSDocs
  */
-export type PQL<T extends Object> = typeof pql<T>
+export type PQL<T extends Record<keyof unknown, unknown>> = typeof pql<T>
