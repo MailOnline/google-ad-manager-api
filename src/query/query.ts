@@ -29,14 +29,22 @@ import { GetByStatement, GetByStatementResponseResult } from './statement'
  * })
  * ```
  */
-export function query<C extends Client, M extends keyof C>(
+export function query<
+  C extends Client,
+  M extends keyof C,
+  Args extends unknown[],
+>(
   client: C,
-  methodName: Parameters<C[M]> extends [GetByStatement] ? M : never,
+  methodName: Parameters<C[M]> extends [GetByStatement, ...Args] ? M : never,
   query: PQLOptions<GetByStatementResponseResult<C[M]>>,
+  ...args: Args
 ): ReturnType<C[M]> {
-  return client[methodName]({
-    filterStatement: {
-      query: pql(query),
+  return client[methodName](
+    {
+      filterStatement: {
+        query: pql(query),
+      },
     },
-  })
+    ...args,
+  )
 }
