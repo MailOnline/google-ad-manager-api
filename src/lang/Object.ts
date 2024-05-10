@@ -4,9 +4,7 @@ export type Entry<T> = {
   [K in keyof T]: [K, T[K]]
 }[keyof T]
 
-export type Entries<T> = {
-  [K in keyof T]: [K, T[K]]
-}[keyof T][]
+export type Entries<T> = Entry<T>[]
 
 export function entries<T extends Object>(x: T): Entries<T> {
   return Object.entries(x) as Entries<T>
