@@ -74,7 +74,7 @@ export function ensureCorrectOrderOfReportQueryParameters(
 export async function runReport(
   client: ReportService.ReportServiceClient,
   query: ReportService.ReportQuery,
-): Promise<number> {
+): Promise<string> {
   const [reportJob] = await client.runReportJobAsync({
     reportJob: {
       reportQuery: ensureCorrectOrderOfReportQueryParameters(query),
@@ -88,7 +88,7 @@ export async function runReport(
 
 export async function waitForReportToFinish(
   client: ReportService.ReportServiceClient,
-  jobId: number,
+  jobId: string,
   statusCheckInterval: number,
 ): Promise<void> {
   let status = 'IN_PROGRESS'
@@ -110,7 +110,7 @@ export async function waitForReportToFinish(
 
 export async function streamReportResult(
   client: ReportService.ReportServiceClient,
-  jobId: number,
+  jobId: string,
   exportFormat: RunAndDownloadReportOpts['exportFormat'],
 ): Promise<IncomingMessage> {
   const [urlResult] = await client.getReportDownloadURLAsync({
