@@ -1014,7 +1014,7 @@ __metadata:
     prettier: "npm:3.2.5"
     prettier-2: "npm:prettier@2.8.8"
     rimraf: "npm:5.0.7"
-    semantic-release: "npm:23.0.8"
+    semantic-release: "npm:23.1.1"
     soap: "npm:1.0.2"
     source-map-support: "npm:0.5.21"
     ts-jest: "npm:29.1.2"
@@ -8514,9 +8514,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semantic-release@npm:23.0.8":
-  version: 23.0.8
-  resolution: "semantic-release@npm:23.0.8"
+"semantic-release@npm:23.1.1":
+  version: 23.1.1
+  resolution: "semantic-release@npm:23.1.1"
   dependencies:
     "@semantic-release/commit-analyzer": "npm:^12.0.0"
     "@semantic-release/error": "npm:^4.0.0"
@@ -8527,7 +8527,7 @@ __metadata:
     cosmiconfig: "npm:^9.0.0"
     debug: "npm:^4.0.0"
     env-ci: "npm:^11.0.0"
-    execa: "npm:^8.0.0"
+    execa: "npm:^9.0.0"
     figures: "npm:^6.0.0"
     find-versions: "npm:^6.0.0"
     get-stream: "npm:^6.0.0"
@@ -8549,7 +8549,7 @@ __metadata:
     yargs: "npm:^17.5.1"
   bin:
     semantic-release: bin/semantic-release.js
-  checksum: 10c0/202b84def459d60d6c5cb2542b1f509a2b67dd1fb81312b1871ae3ba4c0dfcd81fb25ea60b93b381c46682633ec4f397e4188490cbbe68ab16967044d059a0cf
+  checksum: 10c0/c54fb43917299737803ca89fd5c692e08c630ad8765617b30ac41fb21173db67ce4bc617811b29702d27badd5075d984fcc8bdf058c3b3ce81732016bb07f9ee
   languageName: node
   linkType: hard
 
