@@ -59,7 +59,7 @@ const RAW_RUNTIME_STATE =
           ["prettier", "npm:3.2.5"],\
           ["prettier-2", [\
             "prettier",\
-            "npm:2.8.8"\
+            "npm:3.2.5"\
           ]],\
           ["rimraf", "npm:5.0.7"],\
           ["semantic-release", "npm:23.0.8"],\
@@ -1526,7 +1526,7 @@ const RAW_RUNTIME_STATE =
           ["prettier", "npm:3.2.5"],\
           ["prettier-2", [\
             "prettier",\
-            "npm:2.8.8"\
+            "npm:3.2.5"\
           ]],\
           ["rimraf", "npm:5.0.7"],\
           ["semantic-release", "npm:23.0.8"],\
@@ -9454,13 +9454,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["prettier", [\
-      ["npm:2.8.8", {\
-        "packageLocation": "../../../../cache/others/berry/cache/prettier-npm-2.8.8-430828a36c-10c0.zip/node_modules/prettier/",\
-        "packageDependencies": [\
-          ["prettier", "npm:2.8.8"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:3.2.5", {\
         "packageLocation": "./.yarn/unplugged/prettier-npm-3.2.5-6859110d6a/node_modules/prettier/",\
         "packageDependencies": [\
