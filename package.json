@@ -63,7 +63,7 @@
     "ts-jest": "29.1.2",
     "ts-node": "10.9.2",
     "typescript": "5.4.5",
-    "wsdl-tsclient": "1.5.0"
+    "wsdl-tsclient": "johngeorgewright/wsdl-tsclient#enum"
   },
   "lint-staged": {
     "*.{md,json,js,jsx,ts,tsx,yml,yaml}": [

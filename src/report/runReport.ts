@@ -5,7 +5,7 @@ import { GoogleAdManager, ReportService } from '..'
 import { prioritiseKeys } from '../lang/Object'
 
 export interface RunAndDownloadReportOpts {
-  exportFormat: 'TSV' | 'TSV_EXCEL' | 'CSV_DUMP' | 'XML' | 'XLSX'
+  exportFormat: ReportService.GetReportDownloadUrl['exportFormat']
   statusCheckInterval?: number
   query: ReportService.ReportQuery
 }
@@ -74,7 +74,7 @@ export function ensureCorrectOrderOfReportQueryParameters(
 export async function runReport(
   client: ReportService.ReportServiceClient,
   query: ReportService.ReportQuery,
-): Promise<string> {
+): Promise<number> {
   const [reportJob] = await client.runReportJobAsync({
     reportJob: {
       reportQuery: ensureCorrectOrderOfReportQueryParameters(query),
@@ -88,7 +88,7 @@ export async function runReport(
 
 export async function waitForReportToFinish(
   client: ReportService.ReportServiceClient,
-  jobId: string,
+  jobId: number,
   statusCheckInterval: number,
 ): Promise<void> {
   let status = 'IN_PROGRESS'
@@ -110,7 +110,7 @@ export async function waitForReportToFinish(
 
 export async function streamReportResult(
   client: ReportService.ReportServiceClient,
-  jobId: string,
+  jobId: number,
   exportFormat: RunAndDownloadReportOpts['exportFormat'],
 ): Promise<IncomingMessage> {
   const [urlResult] = await client.getReportDownloadURLAsync({
