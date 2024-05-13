@@ -35,7 +35,9 @@ export function query<
   Args extends unknown[],
 >(
   client: C,
-  methodName: Parameters<C[M]> extends [GetByStatement, ...Args] ? M : never,
+  methodName: Parameters<C[M]> extends [GetByStatement, ...unknown[]]
+    ? M
+    : never,
   query: PQLOptions<GetByStatementResponseResult<C[M]>>,
   ...args: Args
 ): ReturnType<C[M]> {

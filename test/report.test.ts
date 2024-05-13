@@ -13,7 +13,6 @@ test('ensureCorrectOrderOfReportQueryParameters()', () => {
         ],
 
         columns: [
-          'AD_UNIT_CODE',
           'TOTAL_LINE_ITEM_LEVEL_IMPRESSIONS',
           'TOTAL_ACTIVE_VIEW_MEASURABLE_IMPRESSIONS',
           'AD_SERVER_ACTIVE_VIEW_VIEWABLE_IMPRESSIONS',
@@ -39,7 +38,6 @@ test('ensureCorrectOrderOfReportQueryParameters()', () => {
       ],
       "adUnitView": "HIERARCHICAL",
       "columns": [
-        "AD_UNIT_CODE",
         "TOTAL_LINE_ITEM_LEVEL_IMPRESSIONS",
         "TOTAL_ACTIVE_VIEW_MEASURABLE_IMPRESSIONS",
         "AD_SERVER_ACTIVE_VIEW_VIEWABLE_IMPRESSIONS",
