@@ -999,7 +999,7 @@ __metadata:
     "@types/sax": "npm:1.2.7"
     "@types/source-map-support": "npm:0.5.10"
     assert-never: "npm:^1.2.1"
-    axios: "npm:1.6.8"
+    axios: "npm:1.7.0"
     commitizen: "npm:4.3.0"
     concurrently: "npm:8.2.2"
     crawler: "npm:1.5.0"
@@ -2450,7 +2450,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:1.6.8, axios@npm:^1.6.1, axios@npm:^1.6.8":
+"axios@npm:1.7.0":
+  version: 1.7.0
+  resolution: "axios@npm:1.7.0"
+  dependencies:
+    follow-redirects: "npm:^1.15.6"
+    form-data: "npm:^4.0.0"
+    proxy-from-env: "npm:^1.1.0"
+  checksum: 10c0/340ea17372f532c35b0713314b3454611a14fa9ed5ac31b6b84791e05231e878e72ea8d8b8cf780c00285052eea33549afa8fede495d9ee38248a2dac16492ee
+  languageName: node
+  linkType: hard
+
+"axios@npm:^1.6.1, axios@npm:^1.6.8":
   version: 1.6.8
   resolution: "axios@npm:1.6.8"
   dependencies:
