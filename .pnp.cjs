@@ -40,7 +40,7 @@ const RAW_RUNTIME_STATE =
           ["@types/crawler", "npm:1.2.6"],\
           ["@types/jest", "npm:29.5.12"],\
           ["@types/lodash", "npm:4.17.4"],\
-          ["@types/node", "npm:20.12.14"],\
+          ["@types/node", "npm:20.13.0"],\
           ["@types/sax", "npm:1.2.7"],\
           ["@types/source-map-support", "npm:0.5.10"],\
           ["assert-never", "npm:1.2.1"],\
@@ -1507,7 +1507,7 @@ const RAW_RUNTIME_STATE =
           ["@types/crawler", "npm:1.2.6"],\
           ["@types/jest", "npm:29.5.12"],\
           ["@types/lodash", "npm:4.17.4"],\
-          ["@types/node", "npm:20.12.14"],\
+          ["@types/node", "npm:20.13.0"],\
           ["@types/sax", "npm:1.2.7"],\
           ["@types/source-map-support", "npm:0.5.10"],\
           ["assert-never", "npm:1.2.1"],\
@@ -2742,10 +2742,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/node", [\
-      ["npm:20.12.14", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@types-node-npm-20.12.14-5440d7b108-10c0.zip/node_modules/@types/node/",\
+      ["npm:20.13.0", {\
+        "packageLocation": "../../../../cache/others/berry/cache/@types-node-npm-20.13.0-88c0bd0276-10c0.zip/node_modules/@types/node/",\
         "packageDependencies": [\
-          ["@types/node", "npm:20.12.14"],\
+          ["@types/node", "npm:20.13.0"],\
           ["undici-types", "npm:5.26.5"]\
         ],\
         "linkType": "HARD"\
@@ -11126,7 +11126,7 @@ const RAW_RUNTIME_STATE =
           ["@tsconfig/node12", "npm:1.0.11"],\
           ["@tsconfig/node14", "npm:1.0.3"],\
           ["@tsconfig/node16", "npm:1.0.4"],\
-          ["@types/node", "npm:20.12.14"],\
+          ["@types/node", "npm:20.13.0"],\
           ["@types/swc__core", null],\
           ["@types/swc__wasm", null],\
           ["@types/typescript", null],\
