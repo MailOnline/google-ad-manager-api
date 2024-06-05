@@ -55,7 +55,7 @@
     "lint-staged": "15.2.5",
     "lodash": "^4.17.21",
     "mkdirp": "3.0.1",
-    "prettier": "3.3.0",
+    "prettier": "3.3.1",
     "prettier-2": "npm:prettier@2.8.8",
     "rimraf": "5.0.7",
     "semantic-release": "23.1.1",
