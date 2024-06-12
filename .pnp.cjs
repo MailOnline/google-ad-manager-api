@@ -53,7 +53,7 @@ const RAW_RUNTIME_STATE =
           ["google-auth-library", "npm:9.10.0"],\
           ["husky", "npm:9.0.11"],\
           ["jest", "virtual:d9229f1b7c5a259acf00d7e72e1268ab77ed605086423c334fd3d275d6b9fcf6ddafca867e00be62f2246f0e1f1bf28fa65d683eb7fa3d5ba69ec29da92ea5fb#npm:29.7.0"],\
-          ["lint-staged", "npm:15.2.6"],\
+          ["lint-staged", "npm:15.2.7"],\
           ["lodash", "npm:4.17.21"],\
           ["mkdirp", "npm:3.0.1"],\
           ["prettier", "npm:3.3.2"],\
@@ -1520,7 +1520,7 @@ const RAW_RUNTIME_STATE =
           ["google-auth-library", "npm:9.10.0"],\
           ["husky", "npm:9.0.11"],\
           ["jest", "virtual:d9229f1b7c5a259acf00d7e72e1268ab77ed605086423c334fd3d275d6b9fcf6ddafca867e00be62f2246f0e1f1bf28fa65d683eb7fa3d5ba69ec29da92ea5fb#npm:29.7.0"],\
-          ["lint-staged", "npm:15.2.6"],\
+          ["lint-staged", "npm:15.2.7"],\
           ["lodash", "npm:4.17.21"],\
           ["mkdirp", "npm:3.0.1"],\
           ["prettier", "npm:3.3.2"],\
@@ -7659,10 +7659,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["lint-staged", [\
-      ["npm:15.2.6", {\
-        "packageLocation": "../../../../cache/others/berry/cache/lint-staged-npm-15.2.6-52e1324c4d-10c0.zip/node_modules/lint-staged/",\
+      ["npm:15.2.7", {\
+        "packageLocation": "../../../../cache/others/berry/cache/lint-staged-npm-15.2.7-2a90203033-10c0.zip/node_modules/lint-staged/",\
         "packageDependencies": [\
-          ["lint-staged", "npm:15.2.6"],\
+          ["lint-staged", "npm:15.2.7"],\
           ["chalk", "npm:5.3.0"],\
           ["commander", "npm:12.1.0"],\
           ["debug", "virtual:4b12ba5111caf7e8338099bdbc7cb046a9f8e079a44e74d0c03dca469876e3071ebbe671c5e90ae6b78ae33e22c205fa5ed32169a4aabd1404b13c56d09986e1#npm:4.3.4"],\
