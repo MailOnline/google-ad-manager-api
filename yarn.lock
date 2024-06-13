@@ -9998,7 +9998,7 @@ __metadata:
 
 "wsdl-tsclient@johngeorgewright/wsdl-tsclient#enum":
   version: 1.5.0
-  resolution: "wsdl-tsclient@https://github.com/johngeorgewright/wsdl-tsclient.git#commit=d777bd99a1edf9b3532646aef640c95e9cc9b7e0"
+  resolution: "wsdl-tsclient@https://github.com/johngeorgewright/wsdl-tsclient.git#commit=c4a9d5ae52ca03da4bb365790d04b320ac70b3d4"
   dependencies:
     camelcase: "npm:^6.3.0"
     chalk: "npm:^4.1.1"
@@ -10009,7 +10009,7 @@ __metadata:
     yargs: "npm:^16.2.0"
   bin:
     wsdl-tsclient: dist/src/cli.js
-  checksum: 10c0/49a79edcd89ae0a4d410d1d4d8aefaaf9a9994cfe78447ef143b6ac662f9fc449c9d8f6d7f2238f1e22807983e657c59066719fe0e0b5a6d6a815164e8cb9629
+  checksum: 10c0/a3e64988a68a5ba55075241887182fc893bf9758e20fe821355b51517a14b8a7f51253aa221ba0527186b0b8d5120f149c9aeaaadcf8dd23638489632fcb0312
   languageName: node
   linkType: hard
 
