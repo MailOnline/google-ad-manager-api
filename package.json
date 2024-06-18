@@ -78,12 +78,12 @@
   "dependencies": {
     "assert-never": "^1.2.1",
     "google-auth-library": "9.11.0",
-    "soap": "1.0.3",
+    "soap": "1.0.4",
     "ts-toolbelt": "9.6.0",
     "tslib": "2.6.3"
   },
   "resolutions": {
-    "soap": "1.0.3"
+    "soap": "1.0.4"
   },
   "packageManager": "yarn@4.3.0"
 }

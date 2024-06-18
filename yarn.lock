@@ -1015,7 +1015,7 @@ __metadata:
     prettier-2: "npm:prettier@2.8.8"
     rimraf: "npm:5.0.7"
     semantic-release: "npm:23.1.1"
-    soap: "npm:1.0.3"
+    soap: "npm:1.0.4"
     source-map-support: "npm:0.5.21"
     ts-jest: "npm:29.1.5"
     ts-node: "npm:10.9.2"
@@ -8777,9 +8777,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"soap@npm:1.0.3":
-  version: 1.0.3
-  resolution: "soap@npm:1.0.3"
+"soap@npm:1.0.4":
+  version: 1.0.4
+  resolution: "soap@npm:1.0.4"
   dependencies:
     axios: "npm:^1.6.8"
     axios-ntlm: "npm:^1.4.2"
@@ -8792,7 +8792,7 @@ __metadata:
     uuid: "npm:^8.3.2"
     whatwg-mimetype: "npm:3.0.0"
     xml-crypto: "npm:^3.0.0"
-  checksum: 10c0/5bac27df219f2ef386e83599e4ce029d9c89b0bba3d120d86ecc4672ff631b5df3fd663f64af70af3142210daa2541b216d293293447654acdf4560ba80e123e
+  checksum: 10c0/eea303a777b690c91cdfbefc9145ef1e5223ca4896de3eaec91bba0ba038300a917f763c3dd29f4904c10debdece3e78b2f7f916673d9847f9b0756616575c97
   languageName: node
   linkType: hard
 
