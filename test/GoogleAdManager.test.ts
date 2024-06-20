@@ -1,4 +1,11 @@
-import { GoogleAdManager, LineItemService, iterate, query } from '../src'
+import {
+  GT,
+  GoogleAdManager,
+  LineItemService,
+  iterate,
+  query,
+  value,
+} from '../src'
 import { load as dotenv } from 'dotenv-extended'
 
 let api: GoogleAdManager
@@ -29,6 +36,42 @@ test('line items', async () => {
 
   expect(response.rval?.results).toHaveLength(10)
 }, 10_000)
+
+test('values', async () => {
+  const client = await api.createLineItemServiceClient()
+
+  await expect(
+    query(client, 'getLineItemsByStatementAsync', {
+      limit: 10,
+      // @ts-expect-error :mng is not a defined value
+      where: {
+        id: ':mng',
+      },
+    }),
+  ).rejects.toThrow()
+
+  const [response] = await query(
+    client,
+    'getLineItemsByStatementAsync',
+    {
+      limit: 10,
+      where: {
+        creationDateTime: GT(':cdt'),
+      },
+    },
+    [
+      value('cdt', 'DateTimeValue', {
+        date: {
+          year: 1990,
+          month: 1,
+          day: 1,
+        },
+      }),
+    ],
+  )
+
+  expect(response.rval?.results).toHaveLength(10)
+})
 
 test('pagination', async () => {
   const client = await api.createLineItemServiceClient()

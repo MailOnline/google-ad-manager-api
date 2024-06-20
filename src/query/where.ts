@@ -1,11 +1,17 @@
 import { O } from 'ts-toolbelt'
 import { Comparable } from './condition/comparable'
 import { Condition } from './condition/condition'
+import { Placeholder } from './condition/placeholder'
 
-export type Where<T extends Object> = _Where<PickComparableValues<T>>
+export type Where<T extends Object, P extends string> = _Where<
+  PickComparableValues<T>,
+  P
+>
 
-type _Where<T> = {
-  [K in keyof T]?: T[K] extends Comparable ? T[K] | Condition<T[K]> : never
+type _Where<T, P extends string> = {
+  [K in keyof T]?: T[K] extends Comparable
+    ? T[K] | Placeholder<P> | Condition<T[K] | Placeholder<P>>
+    : never
 }
 
 type PickComparableValues<T extends Object> = O.Select<

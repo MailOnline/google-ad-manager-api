@@ -202,3 +202,20 @@ test('all together now', () => {
     "WHERE (name = 'foo' AND previewUrl = 'bar') OR (id = 123 AND advertiserId = 333) ORDER BY name ASC LIMIT 12 OFFSET 6",
   )
 })
+
+test('placeholders', () => {
+  pql<Creatives>({
+    // @ts-expect-error no value for ':id' of ':advertiserId'
+    where: {
+      advertiserId: ':advertiserId',
+      id: ':id',
+    },
+  })
+
+  pql<Creatives, 'advertiserId' | 'id'>({
+    where: {
+      advertiserId: ':advertiserId',
+      id: ':id',
+    },
+  })
+})
