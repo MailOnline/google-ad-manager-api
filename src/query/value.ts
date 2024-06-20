@@ -1,21 +1,21 @@
-export interface Value<Key extends string> {
-  key: Key
+export interface Value<K extends string, V = any> {
+  key: K
   value: {
     attributes: {
       'xsi:type': string
     }
-    value: any
+    value: V
   }
 }
 
 export type ValueKey<V extends Value<string>> =
   V extends Value<infer Key> ? Key : never
 
-export function value<Key extends string>(
-  key: Key,
+export function value<K extends string, V = any>(
+  key: K,
   type: string,
-  value: any,
-): Value<Key> {
+  value: V,
+): Value<K, V> {
   return {
     key,
     value: {
