@@ -62,8 +62,7 @@
     "source-map-support": "0.5.21",
     "ts-jest": "29.1.5",
     "ts-node": "10.9.2",
-    "typescript": "5.4.5",
-    "wsdl-tsclient": "johngeorgewright/wsdl-tsclient#enum"
+    "typescript": "5.4.5"
   },
   "lint-staged": {
     "*.{md,json,js,jsx,ts,tsx,yml,yaml}": [
@@ -80,7 +79,8 @@
     "google-auth-library": "9.11.0",
     "soap": "1.0.4",
     "ts-toolbelt": "9.6.0",
-    "tslib": "2.6.3"
+    "tslib": "2.6.3",
+    "wsdl-tsclient": "johngeorgewright/wsdl-tsclient#enum"
   },
   "resolutions": {
     "soap": "1.0.4"
