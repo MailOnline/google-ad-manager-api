@@ -39,7 +39,7 @@ const RAW_RUNTIME_STATE =
           ["@semantic-release/release-notes-generator", "virtual:82d87e745d82769fec305392a8e65d1069dcc5ffa2ac0801dc092daedad9cca616d60eb55a601ca4d7e8032bb9e66f9abea858aef7ef69ab5bbe5b22a1cf6718#npm:13.0.0"],\
           ["@types/crawler", "npm:1.2.6"],\
           ["@types/jest", "npm:29.5.12"],\
-          ["@types/lodash", "npm:4.17.5"],\
+          ["@types/lodash", "npm:4.17.6"],\
           ["@types/node", "npm:20.14.9"],\
           ["@types/sax", "npm:1.2.7"],\
           ["@types/source-map-support", "npm:0.5.10"],\
@@ -1506,7 +1506,7 @@ const RAW_RUNTIME_STATE =
           ["@semantic-release/release-notes-generator", "virtual:82d87e745d82769fec305392a8e65d1069dcc5ffa2ac0801dc092daedad9cca616d60eb55a601ca4d7e8032bb9e66f9abea858aef7ef69ab5bbe5b22a1cf6718#npm:13.0.0"],\
           ["@types/crawler", "npm:1.2.6"],\
           ["@types/jest", "npm:29.5.12"],\
-          ["@types/lodash", "npm:4.17.5"],\
+          ["@types/lodash", "npm:4.17.6"],\
           ["@types/node", "npm:20.14.9"],\
           ["@types/sax", "npm:1.2.7"],\
           ["@types/source-map-support", "npm:0.5.10"],\
@@ -2733,10 +2733,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/lodash", [\
-      ["npm:4.17.5", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@types-lodash-npm-4.17.5-81b8d6a8ab-10c0.zip/node_modules/@types/lodash/",\
+      ["npm:4.17.6", {\
+        "packageLocation": "../../../../cache/others/berry/cache/@types-lodash-npm-4.17.6-a11eead63f-10c0.zip/node_modules/@types/lodash/",\
         "packageDependencies": [\
-          ["@types/lodash", "npm:4.17.5"]\
+          ["@types/lodash", "npm:4.17.6"]\
         ],\
         "linkType": "HARD"\
       }]\
