@@ -33,14 +33,13 @@
     "@commitlint/types": "19.0.3",
     "@jest/types": "29.6.3",
     "@johngw/fs": "3.0.1",
-    "@semantic-release/commit-analyzer": "12.0.0",
+    "@semantic-release/commit-analyzer": "13.0.0",
     "@semantic-release/git": "10.0.1",
     "@semantic-release/github": "10.0.7",
     "@semantic-release/npm": "12.0.1",
-    "@semantic-release/release-notes-generator": "13.0.0",
-    "@types/crawler": "1.2.6",
+    "@semantic-release/release-notes-generator": "14.0.1",
     "@types/jest": "29.5.12",
-    "@types/lodash": "^4.17.1",
+    "@types/lodash": "^4.17.6",
     "@types/node": "20.14.9",
     "@types/sax": "1.2.7",
     "@types/source-map-support": "0.5.10",
@@ -58,11 +57,11 @@
     "prettier": "3.3.2",
     "prettier-2": "npm:prettier@2.8.8",
     "rimraf": "5.0.7",
-    "semantic-release": "23.1.1",
+    "semantic-release": "24.0.0",
     "source-map-support": "0.5.21",
     "ts-jest": "29.1.5",
     "ts-node": "10.9.2",
-    "typescript": "5.4.5"
+    "typescript": "5.5.3"
   },
   "lint-staged": {
     "*.{md,json,js,jsx,ts,tsx,yml,yaml}": [
@@ -75,6 +74,7 @@
     }
   },
   "dependencies": {
+    "@types/crawler": "1.2.6",
     "assert-never": "^1.2.1",
     "google-auth-library": "9.11.0",
     "soap": "1.0.4",
