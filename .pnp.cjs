@@ -61,7 +61,7 @@ const RAW_RUNTIME_STATE =
             "prettier",\
             "npm:2.8.8"\
           ]],\
-          ["rimraf", "npm:5.0.7"],\
+          ["rimraf", "npm:5.0.8"],\
           ["semantic-release", "npm:24.0.0"],\
           ["soap", "npm:1.0.4"],\
           ["source-map-support", "npm:0.5.21"],\
@@ -1528,7 +1528,7 @@ const RAW_RUNTIME_STATE =
             "prettier",\
             "npm:2.8.8"\
           ]],\
-          ["rimraf", "npm:5.0.7"],\
+          ["rimraf", "npm:5.0.8"],\
           ["semantic-release", "npm:24.0.0"],\
           ["soap", "npm:1.0.4"],\
           ["source-map-support", "npm:0.5.21"],\
@@ -10054,10 +10054,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:5.0.7", {\
-        "packageLocation": "../../../../cache/others/berry/cache/rimraf-npm-5.0.7-5c7aa1db5b-10c0.zip/node_modules/rimraf/",\
+      ["npm:5.0.8", {\
+        "packageLocation": "../../../../cache/others/berry/cache/rimraf-npm-5.0.8-c3d5c58779-10c0.zip/node_modules/rimraf/",\
         "packageDependencies": [\
-          ["rimraf", "npm:5.0.7"],\
+          ["rimraf", "npm:5.0.8"],\
           ["glob", "npm:10.3.7"]\
         ],\
         "linkType": "HARD"\
