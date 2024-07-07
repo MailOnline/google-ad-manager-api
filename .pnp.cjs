@@ -43,7 +43,7 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:20.14.10"],\
           ["@types/sax", "npm:1.2.7"],\
           ["@types/source-map-support", "npm:0.5.10"],\
-          ["assert-never", "npm:1.2.1"],\
+          ["assert-never", "npm:1.3.0"],\
           ["axios", "npm:1.7.2"],\
           ["commitizen", "npm:4.3.0"],\
           ["concurrently", "npm:8.2.2"],\
@@ -1510,7 +1510,7 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:20.14.10"],\
           ["@types/sax", "npm:1.2.7"],\
           ["@types/source-map-support", "npm:0.5.10"],\
-          ["assert-never", "npm:1.2.1"],\
+          ["assert-never", "npm:1.3.0"],\
           ["axios", "npm:1.7.2"],\
           ["commitizen", "npm:4.3.0"],\
           ["concurrently", "npm:8.2.2"],\
@@ -3157,10 +3157,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["assert-never", [\
-      ["npm:1.2.1", {\
-        "packageLocation": "../../../../cache/others/berry/cache/assert-never-npm-1.2.1-d423b480cd-10c0.zip/node_modules/assert-never/",\
+      ["npm:1.3.0", {\
+        "packageLocation": "../../../../cache/others/berry/cache/assert-never-npm-1.3.0-d6cea10ce9-10c0.zip/node_modules/assert-never/",\
         "packageDependencies": [\
-          ["assert-never", "npm:1.2.1"]\
+          ["assert-never", "npm:1.3.0"]\
         ],\
         "linkType": "HARD"\
       }]\
