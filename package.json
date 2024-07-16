@@ -77,13 +77,13 @@
     "@types/crawler": "1.2.6",
     "assert-never": "^1.2.1",
     "google-auth-library": "9.11.0",
-    "soap": "1.0.4",
+    "soap": "1.1.0",
     "ts-toolbelt": "9.6.0",
     "tslib": "2.6.3",
     "wsdl-tsclient": "johngeorgewright/wsdl-tsclient#enum"
   },
   "resolutions": {
-    "soap": "1.0.4"
+    "soap": "1.1.0"
   },
   "packageManager": "yarn@4.3.1"
 }

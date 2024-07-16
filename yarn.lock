@@ -1015,7 +1015,7 @@ __metadata:
     prettier-2: "npm:prettier@2.8.8"
     rimraf: "npm:5.0.9"
     semantic-release: "npm:24.0.0"
-    soap: "npm:1.0.4"
+    soap: "npm:1.1.0"
     source-map-support: "npm:0.5.21"
     ts-jest: "npm:29.2.2"
     ts-node: "npm:10.9.2"
@@ -2098,7 +2098,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xmldom/xmldom@npm:^0.8.8":
+"@xmldom/is-dom-node@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@xmldom/is-dom-node@npm:1.0.1"
+  checksum: 10c0/138d5e74441b16f065ce360d81737673986d93f14d5bb09b1e3bcfc2b18fae70b86beb9b7bfbffe916dd36b3bdab012acaa81cc0b49450acadfd66978b62827f
+  languageName: node
+  linkType: hard
+
+"@xmldom/xmldom@npm:^0.8.10":
   version: 0.8.10
   resolution: "@xmldom/xmldom@npm:0.8.10"
   checksum: 10c0/c7647c442502720182b0d65b17d45d2d95317c1c8c497626fe524bda79b4fb768a9aa4fae2da919f308e7abcff7d67c058b102a9d641097e9a57f0b80187851f
@@ -2465,7 +2472,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:1.7.2":
+"axios@npm:1.7.2, axios@npm:^1.7.2":
   version: 1.7.2
   resolution: "axios@npm:1.7.2"
   dependencies:
@@ -2476,7 +2483,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.6.1, axios@npm:^1.6.8":
+"axios@npm:^1.6.1":
   version: 1.6.8
   resolution: "axios@npm:1.6.8"
   dependencies:
@@ -3588,7 +3595,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:4, debug@npm:^4.0.0, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.2, debug@npm:^4.3.3, debug@npm:^4.3.4, debug@npm:~4.3.4":
+"debug@npm:4, debug@npm:^4.0.0, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.3, debug@npm:^4.3.4, debug@npm:~4.3.4":
   version: 4.3.4
   resolution: "debug@npm:4.3.4"
   dependencies:
@@ -3597,6 +3604,18 @@ __metadata:
     supports-color:
       optional: true
   checksum: 10c0/cedbec45298dd5c501d01b92b119cd3faebe5438c3917ff11ae1bff86a6c722930ac9c8659792824013168ba6db7c4668225d845c633fbdafbbf902a6389f736
+  languageName: node
+  linkType: hard
+
+"debug@npm:^4.3.5":
+  version: 4.3.5
+  resolution: "debug@npm:4.3.5"
+  dependencies:
+    ms: "npm:2.1.2"
+  peerDependenciesMeta:
+    supports-color:
+      optional: true
+  checksum: 10c0/082c375a2bdc4f4469c99f325ff458adad62a3fc2c482d59923c260cb08152f34e2659f72b3767db8bb2f21ca81a60a42d1019605a412132d7b9f59363a005cc
   languageName: node
   linkType: hard
 
@@ -4405,7 +4424,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"formidable@npm:^3.2.4":
+"formidable@npm:^3.5.1":
   version: 3.5.1
   resolution: "formidable@npm:3.5.1"
   dependencies:
@@ -8608,10 +8627,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sax@npm:>=0.6":
-  version: 1.2.4
-  resolution: "sax@npm:1.2.4"
-  checksum: 10c0/6e9b05ff443ee5e5096ce92d31c0740a20d33002fad714ebcb8fc7a664d9ee159103ebe8f7aef0a1f7c5ecacdd01f177f510dff95611c589399baf76437d3fe3
+"sax@npm:^1.4.1":
+  version: 1.4.1
+  resolution: "sax@npm:1.4.1"
+  checksum: 10c0/6bf86318a254c5d898ede6bd3ded15daf68ae08a5495a2739564eb265cd13bcc64a07ab466fb204f67ce472bb534eb8612dac587435515169593f4fffa11de7c
   languageName: node
   linkType: hard
 
@@ -8848,22 +8867,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"soap@npm:1.0.4":
-  version: 1.0.4
-  resolution: "soap@npm:1.0.4"
+"soap@npm:1.1.0":
+  version: 1.1.0
+  resolution: "soap@npm:1.1.0"
   dependencies:
-    axios: "npm:^1.6.8"
+    axios: "npm:^1.7.2"
     axios-ntlm: "npm:^1.4.2"
-    debug: "npm:^4.3.2"
-    formidable: "npm:^3.2.4"
+    debug: "npm:^4.3.5"
+    formidable: "npm:^3.5.1"
     get-stream: "npm:^6.0.1"
     lodash: "npm:^4.17.21"
-    sax: "npm:>=0.6"
+    sax: "npm:^1.4.1"
     strip-bom: "npm:^3.0.0"
-    uuid: "npm:^8.3.2"
-    whatwg-mimetype: "npm:3.0.0"
-    xml-crypto: "npm:^3.0.0"
-  checksum: 10c0/eea303a777b690c91cdfbefc9145ef1e5223ca4896de3eaec91bba0ba038300a917f763c3dd29f4904c10debdece3e78b2f7f916673d9847f9b0756616575c97
+    whatwg-mimetype: "npm:4.0.0"
+    xml-crypto: "npm:^6.0.0"
+  checksum: 10c0/733b6e3695d71b658761f87eaaa14f2611d04a65c5f0707f8940b2939774b039a16f1278af36aec4b597ed5ced0db1bb8d791f8473dd7a5165b2aca528663dde
   languageName: node
   linkType: hard
 
@@ -9846,15 +9864,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"uuid@npm:^8.3.2":
-  version: 8.3.2
-  resolution: "uuid@npm:8.3.2"
-  bin:
-    uuid: dist/bin/uuid
-  checksum: 10c0/bcbb807a917d374a49f475fae2e87fdca7da5e5530820ef53f65ba1d12131bd81a92ecf259cc7ce317cbe0f289e7d79fdfebcef9bfa3087c8c8a2fa304c9be54
-  languageName: node
-  linkType: hard
-
 "v8-compile-cache-lib@npm:^3.0.1":
   version: 3.0.1
   resolution: "v8-compile-cache-lib@npm:3.0.1"
@@ -9935,10 +9944,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"whatwg-mimetype@npm:3.0.0":
-  version: 3.0.0
-  resolution: "whatwg-mimetype@npm:3.0.0"
-  checksum: 10c0/323895a1cda29a5fb0b9ca82831d2c316309fede0365047c4c323073e3239067a304a09a1f4b123b9532641ab604203f33a1403b5ca6a62ef405bcd7a204080f
+"whatwg-mimetype@npm:4.0.0":
+  version: 4.0.0
+  resolution: "whatwg-mimetype@npm:4.0.0"
+  checksum: 10c0/a773cdc8126b514d790bdae7052e8bf242970cebd84af62fb2f35a33411e78e981f6c0ab9ed1fe6ec5071b09d5340ac9178e05b52d35a9c4bcf558ba1b1551df
   languageName: node
   linkType: hard
 
@@ -10085,20 +10094,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"xml-crypto@npm:^3.0.0":
-  version: 3.2.0
-  resolution: "xml-crypto@npm:3.2.0"
+"xml-crypto@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "xml-crypto@npm:6.0.0"
   dependencies:
-    "@xmldom/xmldom": "npm:^0.8.8"
-    xpath: "npm:0.0.32"
-  checksum: 10c0/adfeeb810c0b25674c78386c1b537561e6d8bdf69cef0852e47559d0eb96aa20edb22dd70efa35eefae3aa98602736ce9a54f78f6dea685bd4d4f18032d803af
+    "@xmldom/is-dom-node": "npm:^1.0.1"
+    "@xmldom/xmldom": "npm:^0.8.10"
+    xpath: "npm:^0.0.33"
+  checksum: 10c0/1a9d8be4cc7a4c618fa413b8ef30f11cda9ae81f20bc03e84c51f6c61383168a9915f8c3a26061e2053e58807b76d3a13726338f7bc0d8c45285fbb1da296293
   languageName: node
   linkType: hard
 
-"xpath@npm:0.0.32":
-  version: 0.0.32
-  resolution: "xpath@npm:0.0.32"
-  checksum: 10c0/3743ab91a8ec1b5eac1f27ddf2fbf696fcde8ce487215becde1502b85a309dcd1b0baeaac1ee7a730aea4787d049b67ae89e8aedbe03a5a07a71e62ec296d9de
+"xpath@npm:^0.0.33":
+  version: 0.0.33
+  resolution: "xpath@npm:0.0.33"
+  checksum: 10c0/ac2c04142c0f38e75f0d899b6818b08a0e8163aab5d6fd8a292f31a6e925ab08ee48feb1f447049c5bbcb8926b7241c79d1d4a51386e6f6f2d76ac5784917b9d
   languageName: node
   linkType: hard
 
