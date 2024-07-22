@@ -44,9 +44,10 @@
     "@types/sax": "1.2.7",
     "@types/source-map-support": "0.5.10",
     "axios": "1.7.2",
+    "cheerio": "1.0.0-rc.12",
     "commitizen": "4.3.0",
     "concurrently": "8.2.2",
-    "crawler": "1.5.0",
+    "crawler": "2.0.2",
     "cz-conventional-changelog": "3.3.0",
     "dotenv-extended": "2.9.0",
     "husky": "9.1.1",
@@ -74,7 +75,6 @@
     }
   },
   "dependencies": {
-    "@types/crawler": "1.2.6",
     "assert-never": "^1.2.1",
     "google-auth-library": "9.11.0",
     "soap": "1.1.0",
