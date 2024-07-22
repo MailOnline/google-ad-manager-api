@@ -992,7 +992,6 @@ __metadata:
     "@semantic-release/github": "npm:10.1.0"
     "@semantic-release/npm": "npm:12.0.1"
     "@semantic-release/release-notes-generator": "npm:14.0.1"
-    "@types/crawler": "npm:1.2.6"
     "@types/jest": "npm:29.5.12"
     "@types/lodash": "npm:^4.17.6"
     "@types/node": "npm:20.14.11"
@@ -1000,6 +999,7 @@ __metadata:
     "@types/source-map-support": "npm:0.5.10"
     assert-never: "npm:^1.2.1"
     axios: "npm:1.7.2"
+    cheerio: "npm:1.0.0-rc.12"
     commitizen: "npm:4.3.0"
     concurrently: "npm:8.2.2"
     crawler: "npm:2.0.2"
@@ -1956,30 +1956,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/cheerio@npm:*":
-  version: 0.22.35
-  resolution: "@types/cheerio@npm:0.22.35"
-  dependencies:
-    "@types/node": "npm:*"
-  checksum: 10c0/648552e6b981185220b356634374aacdee31815ee55c9a6776bcbf7f8c217e54a3a3951d9929b403ca637190ba748f884e6126c730238c5704bf4488a47dedae
-  languageName: node
-  linkType: hard
-
 "@types/conventional-commits-parser@npm:^5.0.0":
   version: 5.0.0
   resolution: "@types/conventional-commits-parser@npm:5.0.0"
   dependencies:
     "@types/node": "npm:*"
   checksum: 10c0/16c748ce01cb3b3ea5947950acd695569c0daa8da62cc7e0eb98b15c4d7f812f95c079fe2c853325509f8aa73cfd388390319ae4621c8dfb21eeacb63accdb25
-  languageName: node
-  linkType: hard
-
-"@types/crawler@npm:1.2.6":
-  version: 1.2.6
-  resolution: "@types/crawler@npm:1.2.6"
-  dependencies:
-    "@types/cheerio": "npm:*"
-  checksum: 10c0/f60c8b62a66e29bec37525e056303245d05df4e5fbb0a25ad2d361ddc95bb38cd618d2c13a36349bfdbd648f49208a0519e583f16546f6112014e454de0112fb
   languageName: node
   linkType: hard
 
