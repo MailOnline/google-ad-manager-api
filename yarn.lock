@@ -989,7 +989,7 @@ __metadata:
     "@johngw/fs": "npm:3.0.1"
     "@semantic-release/commit-analyzer": "npm:13.0.0"
     "@semantic-release/git": "npm:10.0.1"
-    "@semantic-release/github": "npm:10.1.2"
+    "@semantic-release/github": "npm:10.1.3"
     "@semantic-release/npm": "npm:12.0.1"
     "@semantic-release/release-notes-generator": "npm:14.0.1"
     "@types/jest": "npm:29.5.12"
@@ -1578,9 +1578,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/github@npm:10.1.2":
-  version: 10.1.2
-  resolution: "@semantic-release/github@npm:10.1.2"
+"@semantic-release/github@npm:10.1.3":
+  version: 10.1.3
+  resolution: "@semantic-release/github@npm:10.1.3"
   dependencies:
     "@octokit/core": "npm:^6.0.0"
     "@octokit/plugin-paginate-rest": "npm:^11.0.0"
@@ -1600,7 +1600,7 @@ __metadata:
     url-join: "npm:^5.0.0"
   peerDependencies:
     semantic-release: ">=20.1.0"
-  checksum: 10c0/c2560cf9d6ab6891538a58d3ffe4f354856e24ff40e020cc5e6b223ae5dc6caee538a1b502b49794c6a8f3989e93c6c80f25131f7a6470b3cc96a88f67620656
+  checksum: 10c0/86f39ce6601bc321b77f7ed57fd6988b618e4ed232860ca42e5ed36cfc7ffa7e96e9a7710298da2b71c5a992c67586d737befef892f2308e2b9eac7d089ddc84
   languageName: node
   linkType: hard
 
