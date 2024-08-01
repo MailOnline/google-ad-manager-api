@@ -43,7 +43,7 @@
     "@types/node": "20.14.13",
     "@types/sax": "1.2.7",
     "@types/source-map-support": "0.5.10",
-    "axios": "1.7.2",
+    "axios": "1.7.3",
     "cheerio": "1.0.0-rc.12",
     "commitizen": "4.3.0",
     "concurrently": "8.2.2",
