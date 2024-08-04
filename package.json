@@ -77,13 +77,13 @@
   "dependencies": {
     "assert-never": "^1.2.1",
     "google-auth-library": "9.13.0",
-    "soap": "1.1.0",
+    "soap": "1.1.1",
     "ts-toolbelt": "9.6.0",
     "tslib": "2.6.3",
     "wsdl-tsclient": "johngeorgewright/wsdl-tsclient#enum"
   },
   "resolutions": {
-    "soap": "1.1.0"
+    "soap": "1.1.1"
   },
   "packageManager": "yarn@4.4.0"
 }
