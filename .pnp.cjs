@@ -27,7 +27,7 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
-          ["@commitlint/cli", "npm:19.3.0"],\
+          ["@commitlint/cli", "npm:19.4.0"],\
           ["@commitlint/config-conventional", "npm:19.2.2"],\
           ["@commitlint/types", "npm:19.0.3"],\
           ["@jest/types", "npm:29.6.3"],\
@@ -886,14 +886,14 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@commitlint/cli", [\
-      ["npm:19.3.0", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@commitlint-cli-npm-19.3.0-9e344abddf-10c0.zip/node_modules/@commitlint/cli/",\
+      ["npm:19.4.0", {\
+        "packageLocation": "../../../../cache/others/berry/cache/@commitlint-cli-npm-19.4.0-f98136516c-10c0.zip/node_modules/@commitlint/cli/",\
         "packageDependencies": [\
-          ["@commitlint/cli", "npm:19.3.0"],\
+          ["@commitlint/cli", "npm:19.4.0"],\
           ["@commitlint/format", "npm:19.3.0"],\
           ["@commitlint/lint", "npm:19.2.2"],\
-          ["@commitlint/load", "npm:19.2.0"],\
-          ["@commitlint/read", "npm:19.2.1"],\
+          ["@commitlint/load", "npm:19.4.0"],\
+          ["@commitlint/read", "npm:19.4.0"],\
           ["@commitlint/types", "npm:19.0.3"],\
           ["execa", "npm:8.0.1"],\
           ["yargs", "npm:17.7.2"]\
@@ -1020,17 +1020,17 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:19.2.0", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@commitlint-load-npm-19.2.0-4b67509b59-10c0.zip/node_modules/@commitlint/load/",\
+      ["npm:19.4.0", {\
+        "packageLocation": "../../../../cache/others/berry/cache/@commitlint-load-npm-19.4.0-ac4422f1df-10c0.zip/node_modules/@commitlint/load/",\
         "packageDependencies": [\
-          ["@commitlint/load", "npm:19.2.0"],\
+          ["@commitlint/load", "npm:19.4.0"],\
           ["@commitlint/config-validator", "npm:19.0.3"],\
           ["@commitlint/execute-rule", "npm:19.0.0"],\
           ["@commitlint/resolve-extends", "npm:19.1.0"],\
           ["@commitlint/types", "npm:19.0.3"],\
           ["chalk", "npm:5.3.0"],\
-          ["cosmiconfig", "virtual:4b67509b5989e03463b1fd8f45f95e3b0c96fa3a9cee36f6a33149e8e27fbb74ab282562b940c8dd7d286e2c3d83f43031f7aa7631edd43861c26c06a7c05ffd#npm:9.0.0"],\
-          ["cosmiconfig-typescript-loader", "virtual:4b67509b5989e03463b1fd8f45f95e3b0c96fa3a9cee36f6a33149e8e27fbb74ab282562b940c8dd7d286e2c3d83f43031f7aa7631edd43861c26c06a7c05ffd#npm:5.0.0"],\
+          ["cosmiconfig", "virtual:ac4422f1dfbe470478d83b6bce2be9f86760d1aa94fddc441f98119694b6b507a37875ce226719666406a97d515fc73789b19212dae3cc6bd4332afe9995fdbc#npm:9.0.0"],\
+          ["cosmiconfig-typescript-loader", "virtual:ac4422f1dfbe470478d83b6bce2be9f86760d1aa94fddc441f98119694b6b507a37875ce226719666406a97d515fc73789b19212dae3cc6bd4332afe9995fdbc#npm:5.0.0"],\
           ["lodash.isplainobject", "npm:4.0.6"],\
           ["lodash.merge", "npm:4.6.2"],\
           ["lodash.uniq", "npm:4.5.0"]\
@@ -1060,10 +1060,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@commitlint/read", [\
-      ["npm:19.2.1", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@commitlint-read-npm-19.2.1-3909353ecc-10c0.zip/node_modules/@commitlint/read/",\
+      ["npm:19.4.0", {\
+        "packageLocation": "../../../../cache/others/berry/cache/@commitlint-read-npm-19.4.0-3a830ef1a6-10c0.zip/node_modules/@commitlint/read/",\
         "packageDependencies": [\
-          ["@commitlint/read", "npm:19.2.1"],\
+          ["@commitlint/read", "npm:19.4.0"],\
           ["@commitlint/top-level", "npm:19.0.0"],\
           ["@commitlint/types", "npm:19.0.3"],\
           ["execa", "npm:8.0.1"],\
@@ -1494,7 +1494,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@johngw/google-ad-manager-api", "workspace:."],\
-          ["@commitlint/cli", "npm:19.3.0"],\
+          ["@commitlint/cli", "npm:19.4.0"],\
           ["@commitlint/config-conventional", "npm:19.2.2"],\
           ["@commitlint/types", "npm:19.0.3"],\
           ["@jest/types", "npm:29.6.3"],\
@@ -4310,23 +4310,6 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:4b67509b5989e03463b1fd8f45f95e3b0c96fa3a9cee36f6a33149e8e27fbb74ab282562b940c8dd7d286e2c3d83f43031f7aa7631edd43861c26c06a7c05ffd#npm:9.0.0", {\
-        "packageLocation": "./.yarn/__virtual__/cosmiconfig-virtual-adf96ed03c/5/cache/others/berry/cache/cosmiconfig-npm-9.0.0-47d78cf275-10c0.zip/node_modules/cosmiconfig/",\
-        "packageDependencies": [\
-          ["cosmiconfig", "virtual:4b67509b5989e03463b1fd8f45f95e3b0c96fa3a9cee36f6a33149e8e27fbb74ab282562b940c8dd7d286e2c3d83f43031f7aa7631edd43861c26c06a7c05ffd#npm:9.0.0"],\
-          ["@types/typescript", null],\
-          ["env-paths", "npm:2.2.1"],\
-          ["import-fresh", "npm:3.3.0"],\
-          ["js-yaml", "npm:4.1.0"],\
-          ["parse-json", "npm:5.2.0"],\
-          ["typescript", null]\
-        ],\
-        "packagePeers": [\
-          "@types/typescript",\
-          "typescript"\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["virtual:ab0b138988568fc1d4a212e374a9748df3d17d8eab9398c02e7d835ca66140c74a2db9f53d3b50b59c81589c32fe7f482677f061dc62255bf92b9e9634042916#npm:8.3.6", {\
         "packageLocation": "./.yarn/__virtual__/cosmiconfig-virtual-9f9379035a/5/cache/others/berry/cache/cosmiconfig-npm-8.3.6-a5566e2779-10c0.zip/node_modules/cosmiconfig/",\
         "packageDependencies": [\
@@ -4337,6 +4320,23 @@ const RAW_RUNTIME_STATE =
           ["parse-json", "npm:5.2.0"],\
           ["path-type", "npm:4.0.0"],\
           ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
+        ],\
+        "packagePeers": [\
+          "@types/typescript",\
+          "typescript"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:ac4422f1dfbe470478d83b6bce2be9f86760d1aa94fddc441f98119694b6b507a37875ce226719666406a97d515fc73789b19212dae3cc6bd4332afe9995fdbc#npm:9.0.0", {\
+        "packageLocation": "./.yarn/__virtual__/cosmiconfig-virtual-bf6bc9b9e1/5/cache/others/berry/cache/cosmiconfig-npm-9.0.0-47d78cf275-10c0.zip/node_modules/cosmiconfig/",\
+        "packageDependencies": [\
+          ["cosmiconfig", "virtual:ac4422f1dfbe470478d83b6bce2be9f86760d1aa94fddc441f98119694b6b507a37875ce226719666406a97d515fc73789b19212dae3cc6bd4332afe9995fdbc#npm:9.0.0"],\
+          ["@types/typescript", null],\
+          ["env-paths", "npm:2.2.1"],\
+          ["import-fresh", "npm:3.3.0"],\
+          ["js-yaml", "npm:4.1.0"],\
+          ["parse-json", "npm:5.2.0"],\
+          ["typescript", null]\
         ],\
         "packagePeers": [\
           "@types/typescript",\
@@ -4360,26 +4360,6 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:4b67509b5989e03463b1fd8f45f95e3b0c96fa3a9cee36f6a33149e8e27fbb74ab282562b940c8dd7d286e2c3d83f43031f7aa7631edd43861c26c06a7c05ffd#npm:5.0.0", {\
-        "packageLocation": "./.yarn/__virtual__/cosmiconfig-typescript-loader-virtual-55a335da9f/5/cache/others/berry/cache/cosmiconfig-typescript-loader-npm-5.0.0-6462903b70-10c0.zip/node_modules/cosmiconfig-typescript-loader/",\
-        "packageDependencies": [\
-          ["cosmiconfig-typescript-loader", "virtual:4b67509b5989e03463b1fd8f45f95e3b0c96fa3a9cee36f6a33149e8e27fbb74ab282562b940c8dd7d286e2c3d83f43031f7aa7631edd43861c26c06a7c05ffd#npm:5.0.0"],\
-          ["@types/cosmiconfig", null],\
-          ["@types/node", null],\
-          ["@types/typescript", null],\
-          ["cosmiconfig", "virtual:4b67509b5989e03463b1fd8f45f95e3b0c96fa3a9cee36f6a33149e8e27fbb74ab282562b940c8dd7d286e2c3d83f43031f7aa7631edd43861c26c06a7c05ffd#npm:9.0.0"],\
-          ["jiti", "npm:1.20.0"],\
-          ["typescript", null]\
-        ],\
-        "packagePeers": [\
-          "@types/cosmiconfig",\
-          "@types/node",\
-          "@types/typescript",\
-          "cosmiconfig",\
-          "typescript"\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["virtual:ab0b138988568fc1d4a212e374a9748df3d17d8eab9398c02e7d835ca66140c74a2db9f53d3b50b59c81589c32fe7f482677f061dc62255bf92b9e9634042916#npm:4.4.0", {\
         "packageLocation": "./.yarn/__virtual__/cosmiconfig-typescript-loader-virtual-7643032531/5/cache/others/berry/cache/cosmiconfig-typescript-loader-npm-4.4.0-6aa18a9384-10c0.zip/node_modules/cosmiconfig-typescript-loader/",\
         "packageDependencies": [\
@@ -4399,6 +4379,26 @@ const RAW_RUNTIME_STATE =
           "@types/typescript",\
           "cosmiconfig",\
           "ts-node",\
+          "typescript"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:ac4422f1dfbe470478d83b6bce2be9f86760d1aa94fddc441f98119694b6b507a37875ce226719666406a97d515fc73789b19212dae3cc6bd4332afe9995fdbc#npm:5.0.0", {\
+        "packageLocation": "./.yarn/__virtual__/cosmiconfig-typescript-loader-virtual-4b8ab716d0/5/cache/others/berry/cache/cosmiconfig-typescript-loader-npm-5.0.0-6462903b70-10c0.zip/node_modules/cosmiconfig-typescript-loader/",\
+        "packageDependencies": [\
+          ["cosmiconfig-typescript-loader", "virtual:ac4422f1dfbe470478d83b6bce2be9f86760d1aa94fddc441f98119694b6b507a37875ce226719666406a97d515fc73789b19212dae3cc6bd4332afe9995fdbc#npm:5.0.0"],\
+          ["@types/cosmiconfig", null],\
+          ["@types/node", null],\
+          ["@types/typescript", null],\
+          ["cosmiconfig", "virtual:ac4422f1dfbe470478d83b6bce2be9f86760d1aa94fddc441f98119694b6b507a37875ce226719666406a97d515fc73789b19212dae3cc6bd4332afe9995fdbc#npm:9.0.0"],\
+          ["jiti", "npm:1.20.0"],\
+          ["typescript", null]\
+        ],\
+        "packagePeers": [\
+          "@types/cosmiconfig",\
+          "@types/node",\
+          "@types/typescript",\
+          "cosmiconfig",\
           "typescript"\
         ],\
         "linkType": "HARD"\
@@ -10057,7 +10057,7 @@ const RAW_RUNTIME_STATE =
           ["@semantic-release/npm", "virtual:9869a19b9cac301da62b60e4309d3a1bba47ad8222f27bd70feaff25a104c869d506dded55468019f6fee38fd7baa67c620ade0e78cbd82fc702ae439516efaa#npm:12.0.0"],\
           ["@semantic-release/release-notes-generator", "virtual:9869a19b9cac301da62b60e4309d3a1bba47ad8222f27bd70feaff25a104c869d506dded55468019f6fee38fd7baa67c620ade0e78cbd82fc702ae439516efaa#npm:14.0.1"],\
           ["aggregate-error", "npm:5.0.0"],\
-          ["cosmiconfig", "virtual:4b67509b5989e03463b1fd8f45f95e3b0c96fa3a9cee36f6a33149e8e27fbb74ab282562b940c8dd7d286e2c3d83f43031f7aa7631edd43861c26c06a7c05ffd#npm:9.0.0"],\
+          ["cosmiconfig", "virtual:ac4422f1dfbe470478d83b6bce2be9f86760d1aa94fddc441f98119694b6b507a37875ce226719666406a97d515fc73789b19212dae3cc6bd4332afe9995fdbc#npm:9.0.0"],\
           ["debug", "virtual:4b12ba5111caf7e8338099bdbc7cb046a9f8e079a44e74d0c03dca469876e3071ebbe671c5e90ae6b78ae33e22c205fa5ed32169a4aabd1404b13c56d09986e1#npm:4.3.4"],\
           ["env-ci", "npm:11.0.0"],\
           ["execa", "npm:9.0.2"],\
