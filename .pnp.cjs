@@ -44,7 +44,7 @@ const RAW_RUNTIME_STATE =
           ["@types/source-map-support", "npm:0.5.10"],\
           ["assert-never", "npm:1.3.0"],\
           ["axios", "npm:1.7.3"],\
-          ["cheerio", "npm:1.0.0-rc.12"],\
+          ["cheerio", "npm:1.0.0"],\
           ["commitizen", "npm:4.3.0"],\
           ["concurrently", "npm:8.2.2"],\
           ["crawler", "npm:2.0.2"],\
@@ -1511,7 +1511,7 @@ const RAW_RUNTIME_STATE =
           ["@types/source-map-support", "npm:0.5.10"],\
           ["assert-never", "npm:1.3.0"],\
           ["axios", "npm:1.7.3"],\
-          ["cheerio", "npm:1.0.0-rc.12"],\
+          ["cheerio", "npm:1.0.0"],\
           ["commitizen", "npm:4.3.0"],\
           ["concurrently", "npm:8.2.2"],\
           ["crawler", "npm:2.0.2"],\
@@ -3766,6 +3766,24 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["cheerio", [\
+      ["npm:1.0.0", {\
+        "packageLocation": "../../../../cache/others/berry/cache/cheerio-npm-1.0.0-837785b57b-10c0.zip/node_modules/cheerio/",\
+        "packageDependencies": [\
+          ["cheerio", "npm:1.0.0"],\
+          ["cheerio-select", "npm:2.1.0"],\
+          ["dom-serializer", "npm:2.0.0"],\
+          ["domhandler", "npm:5.0.3"],\
+          ["domutils", "npm:3.1.0"],\
+          ["encoding-sniffer", "npm:0.2.0"],\
+          ["htmlparser2", "npm:9.1.0"],\
+          ["parse5", "npm:7.1.2"],\
+          ["parse5-htmlparser2-tree-adapter", "npm:7.0.0"],\
+          ["parse5-parser-stream", "npm:7.1.2"],\
+          ["undici", "npm:6.19.7"],\
+          ["whatwg-mimetype", "npm:4.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:1.0.0-rc.12", {\
         "packageLocation": "../../../../cache/others/berry/cache/cheerio-npm-1.0.0-rc.12-6785a97c2a-10c0.zip/node_modules/cheerio/",\
         "packageDependencies": [\
@@ -4960,6 +4978,17 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["encoding-sniffer", [\
+      ["npm:0.2.0", {\
+        "packageLocation": "../../../../cache/others/berry/cache/encoding-sniffer-npm-0.2.0-7e717bfa93-10c0.zip/node_modules/encoding-sniffer/",\
+        "packageDependencies": [\
+          ["encoding-sniffer", "npm:0.2.0"],\
+          ["iconv-lite", "npm:0.6.3"],\
+          ["whatwg-encoding", "npm:3.1.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["entities", [\
       ["npm:4.5.0", {\
         "packageLocation": "../../../../cache/others/berry/cache/entities-npm-4.5.0-7cdb83b832-10c0.zip/node_modules/entities/",\
@@ -6047,6 +6076,17 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../cache/others/berry/cache/htmlparser2-npm-8.0.2-5d9f901bb6-10c0.zip/node_modules/htmlparser2/",\
         "packageDependencies": [\
           ["htmlparser2", "npm:8.0.2"],\
+          ["domelementtype", "npm:2.3.0"],\
+          ["domhandler", "npm:5.0.3"],\
+          ["domutils", "npm:3.1.0"],\
+          ["entities", "npm:4.5.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:9.1.0", {\
+        "packageLocation": "../../../../cache/others/berry/cache/htmlparser2-npm-9.1.0-5ef8394060-10c0.zip/node_modules/htmlparser2/",\
+        "packageDependencies": [\
+          ["htmlparser2", "npm:9.1.0"],\
           ["domelementtype", "npm:2.3.0"],\
           ["domhandler", "npm:5.0.3"],\
           ["domutils", "npm:3.1.0"],\
@@ -9276,6 +9316,16 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["parse5-parser-stream", [\
+      ["npm:7.1.2", {\
+        "packageLocation": "../../../../cache/others/berry/cache/parse5-parser-stream-npm-7.1.2-94131559b2-10c0.zip/node_modules/parse5-parser-stream/",\
+        "packageDependencies": [\
+          ["parse5-parser-stream", "npm:7.1.2"],\
+          ["parse5", "npm:7.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["path-browserify", [\
       ["npm:1.0.1", {\
         "packageLocation": "../../../../cache/others/berry/cache/path-browserify-npm-1.0.1-f975d99a99-10c0.zip/node_modules/path-browserify/",\
@@ -11201,6 +11251,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["undici", [\
+      ["npm:6.19.7", {\
+        "packageLocation": "../../../../cache/others/berry/cache/undici-npm-6.19.7-74aaf15ae3-10c0.zip/node_modules/undici/",\
+        "packageDependencies": [\
+          ["undici", "npm:6.19.7"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["undici-types", [\
       ["npm:5.26.5", {\
         "packageLocation": "../../../../cache/others/berry/cache/undici-types-npm-5.26.5-de4f7c7bb9-10c0.zip/node_modules/undici-types/",\
@@ -11413,6 +11472,16 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../cache/others/berry/cache/webidl-conversions-npm-3.0.1-60310f6a2b-10c0.zip/node_modules/webidl-conversions/",\
         "packageDependencies": [\
           ["webidl-conversions", "npm:3.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["whatwg-encoding", [\
+      ["npm:3.1.1", {\
+        "packageLocation": "../../../../cache/others/berry/cache/whatwg-encoding-npm-3.1.1-7dfe21cf7d-10c0.zip/node_modules/whatwg-encoding/",\
+        "packageDependencies": [\
+          ["whatwg-encoding", "npm:3.1.1"],\
+          ["iconv-lite", "npm:0.6.3"]\
         ],\
         "linkType": "HARD"\
       }]\
