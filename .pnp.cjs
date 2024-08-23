@@ -68,7 +68,7 @@ const RAW_RUNTIME_STATE =
           ["ts-jest", "virtual:d9229f1b7c5a259acf00d7e72e1268ab77ed605086423c334fd3d275d6b9fcf6ddafca867e00be62f2246f0e1f1bf28fa65d683eb7fa3d5ba69ec29da92ea5fb#npm:29.2.5"],\
           ["ts-node", "virtual:d9229f1b7c5a259acf00d7e72e1268ab77ed605086423c334fd3d275d6b9fcf6ddafca867e00be62f2246f0e1f1bf28fa65d683eb7fa3d5ba69ec29da92ea5fb#npm:10.9.2"],\
           ["ts-toolbelt", "npm:9.6.0"],\
-          ["tslib", "npm:2.6.3"],\
+          ["tslib", "npm:2.7.0"],\
           ["typescript", "patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"],\
           ["wsdl-tsclient", "https://github.com/johngeorgewright/wsdl-tsclient.git#commit=1b7273d78d7f2e762c25cc9119021e4e03e49665"]\
         ],\
@@ -1535,7 +1535,7 @@ const RAW_RUNTIME_STATE =
           ["ts-jest", "virtual:d9229f1b7c5a259acf00d7e72e1268ab77ed605086423c334fd3d275d6b9fcf6ddafca867e00be62f2246f0e1f1bf28fa65d683eb7fa3d5ba69ec29da92ea5fb#npm:29.2.5"],\
           ["ts-node", "virtual:d9229f1b7c5a259acf00d7e72e1268ab77ed605086423c334fd3d275d6b9fcf6ddafca867e00be62f2246f0e1f1bf28fa65d683eb7fa3d5ba69ec29da92ea5fb#npm:10.9.2"],\
           ["ts-toolbelt", "npm:9.6.0"],\
-          ["tslib", "npm:2.6.3"],\
+          ["tslib", "npm:2.7.0"],\
           ["typescript", "patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"],\
           ["wsdl-tsclient", "https://github.com/johngeorgewright/wsdl-tsclient.git#commit=1b7273d78d7f2e762c25cc9119021e4e03e49665"]\
         ],\
@@ -11131,10 +11131,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:2.6.3", {\
-        "packageLocation": "../../../../cache/others/berry/cache/tslib-npm-2.6.3-0fd136b3be-10c0.zip/node_modules/tslib/",\
+      ["npm:2.7.0", {\
+        "packageLocation": "../../../../cache/others/berry/cache/tslib-npm-2.7.0-21668f5c21-10c0.zip/node_modules/tslib/",\
         "packageDependencies": [\
-          ["tslib", "npm:2.6.3"]\
+          ["tslib", "npm:2.7.0"]\
         ],\
         "linkType": "HARD"\
       }]\
