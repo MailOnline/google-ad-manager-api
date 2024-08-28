@@ -27,7 +27,7 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
-          ["@commitlint/cli", "npm:19.4.0"],\
+          ["@commitlint/cli", "npm:19.4.1"],\
           ["@commitlint/config-conventional", "npm:19.4.1"],\
           ["@commitlint/types", "npm:19.0.3"],\
           ["@jest/types", "npm:29.6.3"],\
@@ -886,12 +886,12 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@commitlint/cli", [\
-      ["npm:19.4.0", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@commitlint-cli-npm-19.4.0-f98136516c-10c0.zip/node_modules/@commitlint/cli/",\
+      ["npm:19.4.1", {\
+        "packageLocation": "../../../../cache/others/berry/cache/@commitlint-cli-npm-19.4.1-3163d3cb36-10c0.zip/node_modules/@commitlint/cli/",\
         "packageDependencies": [\
-          ["@commitlint/cli", "npm:19.4.0"],\
+          ["@commitlint/cli", "npm:19.4.1"],\
           ["@commitlint/format", "npm:19.3.0"],\
-          ["@commitlint/lint", "npm:19.2.2"],\
+          ["@commitlint/lint", "npm:19.4.1"],\
           ["@commitlint/load", "npm:19.4.0"],\
           ["@commitlint/read", "npm:19.4.0"],\
           ["@commitlint/types", "npm:19.0.3"],\
@@ -986,13 +986,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@commitlint/lint", [\
-      ["npm:19.2.2", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@commitlint-lint-npm-19.2.2-0724d922e2-10c0.zip/node_modules/@commitlint/lint/",\
+      ["npm:19.4.1", {\
+        "packageLocation": "../../../../cache/others/berry/cache/@commitlint-lint-npm-19.4.1-b040193911-10c0.zip/node_modules/@commitlint/lint/",\
         "packageDependencies": [\
-          ["@commitlint/lint", "npm:19.2.2"],\
+          ["@commitlint/lint", "npm:19.4.1"],\
           ["@commitlint/is-ignored", "npm:19.2.2"],\
           ["@commitlint/parse", "npm:19.0.3"],\
-          ["@commitlint/rules", "npm:19.0.3"],\
+          ["@commitlint/rules", "npm:19.4.1"],\
           ["@commitlint/types", "npm:19.0.3"]\
         ],\
         "linkType": "HARD"\
@@ -1102,10 +1102,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@commitlint/rules", [\
-      ["npm:19.0.3", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@commitlint-rules-npm-19.0.3-9547d09d1e-10c0.zip/node_modules/@commitlint/rules/",\
+      ["npm:19.4.1", {\
+        "packageLocation": "../../../../cache/others/berry/cache/@commitlint-rules-npm-19.4.1-829008e759-10c0.zip/node_modules/@commitlint/rules/",\
         "packageDependencies": [\
-          ["@commitlint/rules", "npm:19.0.3"],\
+          ["@commitlint/rules", "npm:19.4.1"],\
           ["@commitlint/ensure", "npm:19.0.3"],\
           ["@commitlint/message", "npm:19.0.0"],\
           ["@commitlint/to-lines", "npm:19.0.0"],\
@@ -1494,7 +1494,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@johngw/google-ad-manager-api", "workspace:."],\
-          ["@commitlint/cli", "npm:19.4.0"],\
+          ["@commitlint/cli", "npm:19.4.1"],\
           ["@commitlint/config-conventional", "npm:19.4.1"],\
           ["@commitlint/types", "npm:19.0.3"],\
           ["@jest/types", "npm:29.6.3"],\
