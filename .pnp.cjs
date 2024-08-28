@@ -39,7 +39,7 @@ const RAW_RUNTIME_STATE =
           ["@semantic-release/release-notes-generator", "virtual:99aeaffe6ca531ee0c9ffb8a28d9b6e0af7fabd719edb8ac05e95b7aa2abb7634abe6c13c8a7566e7f0819eaf1c5a4b534ac052520c4268553838da06e14b359#npm:14.0.1"],\
           ["@types/jest", "npm:29.5.12"],\
           ["@types/lodash", "npm:4.17.7"],\
-          ["@types/node", "npm:20.16.1"],\
+          ["@types/node", "npm:20.16.2"],\
           ["@types/sax", "npm:1.2.7"],\
           ["@types/source-map-support", "npm:0.5.10"],\
           ["assert-never", "npm:1.3.0"],\
@@ -1506,7 +1506,7 @@ const RAW_RUNTIME_STATE =
           ["@semantic-release/release-notes-generator", "virtual:99aeaffe6ca531ee0c9ffb8a28d9b6e0af7fabd719edb8ac05e95b7aa2abb7634abe6c13c8a7566e7f0819eaf1c5a4b534ac052520c4268553838da06e14b359#npm:14.0.1"],\
           ["@types/jest", "npm:29.5.12"],\
           ["@types/lodash", "npm:4.17.7"],\
-          ["@types/node", "npm:20.16.1"],\
+          ["@types/node", "npm:20.16.2"],\
           ["@types/sax", "npm:1.2.7"],\
           ["@types/source-map-support", "npm:0.5.10"],\
           ["assert-never", "npm:1.3.0"],\
@@ -2749,10 +2749,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/node", [\
-      ["npm:20.16.1", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@types-node-npm-20.16.1-ba5fb07db1-10c0.zip/node_modules/@types/node/",\
+      ["npm:20.16.2", {\
+        "packageLocation": "../../../../cache/others/berry/cache/@types-node-npm-20.16.2-fa541092c6-10c0.zip/node_modules/@types/node/",\
         "packageDependencies": [\
-          ["@types/node", "npm:20.16.1"],\
+          ["@types/node", "npm:20.16.2"],\
           ["undici-types", "npm:6.19.6"]\
         ],\
         "linkType": "HARD"\
@@ -11081,7 +11081,7 @@ const RAW_RUNTIME_STATE =
           ["@tsconfig/node12", "npm:1.0.11"],\
           ["@tsconfig/node14", "npm:1.0.3"],\
           ["@tsconfig/node16", "npm:1.0.4"],\
-          ["@types/node", "npm:20.16.1"],\
+          ["@types/node", "npm:20.16.2"],\
           ["@types/swc__core", null],\
           ["@types/swc__wasm", null],\
           ["@types/typescript", null],\
