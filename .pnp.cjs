@@ -53,7 +53,7 @@ const RAW_RUNTIME_STATE =
           ["google-auth-library", "npm:9.14.0"],\
           ["husky", "npm:9.1.5"],\
           ["jest", "virtual:d9229f1b7c5a259acf00d7e72e1268ab77ed605086423c334fd3d275d6b9fcf6ddafca867e00be62f2246f0e1f1bf28fa65d683eb7fa3d5ba69ec29da92ea5fb#npm:29.7.0"],\
-          ["lint-staged", "npm:15.2.9"],\
+          ["lint-staged", "npm:15.2.10"],\
           ["lodash", "npm:4.17.21"],\
           ["mkdirp", "npm:3.0.1"],\
           ["prettier", "npm:3.3.3"],\
@@ -1520,7 +1520,7 @@ const RAW_RUNTIME_STATE =
           ["google-auth-library", "npm:9.14.0"],\
           ["husky", "npm:9.1.5"],\
           ["jest", "virtual:d9229f1b7c5a259acf00d7e72e1268ab77ed605086423c334fd3d275d6b9fcf6ddafca867e00be62f2246f0e1f1bf28fa65d683eb7fa3d5ba69ec29da92ea5fb#npm:29.7.0"],\
-          ["lint-staged", "npm:15.2.9"],\
+          ["lint-staged", "npm:15.2.10"],\
           ["lodash", "npm:4.17.21"],\
           ["mkdirp", "npm:3.0.1"],\
           ["prettier", "npm:3.3.3"],\
@@ -4574,10 +4574,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:092f3073820446e516cc06ce7526276734f4b9f3261d1fcd2126aa21fe567465c65e776307f3da2178400eab74142717a8f1c9e2ee9a38c913fd009cf77e8d00#npm:4.3.6", {\
-        "packageLocation": "./.yarn/__virtual__/debug-virtual-64b81dbdf5/5/cache/others/berry/cache/debug-npm-4.3.6-ecb233d831-10c0.zip/node_modules/debug/",\
+      ["virtual:3374e8211c8552bd058409bb32829cbe46011ae75cade0b7d3d3c8d8aee68ec5a04759a8ab9d63ecd59d990daccdb9f7d444ca14945f7174d7868d5c95c99333#npm:4.3.6", {\
+        "packageLocation": "./.yarn/__virtual__/debug-virtual-6fccd4f6e9/5/cache/others/berry/cache/debug-npm-4.3.6-ecb233d831-10c0.zip/node_modules/debug/",\
         "packageDependencies": [\
-          ["debug", "virtual:092f3073820446e516cc06ce7526276734f4b9f3261d1fcd2126aa21fe567465c65e776307f3da2178400eab74142717a8f1c9e2ee9a38c913fd009cf77e8d00#npm:4.3.6"],\
+          ["debug", "virtual:3374e8211c8552bd058409bb32829cbe46011ae75cade0b7d3d3c8d8aee68ec5a04759a8ab9d63ecd59d990daccdb9f7d444ca14945f7174d7868d5c95c99333#npm:4.3.6"],\
           ["@types/supports-color", null],\
           ["ms", "npm:2.1.2"],\
           ["supports-color", null]\
@@ -7692,17 +7692,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["lint-staged", [\
-      ["npm:15.2.9", {\
-        "packageLocation": "../../../../cache/others/berry/cache/lint-staged-npm-15.2.9-092f307382-10c0.zip/node_modules/lint-staged/",\
+      ["npm:15.2.10", {\
+        "packageLocation": "../../../../cache/others/berry/cache/lint-staged-npm-15.2.10-3374e8211c-10c0.zip/node_modules/lint-staged/",\
         "packageDependencies": [\
-          ["lint-staged", "npm:15.2.9"],\
+          ["lint-staged", "npm:15.2.10"],\
           ["chalk", "npm:5.3.0"],\
           ["commander", "npm:12.1.0"],\
-          ["debug", "virtual:092f3073820446e516cc06ce7526276734f4b9f3261d1fcd2126aa21fe567465c65e776307f3da2178400eab74142717a8f1c9e2ee9a38c913fd009cf77e8d00#npm:4.3.6"],\
+          ["debug", "virtual:3374e8211c8552bd058409bb32829cbe46011ae75cade0b7d3d3c8d8aee68ec5a04759a8ab9d63ecd59d990daccdb9f7d444ca14945f7174d7868d5c95c99333#npm:4.3.6"],\
           ["execa", "npm:8.0.1"],\
           ["lilconfig", "npm:3.1.2"],\
           ["listr2", "npm:8.2.4"],\
-          ["micromatch", "npm:4.0.7"],\
+          ["micromatch", "npm:4.0.8"],\
           ["pidtree", "npm:0.6.0"],\
           ["string-argv", "npm:0.3.2"],\
           ["yaml", "npm:2.5.0"]\
@@ -8154,10 +8154,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:4.0.7", {\
-        "packageLocation": "../../../../cache/others/berry/cache/micromatch-npm-4.0.7-28fb7387ee-10c0.zip/node_modules/micromatch/",\
+      ["npm:4.0.8", {\
+        "packageLocation": "../../../../cache/others/berry/cache/micromatch-npm-4.0.8-c9570e4aca-10c0.zip/node_modules/micromatch/",\
         "packageDependencies": [\
-          ["micromatch", "npm:4.0.7"],\
+          ["micromatch", "npm:4.0.8"],\
           ["braces", "npm:3.0.3"],\
           ["picomatch", "npm:2.3.1"]\
         ],\
