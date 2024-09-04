@@ -5,7 +5,7 @@ A fully typed library to access Google's Ad Manager.
 ## Installation
 
 ```
-npm install @johngw/google-ad-manager-api
+npm install google-auth-library @johngw/google-ad-manager-api
 ```
 
 ## Usage
@@ -105,15 +105,18 @@ When quering large amounts of data, you'd generally want to use GAM's pagination
 
 ```typescript
 import { GoogleAdManager, iterate, query } from '@johngw/google-ad-manager-api'
+import { JWT } from 'google-auth-lbrary'
+
+const jwt = new JWT({
+  key: 'MY_JWT_KEY',
+  email: 'MY_JWT_EMAIL',
+  scopes: ['https://www.googleapis.com/auth/dfp'],
+})
 
 const api = new GoogleAdManager({
   applicationName: 'MY_APPLICATION_NAME',
   networkCode: 123456789,
-  jwtOptions: {
-    key: 'MY_JWT_KEY',
-    email: 'MY_JWT_EMAIL',
-    scopes: ['https://www.googleapis.com/auth/dfp'],
-  },
+  authorize: () => jwt.authorize(),
 })
 
 const client = await api.createLineItemServiceClient()
