@@ -1,3 +1,4 @@
+import { JWT } from 'google-auth-library'
 import {
   GT,
   GoogleAdManager,
@@ -16,14 +17,16 @@ beforeAll(() => {
     includeProcessEnv: true,
   })
 
+  const jwt = new JWT({
+    key: process.env.JWT_KEY,
+    email: process.env.JWT_EMAIL,
+    scopes: ['https://www.googleapis.com/auth/dfp'],
+  })
+
   api = new GoogleAdManager({
     applicationName: 'google-ad-manager-api CI test',
+    authorize: () => jwt.authorize(),
     networkCode: Number(process.env.NETWORK_CODE),
-    jwtOptions: {
-      key: process.env.JWT_KEY,
-      email: process.env.JWT_EMAIL,
-      scopes: ['https://www.googleapis.com/auth/dfp'],
-    },
   })
 })
 

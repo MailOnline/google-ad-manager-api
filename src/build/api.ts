@@ -13,7 +13,7 @@ async function generateAPIs() {
       wsdl.replace(/\.wsdl$/, ''),
     )
     const template = /* ts */ `
-import { Credentials, JWT, JWTOptions } from 'google-auth-library'
+import { Credentials } from 'google-auth-library'
 import { BearerSecurity, Client, createClientAsync } from 'soap'
 ${mapJoin(
   services,
@@ -29,14 +29,14 @@ ${mapJoin(
 
 export interface GoogleAdManagerOptions {
   applicationName: string
-  jwtOptions: JWTOptions
+  authorize(): Promise<Credentials>
   networkCode: number | string
 }
 
 export class GoogleAdManager {
   #applicationName: string
+  #authorize: () => Promise<Credentials>
   #credentialsPromise!: Promise<Credentials>
-  #jwt: JWT
   #networkCode: string
   #version = '${version}'
 
@@ -44,7 +44,7 @@ export class GoogleAdManager {
 
   constructor(options: GoogleAdManagerOptions) {
     this.#applicationName = options.applicationName
-    this.#jwt = new JWT(options.jwtOptions)
+    this.#authorize = options.authorize
     this.#networkCode = options.networkCode.toString()
   }
 
@@ -54,7 +54,7 @@ export class GoogleAdManager {
   }
 
   authorize() {
-    this.#credentialsPromise = this.#jwt.authorize()
+    this.#credentialsPromise = this.#authorize()
     return this.#credentialsPromise
   }
 
