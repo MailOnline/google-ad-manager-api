@@ -46,7 +46,7 @@ const RAW_RUNTIME_STATE =
           ["axios", "npm:1.7.7"],\
           ["cheerio", "npm:1.0.0"],\
           ["commitizen", "npm:4.3.0"],\
-          ["concurrently", "npm:8.2.2"],\
+          ["concurrently", "npm:9.0.0"],\
           ["crawler", "npm:2.0.2"],\
           ["cz-conventional-changelog", "npm:3.3.0"],\
           ["dotenv-extended", "npm:2.9.0"],\
@@ -804,16 +804,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@babel/runtime", [\
-      ["npm:7.22.15", {\
-        "packageLocation": "../../.yarn/berry/cache/@babel-runtime-npm-7.22.15-b21c55a700-10c0.zip/node_modules/@babel/runtime/",\
-        "packageDependencies": [\
-          ["@babel/runtime", "npm:7.22.15"],\
-          ["regenerator-runtime", "npm:0.14.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["@babel/template", [\
       ["npm:7.22.15", {\
         "packageLocation": "../../.yarn/berry/cache/@babel-template-npm-7.22.15-0b464facb4-10c0.zip/node_modules/@babel/template/",\
@@ -1513,7 +1503,7 @@ const RAW_RUNTIME_STATE =
           ["axios", "npm:1.7.7"],\
           ["cheerio", "npm:1.0.0"],\
           ["commitizen", "npm:4.3.0"],\
-          ["concurrently", "npm:8.2.2"],\
+          ["concurrently", "npm:9.0.0"],\
           ["crawler", "npm:2.0.2"],\
           ["cz-conventional-changelog", "npm:3.3.0"],\
           ["dotenv-extended", "npm:2.9.0"],\
@@ -4151,16 +4141,14 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["concurrently", [\
-      ["npm:8.2.2", {\
-        "packageLocation": "../../.yarn/berry/cache/concurrently-npm-8.2.2-8ae42f052b-10c0.zip/node_modules/concurrently/",\
+      ["npm:9.0.0", {\
+        "packageLocation": "../../.yarn/berry/cache/concurrently-npm-9.0.0-bf1ca28d11-10c0.zip/node_modules/concurrently/",\
         "packageDependencies": [\
-          ["concurrently", "npm:8.2.2"],\
+          ["concurrently", "npm:9.0.0"],\
           ["chalk", "npm:4.1.2"],\
-          ["date-fns", "npm:2.30.0"],\
           ["lodash", "npm:4.17.21"],\
           ["rxjs", "npm:7.8.1"],\
           ["shell-quote", "npm:1.8.1"],\
-          ["spawn-command", "npm:0.0.2"],\
           ["supports-color", "npm:8.1.1"],\
           ["tree-kill", "npm:1.2.2"],\
           ["yargs", "npm:17.7.2"]\
@@ -4528,16 +4516,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/dargs-npm-8.1.0-39fde97ef5-10c0.zip/node_modules/dargs/",\
         "packageDependencies": [\
           ["dargs", "npm:8.1.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["date-fns", [\
-      ["npm:2.30.0", {\
-        "packageLocation": "../../.yarn/berry/cache/date-fns-npm-2.30.0-895c790e0f-10c0.zip/node_modules/date-fns/",\
-        "packageDependencies": [\
-          ["date-fns", "npm:2.30.0"],\
-          ["@babel/runtime", "npm:7.22.15"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -9843,15 +9821,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["regenerator-runtime", [\
-      ["npm:0.14.0", {\
-        "packageLocation": "../../.yarn/berry/cache/regenerator-runtime-npm-0.14.0-e060897cf7-10c0.zip/node_modules/regenerator-runtime/",\
-        "packageDependencies": [\
-          ["regenerator-runtime", "npm:0.14.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["registry-auth-token", [\
       ["npm:5.0.2", {\
         "packageLocation": "../../.yarn/berry/cache/registry-auth-token-npm-5.0.2-26eb592d5d-10c0.zip/node_modules/registry-auth-token/",\
@@ -10437,15 +10406,6 @@ const RAW_RUNTIME_STATE =
           ["source-map-support", "npm:0.5.21"],\
           ["buffer-from", "npm:1.1.2"],\
           ["source-map", "npm:0.6.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["spawn-command", [\
-      ["npm:0.0.2", {\
-        "packageLocation": "../../.yarn/berry/cache/spawn-command-npm-0.0.2-014d4d5d9f-10c0.zip/node_modules/spawn-command/",\
-        "packageDependencies": [\
-          ["spawn-command", "npm:0.0.2"]\
         ],\
         "linkType": "HARD"\
       }]\
