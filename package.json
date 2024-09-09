@@ -63,7 +63,8 @@
     "source-map-support": "0.5.21",
     "ts-jest": "29.2.5",
     "ts-node": "10.9.2",
-    "typescript": "5.5.4"
+    "typescript": "5.5.4",
+    "wsdl-tsclient": "johngeorgewright/wsdl-tsclient#enum"
   },
   "lint-staged": {
     "*.{md,json,js,jsx,ts,tsx,yml,yaml}": [
@@ -79,8 +80,7 @@
     "assert-never": "^1.2.1",
     "soap": "^1.1.3",
     "ts-toolbelt": "^9.6.0",
-    "tslib": "^2.7.0",
-    "wsdl-tsclient": "johngeorgewright/wsdl-tsclient#enum"
+    "tslib": "^2.7.0"
   },
   "peerDependencies": {
     "google-auth-library": "^9.14.1"
