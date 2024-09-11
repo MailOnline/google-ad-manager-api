@@ -1,11 +1,10 @@
 import { And, GT, In, LT, Like, Not, Null, Or, pql } from '../src'
 import { Asc, Desc } from '../src/query'
-import { Creatives } from '../src/service/v202308/creativeservice'
-import { LineItems } from '../src/service/v202308/lineitemservice'
+import { CreativeService, LineItemService } from '../src'
 
 test('positive', () => {
   expect(
-    pql<Creatives>({
+    pql<CreativeService.Creatives>({
       where: {
         name: 'foo',
       },
@@ -13,7 +12,7 @@ test('positive', () => {
   ).toBe("WHERE name = 'foo'")
 
   expect(
-    pql<Creatives>({
+    pql<CreativeService.Creatives>({
       where: {
         name: "foo's",
       },
@@ -21,7 +20,7 @@ test('positive', () => {
   ).toBe("WHERE name = 'foo\\'s'")
 
   expect(
-    pql<Creatives>({
+    pql<CreativeService.Creatives>({
       where: {
         id: 1234,
       },
@@ -29,7 +28,7 @@ test('positive', () => {
   ).toBe('WHERE id = 1234')
 
   expect(
-    pql<LineItems>({
+    pql<LineItemService.LineItems>({
       where: {
         allowOverbook: true,
       },
@@ -37,7 +36,7 @@ test('positive', () => {
   ).toBe('WHERE allowOverbook = TRUE')
 
   expect(
-    pql<LineItems>({
+    pql<LineItemService.LineItems>({
       where: {
         startDateTime: GT(new Date('2020-01-01')),
       },
@@ -45,7 +44,7 @@ test('positive', () => {
   ).toBe("WHERE startDateTime > '2020-01-01T00:00:00.000Z'")
 
   expect(
-    pql<LineItems>({
+    pql<LineItemService.LineItems>({
       where: {
         costType: Null(),
       },
@@ -53,7 +52,7 @@ test('positive', () => {
   ).toBe('WHERE costType IS NULL')
 
   expect(
-    pql<LineItems>({
+    pql<LineItemService.LineItems>({
       where: {
         allowOverbook: false,
       },
@@ -61,7 +60,7 @@ test('positive', () => {
   ).toBe('WHERE allowOverbook = FALSE')
 
   expect(
-    pql<Creatives>({
+    pql<CreativeService.Creatives>({
       where: {
         name: In(['foo', 'bar']),
       },
@@ -69,7 +68,7 @@ test('positive', () => {
   ).toBe("WHERE name IN ('foo','bar')")
 
   expect(
-    pql<Creatives>({
+    pql<CreativeService.Creatives>({
       where: {
         name: Like('foo %'),
       },
@@ -79,7 +78,7 @@ test('positive', () => {
 
 test('negative', () => {
   expect(
-    pql<Creatives>({
+    pql<CreativeService.Creatives>({
       where: {
         name: Not('foo'),
       },
@@ -87,7 +86,7 @@ test('negative', () => {
   ).toBe("WHERE name != 'foo'")
 
   expect(
-    pql<Creatives>({
+    pql<CreativeService.Creatives>({
       where: {
         id: Not(1234),
       },
@@ -95,7 +94,7 @@ test('negative', () => {
   ).toBe('WHERE id != 1234')
 
   expect(
-    pql<Creatives>({
+    pql<CreativeService.Creatives>({
       where: {
         name: Not(In(['foo', 'bar'])),
       },
@@ -103,7 +102,7 @@ test('negative', () => {
   ).toBe("WHERE NOT name IN ('foo','bar')")
 
   expect(
-    pql<Creatives>({
+    pql<CreativeService.Creatives>({
       where: {
         name: Not(Like('foo %')),
       },
@@ -111,7 +110,7 @@ test('negative', () => {
   ).toBe("WHERE NOT name LIKE 'foo %'")
 
   expect(
-    pql<LineItems>({
+    pql<LineItemService.LineItems>({
       where: {
         costType: Not(Null()),
       },
@@ -121,7 +120,7 @@ test('negative', () => {
 
 test('ands', () => {
   expect(
-    pql<Creatives>({
+    pql<CreativeService.Creatives>({
       where: {
         name: 'foo',
         previewUrl: 'bar',
@@ -130,7 +129,7 @@ test('ands', () => {
   ).toBe("WHERE name = 'foo' AND previewUrl = 'bar'")
 
   expect(
-    pql<LineItems>({
+    pql<LineItemService.LineItems>({
       where: {
         creationDateTime: And([GT('2001'), LT('2022')]),
       },
@@ -140,7 +139,7 @@ test('ands', () => {
 
 test('ors', () => {
   expect(
-    pql<Creatives>({
+    pql<CreativeService.Creatives>({
       where: [
         {
           name: 'foo',
@@ -157,7 +156,7 @@ test('ors', () => {
   )
 
   expect(
-    pql<LineItems>({
+    pql<LineItemService.LineItems>({
       where: {
         creationDateTime: Or(['2023', And([GT('2001'), LT('2022')])]),
       },
@@ -169,13 +168,13 @@ test('ors', () => {
 
 test('order by', () => {
   expect(
-    pql<LineItems>({
+    pql<LineItemService.LineItems>({
       orderBy: Asc('status'),
     }),
   ).toBe('ORDER BY status ASC')
 
   expect(
-    pql<LineItems>({
+    pql<LineItemService.LineItems>({
       orderBy: Desc('status'),
     }),
   ).toBe('ORDER BY status DESC')
@@ -183,7 +182,7 @@ test('order by', () => {
 
 test('all together now', () => {
   expect(
-    pql<Creatives>({
+    pql<CreativeService.Creatives>({
       limit: 12,
       orderBy: Asc('name'),
       offset: 6,
@@ -204,7 +203,7 @@ test('all together now', () => {
 })
 
 test('placeholders', () => {
-  pql<Creatives>({
+  pql<CreativeService.Creatives>({
     // @ts-expect-error no value for ':id' of ':advertiserId'
     where: {
       advertiserId: ':advertiserId',
@@ -212,7 +211,7 @@ test('placeholders', () => {
     },
   })
 
-  pql<Creatives, 'advertiserId' | 'id'>({
+  pql<CreativeService.Creatives, 'advertiserId' | 'id'>({
     where: {
       advertiserId: ':advertiserId',
       id: ':id',
