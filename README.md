@@ -5,7 +5,7 @@ A fully typed library to access Google's Ad Manager.
 ## Installation
 
 ```
-npm install google-auth-library @mailonline/google-ad-manager-api
+npm install google-auth-library @dmgt/google-ad-manager-api
 ```
 
 ## Usage
