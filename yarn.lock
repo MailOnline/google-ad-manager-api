@@ -689,6 +689,56 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@dmgt/google-ad-manager-api@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@dmgt/google-ad-manager-api@workspace:."
+  dependencies:
+    "@commitlint/cli": "npm:19.4.1"
+    "@commitlint/config-conventional": "npm:19.4.1"
+    "@commitlint/types": "npm:19.0.3"
+    "@jest/types": "npm:29.6.3"
+    "@johngw/fs": "npm:3.0.1"
+    "@semantic-release/commit-analyzer": "npm:13.0.0"
+    "@semantic-release/git": "npm:10.0.1"
+    "@semantic-release/github": "npm:10.3.3"
+    "@semantic-release/npm": "npm:12.0.1"
+    "@semantic-release/release-notes-generator": "npm:14.0.1"
+    "@types/jest": "npm:29.5.12"
+    "@types/lodash": "npm:^4.17.6"
+    "@types/node": "npm:20.16.5"
+    "@types/sax": "npm:1.2.7"
+    "@types/source-map-support": "npm:0.5.10"
+    assert-never: "npm:^1.2.1"
+    axios: "npm:1.7.7"
+    cheerio: "npm:1.0.0"
+    commitizen: "npm:4.3.0"
+    concurrently: "npm:9.0.0"
+    crawler: "npm:2.0.2"
+    cz-conventional-changelog: "npm:3.3.0"
+    dotenv-extended: "npm:2.9.0"
+    google-auth-library: "npm:9.14.1"
+    husky: "npm:9.1.5"
+    jest: "npm:29.7.0"
+    lint-staged: "npm:15.2.10"
+    lodash: "npm:^4.17.21"
+    mkdirp: "npm:3.0.1"
+    prettier: "npm:3.3.3"
+    prettier-2: "npm:prettier@2.8.8"
+    rimraf: "npm:6.0.1"
+    semantic-release: "npm:24.1.0"
+    soap: "npm:^1.1.3"
+    source-map-support: "npm:0.5.21"
+    ts-jest: "npm:29.2.5"
+    ts-node: "npm:10.9.2"
+    ts-toolbelt: "npm:^9.6.0"
+    tslib: "npm:^2.7.0"
+    typescript: "npm:5.5.4"
+    wsdl-tsclient: "johngeorgewright/wsdl-tsclient#enum"
+  peerDependencies:
+    google-auth-library: ^9.14.1
+  languageName: unknown
+  linkType: soft
+
 "@isaacs/cliui@npm:^8.0.2":
   version: 8.0.2
   resolution: "@isaacs/cliui@npm:8.0.2"
@@ -968,56 +1018,6 @@ __metadata:
   checksum: 10c0/f795646f8bbb629c0698f24f499433dd63466775720821ab22b6f3ed0e11dc586984d03d752635764ebf8f6543f7277e7c87cdda394bbe7dab89dabd04543074
   languageName: node
   linkType: hard
-
-"@johngw/google-ad-manager-api@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@johngw/google-ad-manager-api@workspace:."
-  dependencies:
-    "@commitlint/cli": "npm:19.4.1"
-    "@commitlint/config-conventional": "npm:19.4.1"
-    "@commitlint/types": "npm:19.0.3"
-    "@jest/types": "npm:29.6.3"
-    "@johngw/fs": "npm:3.0.1"
-    "@semantic-release/commit-analyzer": "npm:13.0.0"
-    "@semantic-release/git": "npm:10.0.1"
-    "@semantic-release/github": "npm:10.3.3"
-    "@semantic-release/npm": "npm:12.0.1"
-    "@semantic-release/release-notes-generator": "npm:14.0.1"
-    "@types/jest": "npm:29.5.12"
-    "@types/lodash": "npm:^4.17.6"
-    "@types/node": "npm:20.16.5"
-    "@types/sax": "npm:1.2.7"
-    "@types/source-map-support": "npm:0.5.10"
-    assert-never: "npm:^1.2.1"
-    axios: "npm:1.7.7"
-    cheerio: "npm:1.0.0"
-    commitizen: "npm:4.3.0"
-    concurrently: "npm:9.0.0"
-    crawler: "npm:2.0.2"
-    cz-conventional-changelog: "npm:3.3.0"
-    dotenv-extended: "npm:2.9.0"
-    google-auth-library: "npm:9.14.1"
-    husky: "npm:9.1.5"
-    jest: "npm:29.7.0"
-    lint-staged: "npm:15.2.10"
-    lodash: "npm:^4.17.21"
-    mkdirp: "npm:3.0.1"
-    prettier: "npm:3.3.3"
-    prettier-2: "npm:prettier@2.8.8"
-    rimraf: "npm:6.0.1"
-    semantic-release: "npm:24.1.0"
-    soap: "npm:^1.1.3"
-    source-map-support: "npm:0.5.21"
-    ts-jest: "npm:29.2.5"
-    ts-node: "npm:10.9.2"
-    ts-toolbelt: "npm:^9.6.0"
-    tslib: "npm:^2.7.0"
-    typescript: "npm:5.5.4"
-    wsdl-tsclient: "johngeorgewright/wsdl-tsclient#enum"
-  peerDependencies:
-    google-auth-library: ^9.14.1
-  languageName: unknown
-  linkType: soft
 
 "@jridgewell/gen-mapping@npm:^0.3.0, @jridgewell/gen-mapping@npm:^0.3.2":
   version: 0.3.3

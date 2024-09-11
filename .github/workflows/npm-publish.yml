@@ -12,7 +12,7 @@ jobs:
       - name: Checkout project
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.PUSH_TOKEN }}
+          token: ${{ secrets.MOL_TOKEN }}
 
       - name: Install Node.js
         uses: actions/setup-node@v4
