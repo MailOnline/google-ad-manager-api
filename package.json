@@ -1,7 +1,7 @@
 {
-  "name": "@johngw/google-ad-manager-api",
+  "name": "@mailonline/google-ad-manager-api",
   "version": "7.0.0",
-  "description": "Compose and react upon redux actions",
+  "description": "Typed Google Ad Manager API",
   "main": "dist/index.js",
   "scripts": {
     "build": "yarn clean && yarn build:wsdl && yarn build:service && yarn build:api && tsc",
@@ -18,15 +18,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/johngeorgewright/google-ad-manager-api.git"
+    "url": "git+https://github.com/MailOnline/google-ad-manager-api.git"
   },
-  "keywords": [],
-  "author": "John Wright <johngeorge.wright@gmail.com>",
+  "keywords": [
+    "gam",
+    "google",
+    "ad",
+    "manager"
+  ],
+  "author": "MOL Ads <MOLAds@dmgmedia.tech>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/johngeorgewright/google-ad-manager-api/issues"
+    "url": "https://github.com/MailOnline/google-ad-manager-api/issues"
   },
-  "homepage": "https://github.com/johngeorgewright/google-ad-manager-api#readme",
+  "homepage": "https://github.com/MailOnline/google-ad-manager-api#readme",
   "devDependencies": {
     "@commitlint/cli": "19.4.1",
     "@commitlint/config-conventional": "19.4.1",
