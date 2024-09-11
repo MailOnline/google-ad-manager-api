@@ -1,4 +1,4 @@
-# @mailonline/google-ad-manager-api
+# @dmgt/google-ad-manager-api
 
 A fully typed library to access Google's Ad Manager.
 
@@ -19,7 +19,7 @@ import {
   Not,
   Like,
   query,
-} from '@mailonline/google-ad-manager-api'
+} from '@dmgt/google-ad-manager-api'
 import { JWT } from 'google-auth-lbrary'
 
 const jwt = new JWT({
@@ -58,7 +58,7 @@ import {
   Not,
   Like,
   pql,
-} from '@mailonline/google-ad-manager-api'
+} from '@dmgt/google-ad-manager-api'
 
 const [response] = await client.getLineItemsByStatementAsync({
   filterStatement: {
@@ -79,8 +79,8 @@ You can also type the `pql` function with JSDocs:
 
 ```javascript
 /**
- * @typedef {import('@mailonline/google-ad-manager-api').PQL<
- *   import('@mailonline/google-ad-manager-api').LineItemService.LineItems
+ * @typedef {import('@dmgt/google-ad-manager-api').PQL<
+ *   import('@dmgt/google-ad-manager-api').LineItemService.LineItems
  * >} LineItemsPQL
  */
 
@@ -104,11 +104,7 @@ const [response] = await client.getLineItemsByStatementAsync({
 When quering large amounts of data, you'd generally want to use GAM's pagination feature. Use the `iterate` function to help iterate through all individual items in paginated queries.
 
 ```typescript
-import {
-  GoogleAdManager,
-  iterate,
-  query,
-} from '@mailonline/google-ad-manager-api'
+import { GoogleAdManager, iterate, query } from '@dmgt/google-ad-manager-api'
 import { JWT } from 'google-auth-lbrary'
 
 const jwt = new JWT({
