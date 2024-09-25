@@ -51,5 +51,5 @@ import { CheerioAPI } from 'cheerio'
     },
   })
 
-  crawler.queue(baseURL)
+  crawler.add(baseURL)
 })()
