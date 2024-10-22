@@ -46,6 +46,14 @@ interface Rval<T> {
 
 type ServiceMethod<S extends string> = `get${Capitalize<S>}ByStatementAsync`
 
+type GetByStatementMethodNames<C extends Client> = keyof {
+  [Key in keyof C as Key extends `get${infer T}ByStatementAsync`
+    ? Parameters<C[Key]> extends [GetByStatement, ...unknown[]]
+      ? Uncapitalize<T>
+      : never
+    : never]: unknown
+}
+
 /**
  * Query a service wth PQL options.
  *
@@ -75,16 +83,12 @@ type ServiceMethod<S extends string> = `get${Capitalize<S>}ByStatementAsync`
  */
 export function getByStatement<
   C extends Client,
-  S extends string,
+  S extends GetByStatementMethodNames<C>,
   V extends StatementValue<string> = StatementValue<never>,
   Args extends unknown[] = [],
 >(
   client: C,
-  service: ServiceMethod<S> extends keyof C
-    ? Parameters<C[ServiceMethod<S>]> extends [GetByStatement, ...unknown[]]
-      ? S
-      : never
-    : never,
+  service: S,
   query: ServiceMethod<S> extends keyof C
     ? PQLOptions<
         GetByStatementResponseResult<C[ServiceMethod<S>]>,
@@ -95,7 +99,7 @@ export function getByStatement<
   ...args: Args
 ): ServiceMethod<S> extends keyof C ? ReturnType<C[ServiceMethod<S>]> : never {
   return client[
-    `get${service[0].toUpperCase()}${service.slice(1)}ByStatementAsync`
+    `get${(service as string)[0].toUpperCase()}${(service as string).slice(1)}ByStatementAsync`
   ](
     {
       filterStatement: {
