@@ -9,6 +9,8 @@ import { Value, ValueKey } from './value'
  * If a client's method matches that of a usual query statement,
  * using this function will infer the query object.
  *
+ * @deprecated Use {@link function:getByStatement}
+ *
  * @example
  * ```
  * query(client, 'getLineItemsByStatementAsync', {

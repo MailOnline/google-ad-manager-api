@@ -18,7 +18,7 @@ import {
   In,
   Not,
   Like,
-  query,
+  getByStatement,
 } from '@dmgt/google-ad-manager-api'
 import { JWT } from 'google-auth-lbrary'
 
@@ -36,7 +36,7 @@ const api = new GoogleAdManager({
 
 const client = await api.createLineItemServiceClient()
 
-const [response] = await query(client, 'getLineItemsByStatementAsync', {
+const [response] = await getByStatement(client, 'lineItems', {
   limit: 10,
   where: {
     orderId: In(1, 2, 3),
@@ -104,7 +104,11 @@ const [response] = await client.getLineItemsByStatementAsync({
 When quering large amounts of data, you'd generally want to use GAM's pagination feature. Use the `iterate` function to help iterate through all individual items in paginated queries.
 
 ```typescript
-import { GoogleAdManager, iterate, query } from '@dmgt/google-ad-manager-api'
+import {
+  GoogleAdManager,
+  iterate,
+  getByStatement,
+} from '@dmgt/google-ad-manager-api'
 import { JWT } from 'google-auth-lbrary'
 
 const jwt = new JWT({
@@ -123,7 +127,7 @@ const client = await api.createLineItemServiceClient()
 
 for await (const result of iterate({
   executeQuery: (limit, offset) =>
-    query(client, 'getLineItemsByStatementAsync', {
+    getByStatement(client, 'lineItems', {
       limit,
       offset,
     }),
