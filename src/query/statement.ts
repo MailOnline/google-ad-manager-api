@@ -47,8 +47,8 @@ interface Rval<T> {
 type ServiceMethod<S extends string> = `get${Capitalize<S>}ByStatementAsync`
 
 type GetByStatementMethodNames<C extends Client> = keyof {
-  [Key in keyof C as Key extends `get${infer T}ByStatementAsync`
-    ? Parameters<C[Key]> extends [GetByStatement, ...unknown[]]
+  [Key in keyof C as Parameters<C[Key]> extends [GetByStatement, ...unknown[]]
+    ? Key extends `get${infer T}ByStatementAsync`
       ? Uncapitalize<T>
       : never
     : never]: unknown
