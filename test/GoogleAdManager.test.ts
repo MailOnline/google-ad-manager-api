@@ -1,10 +1,10 @@
 import { JWT } from 'google-auth-library'
 import {
+  getByStatement,
   GT,
   GoogleAdManager,
   LineItemService,
   iterate,
-  query,
   value,
 } from '../src'
 import { load as dotenv } from 'dotenv-extended'
@@ -33,7 +33,7 @@ beforeAll(() => {
 test('line items', async () => {
   const client = await api.createLineItemServiceClient()
 
-  const [response] = await query(client, 'getLineItemsByStatementAsync', {
+  const [response] = await getByStatement(client, 'lineItems', {
     limit: 10,
   })
 
@@ -44,7 +44,7 @@ test('values', async () => {
   const client = await api.createLineItemServiceClient()
 
   await expect(
-    query(client, 'getLineItemsByStatementAsync', {
+    getByStatement(client, 'lineItems', {
       limit: 10,
       // @ts-expect-error :mng is not a defined value
       where: {
@@ -53,9 +53,9 @@ test('values', async () => {
     }),
   ).rejects.toThrow()
 
-  const [response] = await query(
+  const [response] = await getByStatement(
     client,
-    'getLineItemsByStatementAsync',
+    'lineItems',
     {
       limit: 10,
       where: {
@@ -83,7 +83,7 @@ test('pagination', async () => {
   for await (const result of iterate({
     pageSize: 10,
     executeQuery: (limit, offset) =>
-      query(client, 'getLineItemsByStatementAsync', {
+      getByStatement(client, 'lineItems', {
         limit,
         offset,
       }),
