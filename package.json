@@ -1,6 +1,6 @@
 {
   "name": "@dmgt/google-ad-manager-api",
-  "version": "8.1.0",
+  "version": "8.2.0",
   "description": "Typed Google Ad Manager API",
   "main": "dist/index.js",
   "scripts": {
