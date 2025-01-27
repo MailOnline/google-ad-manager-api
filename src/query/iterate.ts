@@ -22,6 +22,5 @@ import { PaginateOptions, paginate } from './paginate'
 export async function* iterate<T>(
   options: PaginateOptions<T>,
 ): AsyncGenerator<T> {
-  for await (const { items } of paginate(options))
-    for (const item of items) yield item
+  for await (const { items } of paginate(options)) yield* items
 }
