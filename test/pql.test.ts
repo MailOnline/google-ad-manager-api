@@ -1,6 +1,7 @@
 import { And, GT, In, LT, Like, Not, Null, Or, pql } from '../src'
 import { Asc, Desc } from '../src/query'
 import { CreativeService, LineItemService } from '../src'
+import { expect, test } from 'vitest'
 
 test('positive', () => {
   expect(

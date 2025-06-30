@@ -8,6 +8,7 @@ import {
   value,
 } from '../src'
 import { load as dotenv } from 'dotenv-extended'
+import { beforeAll, expect, test } from 'vitest'
 
 let api: GoogleAdManager
 

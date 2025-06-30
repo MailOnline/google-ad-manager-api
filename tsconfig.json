@@ -15,8 +15,7 @@
     "resolveJsonModule": true,
     "sourceMap": true,
     "strict": true,
-    "target": "esnext",
-    "isolatedModules": true
+    "target": "esnext"
   },
   "include": ["src"]
 }

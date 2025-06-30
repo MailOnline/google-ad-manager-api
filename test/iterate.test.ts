@@ -1,4 +1,5 @@
 import { iterate } from '../src'
+import { expect, test } from 'vitest'
 
 test('iterate', async () => {
   let i = 0
