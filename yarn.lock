@@ -8719,9 +8719,9 @@ __metadata:
   linkType: hard
 
 "utf8-byte-length@npm:^1.0.1":
-  version: 1.0.4
-  resolution: "utf8-byte-length@npm:1.0.4"
-  checksum: 10c0/78eeae05e7b44cd5cd382f00477fe07f5f14e04e83625cd5680e4b41ec29630fb8f85a553a650ae4131216019ef0569169990015e34619d3a2906380ecac6da8
+  version: 1.0.5
+  resolution: "utf8-byte-length@npm:1.0.5"
+  checksum: 10c0/e69bda3299608f4cc75976da9fb74ac94801a58b9ca29fdad03a20ec952e7477d7f226c12716b5f36bd4cff8151d1d152d02ee1df3752f017d4b2c725ce3e47a
   languageName: node
   linkType: hard
 
@@ -9043,7 +9043,7 @@ __metadata:
 
 "wsdl-tsclient@johngeorgewright/wsdl-tsclient#enum":
   version: 1.7.1
-  resolution: "wsdl-tsclient@https://github.com/johngeorgewright/wsdl-tsclient.git#commit=9080ce04bc2cf30876e66fdaca5b62c9f5d4e31d"
+  resolution: "wsdl-tsclient@https://github.com/johngeorgewright/wsdl-tsclient.git#commit=7ac32b0626aa87e14753dce2665b15e7ee0239ff"
   dependencies:
     camelcase: "npm:^6.3.0"
     chalk: "npm:^4.1.1"
@@ -9054,7 +9054,7 @@ __metadata:
     yargs: "npm:^17.7.2"
   bin:
     wsdl-tsclient: dist/src/cli.js
-  checksum: 10c0/470ba841f7cc3e3b5938e2e2cfdb9f839e094ba0c29312df8286880867c95d49944754ce01711ce39369003a0af106cce07aa58e5ed8a539d0e39c13c9191005
+  checksum: 10c0/c4e129ab462fda1d3cbaa479817a129c8d47820c3aafeb87c2a13667ae9dfa612df7e5f9bb4322442bfd91b7c5463a5ccb4b7a73958ad784c162af780ec331e2
   languageName: node
   linkType: hard
 
