@@ -84,10 +84,10 @@
     "tslib": "^2.8.1"
   },
   "peerDependencies": {
-    "google-auth-library": "^9.14.1"
+    "google-auth-library": ">=9.14.1"
   },
   "resolutions": {
     "soap": "1.1.4"
   },
-  "packageManager": "yarn@4.9.2"
+  "packageManager": "yarn@4.10.3"
 }

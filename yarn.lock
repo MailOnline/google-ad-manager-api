@@ -345,7 +345,7 @@ __metadata:
     vitest: "npm:3.2.4"
     wsdl-tsclient: "johngeorgewright/wsdl-tsclient#enum"
   peerDependencies:
-    google-auth-library: ^9.14.1
+    google-auth-library: ">=9.14.1"
   languageName: unknown
   linkType: soft
 
