@@ -29,7 +29,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@commitlint/cli", "npm:20.1.0"],\
-          ["@commitlint/config-conventional", "npm:20.0.0"],\
+          ["@commitlint/config-conventional", "npm:20.3.1"],\
           ["@commitlint/types", "npm:20.0.0"],\
           ["@dmgt/google-ad-manager-api", "workspace:."],\
           ["@johngw/fs", "npm:3.0.1"],\
@@ -117,11 +117,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@commitlint/config-conventional", [\
-      ["npm:20.0.0", {\
-        "packageLocation": "../../.yarn/berry/cache/@commitlint-config-conventional-npm-20.0.0-0782d41691-10c0.zip/node_modules/@commitlint/config-conventional/",\
+      ["npm:20.3.1", {\
+        "packageLocation": "../../.yarn/berry/cache/@commitlint-config-conventional-npm-20.3.1-943e2ce30a-10c0.zip/node_modules/@commitlint/config-conventional/",\
         "packageDependencies": [\
-          ["@commitlint/config-conventional", "npm:20.0.0"],\
-          ["@commitlint/types", "npm:20.0.0"],\
+          ["@commitlint/config-conventional", "npm:20.3.1"],\
+          ["@commitlint/types", "npm:20.3.1"],\
           ["conventional-changelog-conventionalcommits", "npm:7.0.2"]\
         ],\
         "linkType": "HARD"\
@@ -365,6 +365,15 @@ const RAW_RUNTIME_STATE =
           ["chalk", "npm:5.3.0"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:20.3.1", {\
+        "packageLocation": "../../.yarn/berry/cache/@commitlint-types-npm-20.3.1-8b0056f33b-10c0.zip/node_modules/@commitlint/types/",\
+        "packageDependencies": [\
+          ["@commitlint/types", "npm:20.3.1"],\
+          ["@types/conventional-commits-parser", "npm:5.0.0"],\
+          ["chalk", "npm:5.3.0"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@cspotcode/source-map-support", [\
@@ -382,7 +391,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@commitlint/cli", "npm:20.1.0"],\
-          ["@commitlint/config-conventional", "npm:20.0.0"],\
+          ["@commitlint/config-conventional", "npm:20.3.1"],\
           ["@commitlint/types", "npm:20.0.0"],\
           ["@dmgt/google-ad-manager-api", "workspace:."],\
           ["@johngw/fs", "npm:3.0.1"],\

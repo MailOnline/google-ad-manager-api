@@ -33,7 +33,7 @@
   "homepage": "https://github.com/MailOnline/google-ad-manager-api#readme",
   "devDependencies": {
     "@commitlint/cli": "20.1.0",
-    "@commitlint/config-conventional": "20.0.0",
+    "@commitlint/config-conventional": "20.3.1",
     "@commitlint/types": "20.0.0",
     "@johngw/fs": "3.0.1",
     "@types/lodash": "^4.17.20",
