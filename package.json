@@ -49,7 +49,7 @@
     "dotenv-extended": "2.9.0",
     "google-auth-library": "10.5.0",
     "husky": "9.1.7",
-    "lint-staged": "16.2.6",
+    "lint-staged": "16.2.7",
     "lodash": "^4.17.21",
     "mkdirp": "3.0.1",
     "prettier": "3.6.2",
