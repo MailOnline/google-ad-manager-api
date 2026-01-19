@@ -33,7 +33,7 @@ const RAW_RUNTIME_STATE =
           ["@commitlint/types", "npm:20.0.0"],\
           ["@dmgt/google-ad-manager-api", "workspace:."],\
           ["@johngw/fs", "npm:3.0.1"],\
-          ["@types/lodash", "npm:4.17.20"],\
+          ["@types/lodash", "npm:4.17.23"],\
           ["@types/node", "npm:24.10.0"],\
           ["@types/sax", "npm:1.2.7"],\
           ["@types/source-map-support", "npm:0.5.10"],\
@@ -386,7 +386,7 @@ const RAW_RUNTIME_STATE =
           ["@commitlint/types", "npm:20.0.0"],\
           ["@dmgt/google-ad-manager-api", "workspace:."],\
           ["@johngw/fs", "npm:3.0.1"],\
-          ["@types/lodash", "npm:4.17.20"],\
+          ["@types/lodash", "npm:4.17.23"],\
           ["@types/node", "npm:24.10.0"],\
           ["@types/sax", "npm:1.2.7"],\
           ["@types/source-map-support", "npm:0.5.10"],\
@@ -1130,10 +1130,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/lodash", [\
-      ["npm:4.17.20", {\
-        "packageLocation": "../../.yarn/berry/cache/@types-lodash-npm-4.17.20-d7ed6ac7af-10c0.zip/node_modules/@types/lodash/",\
+      ["npm:4.17.23", {\
+        "packageLocation": "../../.yarn/berry/cache/@types-lodash-npm-4.17.23-cc83cf40c9-10c0.zip/node_modules/@types/lodash/",\
         "packageDependencies": [\
-          ["@types/lodash", "npm:4.17.20"]\
+          ["@types/lodash", "npm:4.17.23"]\
         ],\
         "linkType": "HARD"\
       }]\
