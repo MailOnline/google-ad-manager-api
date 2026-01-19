@@ -30,7 +30,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@commitlint/cli", "npm:20.1.0"],\
           ["@commitlint/config-conventional", "npm:20.0.0"],\
-          ["@commitlint/types", "npm:20.0.0"],\
+          ["@commitlint/types", "npm:20.3.1"],\
           ["@dmgt/google-ad-manager-api", "workspace:."],\
           ["@johngw/fs", "npm:3.0.1"],\
           ["@types/lodash", "npm:4.17.20"],\
@@ -365,6 +365,15 @@ const RAW_RUNTIME_STATE =
           ["chalk", "npm:5.3.0"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:20.3.1", {\
+        "packageLocation": "../../.yarn/berry/cache/@commitlint-types-npm-20.3.1-8b0056f33b-10c0.zip/node_modules/@commitlint/types/",\
+        "packageDependencies": [\
+          ["@commitlint/types", "npm:20.3.1"],\
+          ["@types/conventional-commits-parser", "npm:5.0.0"],\
+          ["chalk", "npm:5.3.0"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@cspotcode/source-map-support", [\
@@ -383,7 +392,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@commitlint/cli", "npm:20.1.0"],\
           ["@commitlint/config-conventional", "npm:20.0.0"],\
-          ["@commitlint/types", "npm:20.0.0"],\
+          ["@commitlint/types", "npm:20.3.1"],\
           ["@dmgt/google-ad-manager-api", "workspace:."],\
           ["@johngw/fs", "npm:3.0.1"],\
           ["@types/lodash", "npm:4.17.20"],\

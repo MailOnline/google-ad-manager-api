@@ -267,13 +267,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/types@npm:20.0.0, @commitlint/types@npm:^20.0.0":
-  version: 20.0.0
-  resolution: "@commitlint/types@npm:20.0.0"
+"@commitlint/types@npm:20.3.1":
+  version: 20.3.1
+  resolution: "@commitlint/types@npm:20.3.1"
   dependencies:
     "@types/conventional-commits-parser": "npm:^5.0.0"
     chalk: "npm:^5.3.0"
-  checksum: 10c0/ede28d479bae4ea94b75b77c4ec4e93e15128b046b52f55998b82fe16577e4fea40fc959be4aefda596382c1593d74936ad3cd8a75d0b61d85cea937d8a1cd8a
+  checksum: 10c0/b25fc5ba667416fc1b35987bd34a85ff4b484534492c53bf23eb7024686b1468bae8ab29988efef14e33c88bdd8b35b7a57d1a4a9db629f95efb827e56ba3c2a
   languageName: node
   linkType: hard
 
@@ -283,6 +283,16 @@ __metadata:
   dependencies:
     chalk: "npm:^4.1.0"
   checksum: 10c0/d6419001d8044954f68ec077a54b21ad73f36901287abf496cf31ccf4d66ea7b816adf7143290d0f382f2ef625416b1d2fa99ad8b80876e1d5772a8c7165cd26
+  languageName: node
+  linkType: hard
+
+"@commitlint/types@npm:^20.0.0":
+  version: 20.0.0
+  resolution: "@commitlint/types@npm:20.0.0"
+  dependencies:
+    "@types/conventional-commits-parser": "npm:^5.0.0"
+    chalk: "npm:^5.3.0"
+  checksum: 10c0/ede28d479bae4ea94b75b77c4ec4e93e15128b046b52f55998b82fe16577e4fea40fc959be4aefda596382c1593d74936ad3cd8a75d0b61d85cea937d8a1cd8a
   languageName: node
   linkType: hard
 
@@ -301,7 +311,7 @@ __metadata:
   dependencies:
     "@commitlint/cli": "npm:20.1.0"
     "@commitlint/config-conventional": "npm:20.0.0"
-    "@commitlint/types": "npm:20.0.0"
+    "@commitlint/types": "npm:20.3.1"
     "@johngw/fs": "npm:3.0.1"
     "@types/lodash": "npm:^4.17.20"
     "@types/node": "npm:24.10.0"
