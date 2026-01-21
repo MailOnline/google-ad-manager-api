@@ -51,3 +51,4 @@ jobs:
           commit-message: ${{ fromJson(steps.state.outputs.commit).commitMessage }}
           labels: ${{ fromJson(steps.state.outputs.commit).labels }}
           title: ${{ fromJson(steps.state.outputs.commit).prTitle }}
+          token: ${{ secrets.MOL_TOKEN }}
