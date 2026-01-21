@@ -81,7 +81,7 @@
     "google-auth-library": ">=9.14.1"
   },
   "resolutions": {
-    "soap": "1.1.4"
+    "soap": "1.6.3"
   },
   "packageManager": "yarn@4.12.0"
 }
