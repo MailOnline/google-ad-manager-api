@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout project
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           token: ${{ secrets.MOL_TOKEN }}
 
@@ -44,7 +44,7 @@ jobs:
 
       - name: Create Pull Request
         if: steps.state.outputs.commit != ''
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           body: ${{ fromJson(steps.state.outputs.commit).prBody }}
           branch: ${{ fromJson(steps.state.outputs.commit).branch }}
