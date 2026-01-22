@@ -581,6 +581,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@noble/hashes@npm:^1.1.5":
+  version: 1.8.0
+  resolution: "@noble/hashes@npm:1.8.0"
+  checksum: 10c0/06a0b52c81a6fa7f04d67762e08b2c476a00285858150caeaaff4037356dd5e119f45b2a530f638b77a5eeca013168ec1b655db41bae3236cb2e9d511484fc77
+  languageName: node
+  linkType: hard
+
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -626,6 +633,15 @@ __metadata:
   dependencies:
     semver: "npm:^7.3.5"
   checksum: 10c0/162b4a0b8705cd6f5c2470b851d1dc6cd228c86d2170e1769d738c1fbb69a87160901411c3c035331e9e99db72f1f1099a8b734bf1637cc32b9a5be1660e4e1e
+  languageName: node
+  linkType: hard
+
+"@paralleldrive/cuid2@npm:^2.2.2":
+  version: 2.3.1
+  resolution: "@paralleldrive/cuid2@npm:2.3.1"
+  dependencies:
+    "@noble/hashes": "npm:^1.1.5"
+  checksum: 10c0/6576b73de49d826b0f33cbab88424dec1f6fa454a9e59a7b621f78c2cfdd2e59d7f48175826d698940a717f45eeb5e87a508583a7316e608f6a05a861a40c129
   languageName: node
   linkType: hard
 
@@ -1238,19 +1254,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios-ntlm@npm:^1.4.2":
-  version: 1.4.2
-  resolution: "axios-ntlm@npm:1.4.2"
+"axios-ntlm@npm:^1.4.6":
+  version: 1.4.6
+  resolution: "axios-ntlm@npm:1.4.6"
   dependencies:
-    axios: "npm:^1.6.1"
+    axios: "npm:^1.12.2"
     des.js: "npm:^1.1.0"
     dev-null: "npm:^0.1.1"
     js-md4: "npm:^0.3.2"
-  checksum: 10c0/21b1a5ce488937c0e90129840655833ed721e8e20e00d72ba72ff9c2ce2455343f37a95b5475ec46455e183260f658d2e72df705c23f9629655d6de742da9221
+  checksum: 10c0/6cd6a14fbd067561eeea93679da5552c99135d806f595b22c144cd3f5a13812acc73c80d01ff16debfd25b5493a6054e72a43ad847a0d85d5a94252637ffebf7
   languageName: node
   linkType: hard
 
-"axios@npm:1.13.2":
+"axios@npm:1.13.2, axios@npm:^1.12.2, axios@npm:^1.13.1":
   version: 1.13.2
   resolution: "axios@npm:1.13.2"
   dependencies:
@@ -1258,28 +1274,6 @@ __metadata:
     form-data: "npm:^4.0.4"
     proxy-from-env: "npm:^1.1.0"
   checksum: 10c0/e8a42e37e5568ae9c7a28c348db0e8cf3e43d06fcbef73f0048669edfe4f71219664da7b6cc991b0c0f01c28a48f037c515263cb79be1f1ae8ff034cd813867b
-  languageName: node
-  linkType: hard
-
-"axios@npm:^1.6.1":
-  version: 1.6.8
-  resolution: "axios@npm:1.6.8"
-  dependencies:
-    follow-redirects: "npm:^1.15.6"
-    form-data: "npm:^4.0.0"
-    proxy-from-env: "npm:^1.1.0"
-  checksum: 10c0/0f22da6f490335479a89878bc7d5a1419484fbb437b564a80c34888fc36759ae4f56ea28d55a191695e5ed327f0bad56e7ff60fb6770c14d1be6501505d47ab9
-  languageName: node
-  linkType: hard
-
-"axios@npm:^1.7.7":
-  version: 1.7.7
-  resolution: "axios@npm:1.7.7"
-  dependencies:
-    follow-redirects: "npm:^1.15.6"
-    form-data: "npm:^4.0.0"
-    proxy-from-env: "npm:^1.1.0"
-  checksum: 10c0/4499efc89e86b0b49ffddc018798de05fab26e3bf57913818266be73279a6418c3ce8f9e934c7d2d707ab8c095e837fc6c90608fb7715b94d357720b5f568af7
   languageName: node
   linkType: hard
 
@@ -1970,15 +1964,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:^4.3.6":
-  version: 4.3.6
-  resolution: "debug@npm:4.3.6"
+"debug@npm:^4.4.3":
+  version: 4.4.3
+  resolution: "debug@npm:4.4.3"
   dependencies:
-    ms: "npm:2.1.2"
+    ms: "npm:^2.1.3"
   peerDependenciesMeta:
     supports-color:
       optional: true
-  checksum: 10c0/3293416bff072389c101697d4611c402a6bacd1900ac20c0492f61a9cdd6b3b29750fc7f5e299f8058469ef60ff8fb79b86395a30374fbd2490113c1c7112285
+  checksum: 10c0/d79136ec6c83ecbefd0f6a5593da6a9c91ec4d7ddc4b54c883d6e71ec9accb5f67a1a5e96d00a328196b5b5c86d365e98d8a3a70856aaf16b4e7b1985e67f5a6
   languageName: node
   linkType: hard
 
@@ -2603,17 +2597,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"form-data@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "form-data@npm:4.0.0"
-  dependencies:
-    asynckit: "npm:^0.4.0"
-    combined-stream: "npm:^1.0.8"
-    mime-types: "npm:^2.1.12"
-  checksum: 10c0/cb6f3ac49180be03ff07ba3ff125f9eba2ff0b277fb33c7fc47569fc5e616882c5b1c69b9904c4c4187e97dd0419dd03b134174756f296dec62041e6527e2c6e
-  languageName: node
-  linkType: hard
-
 "form-data@npm:^4.0.4":
   version: 4.0.4
   resolution: "form-data@npm:4.0.4"
@@ -2636,14 +2619,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"formidable@npm:^3.5.1":
-  version: 3.5.1
-  resolution: "formidable@npm:3.5.1"
+"formidable@npm:^3.5.4":
+  version: 3.5.4
+  resolution: "formidable@npm:3.5.4"
   dependencies:
+    "@paralleldrive/cuid2": "npm:^2.2.2"
     dezalgo: "npm:^1.0.4"
-    hexoid: "npm:^1.0.0"
     once: "npm:^1.4.0"
-  checksum: 10c0/c02fa1a027876dd9fc5abde16e9c537bec41bc652b362d0b3fd26daaae0615b9a472129c29b328a130d11f543f676acd1b13e6f28f3adc1b088cdaea9fb9e054
+  checksum: 10c0/3a311ce57617eb8f532368e91c0f2bbfb299a0f1a35090e085bd6ca772298f196fbb0b66f0d4b5549d7bf3c5e1844439338d4402b7b6d1fedbe206ad44a931f8
   languageName: node
   linkType: hard
 
@@ -3045,13 +3028,6 @@ __metadata:
   dependencies:
     function-bind: "npm:^1.1.2"
   checksum: 10c0/3769d434703b8ac66b209a4cca0737519925bbdb61dd887f93a16372b14694c63ff4e797686d87c90f08168e81082248b9b028bad60d4da9e0d1148766f56eb9
-  languageName: node
-  linkType: hard
-
-"hexoid@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "hexoid@npm:1.0.0"
-  checksum: 10c0/9c45e8ba676b9eb88455631ebceec4c829a8374a583410dc735472ab9808bf11339fcd074633c3fa30e420901b894d8a92ffd5e2e21eddd41149546e05a91f69
   languageName: node
   linkType: hard
 
@@ -4000,6 +3976,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ms@npm:^2.1.3":
+  version: 2.1.3
+  resolution: "ms@npm:2.1.3"
+  checksum: 10c0/d924b57e7312b3b63ad21fc5b3dc0af5e78d61a1fc7cfb5457edaf26326bf62be5307cc87ffb6862ef1c2b33b0233cdb5d4f01c4c958cc0d660948b65a287a48
+  languageName: node
+  linkType: hard
+
 "mute-stream@npm:0.0.8":
   version: 0.0.8
   resolution: "mute-stream@npm:0.0.8"
@@ -4813,21 +4796,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"soap@npm:1.1.4":
-  version: 1.1.4
-  resolution: "soap@npm:1.1.4"
+"soap@npm:1.6.3":
+  version: 1.6.3
+  resolution: "soap@npm:1.6.3"
   dependencies:
-    axios: "npm:^1.7.7"
-    axios-ntlm: "npm:^1.4.2"
-    debug: "npm:^4.3.6"
-    formidable: "npm:^3.5.1"
+    axios: "npm:^1.13.1"
+    axios-ntlm: "npm:^1.4.6"
+    debug: "npm:^4.4.3"
+    formidable: "npm:^3.5.4"
     get-stream: "npm:^6.0.1"
     lodash: "npm:^4.17.21"
     sax: "npm:^1.4.1"
     strip-bom: "npm:^3.0.0"
     whatwg-mimetype: "npm:4.0.0"
-    xml-crypto: "npm:^6.0.0"
-  checksum: 10c0/56a5c5dfe0c0dbe1da98b7ba3647ca137fd57579e1df408c88d1d5b9501f9a8101ee83087efea0e59a2cf3cc1060a5c7f38bb17d995bf87b41c3ec8ac19d8df1
+    xml-crypto: "npm:^6.1.2"
+  checksum: 10c0/9a695a9cc0dc9e0ed9b8a2f28e529eb386a6cc6d5283879a242ba55aff8e606f3bbc15cca8120a14cbbb14800c19bd4f75aa19baea542f4a2bd8a37db18489c6
   languageName: node
   linkType: hard
 
@@ -5662,14 +5645,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"xml-crypto@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "xml-crypto@npm:6.0.0"
+"xml-crypto@npm:^6.1.2":
+  version: 6.1.2
+  resolution: "xml-crypto@npm:6.1.2"
   dependencies:
     "@xmldom/is-dom-node": "npm:^1.0.1"
     "@xmldom/xmldom": "npm:^0.8.10"
     xpath: "npm:^0.0.33"
-  checksum: 10c0/1a9d8be4cc7a4c618fa413b8ef30f11cda9ae81f20bc03e84c51f6c61383168a9915f8c3a26061e2053e58807b76d3a13726338f7bc0d8c45285fbb1da296293
+  checksum: 10c0/70c19a0d721df6fbc967c09636d2c9ed5fa49309cb8a1ed740f6a4bebdcee76c6988d32fd2a338f3122aa112ac67842a638b2913347496c937c2167f0c9d3ed0
   languageName: node
   linkType: hard
 
