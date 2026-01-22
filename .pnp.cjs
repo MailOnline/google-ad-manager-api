@@ -3419,7 +3419,7 @@ const RAW_RUNTIME_STATE =
           ["google-auth-library", "npm:10.5.0"],\
           ["google-logging-utils", "npm:1.1.1"],\
           ["gtoken", "npm:8.0.0"],\
-          ["jws", "npm:4.0.0"]\
+          ["jws", "npm:4.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3478,7 +3478,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["gaxios", "npm:7.1.1"],\
           ["gtoken", "npm:8.0.0"],\
-          ["jws", "npm:4.0.0"]\
+          ["jws", "npm:4.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -4023,23 +4023,23 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["jwa", [\
-      ["npm:2.0.0", {\
-        "packageLocation": "../../.yarn/berry/cache/jwa-npm-2.0.0-52a7c3f1ca-10c0.zip/node_modules/jwa/",\
+      ["npm:2.0.1", {\
+        "packageLocation": "../../.yarn/berry/cache/jwa-npm-2.0.1-9ebe28a626-10c0.zip/node_modules/jwa/",\
         "packageDependencies": [\
           ["buffer-equal-constant-time", "npm:1.0.1"],\
           ["ecdsa-sig-formatter", "npm:1.0.11"],\
-          ["jwa", "npm:2.0.0"],\
+          ["jwa", "npm:2.0.1"],\
           ["safe-buffer", "npm:5.2.1"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["jws", [\
-      ["npm:4.0.0", {\
-        "packageLocation": "../../.yarn/berry/cache/jws-npm-4.0.0-2a24fd53b9-10c0.zip/node_modules/jws/",\
+      ["npm:4.0.1", {\
+        "packageLocation": "../../.yarn/berry/cache/jws-npm-4.0.1-0d8c257cbe-10c0.zip/node_modules/jws/",\
         "packageDependencies": [\
-          ["jwa", "npm:2.0.0"],\
-          ["jws", "npm:4.0.0"],\
+          ["jwa", "npm:2.0.1"],\
+          ["jws", "npm:4.0.1"],\
           ["safe-buffer", "npm:5.2.1"]\
         ],\
         "linkType": "HARD"\
