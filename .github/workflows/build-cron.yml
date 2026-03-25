@@ -9,11 +9,12 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - name: Checkout project
         uses: actions/checkout@v6
-        with:
-          token: ${{ secrets.MOL_TOKEN }}
 
       - name: Install Node.js
         uses: actions/setup-node@v6
@@ -51,4 +52,4 @@ jobs:
           commit-message: ${{ fromJson(steps.state.outputs.commit).commitMessage }}
           labels: ${{ fromJson(steps.state.outputs.commit).labels }}
           title: ${{ fromJson(steps.state.outputs.commit).prTitle }}
-          token: ${{ secrets.MOL_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}

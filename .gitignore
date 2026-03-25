@@ -6,6 +6,7 @@ src/api
 src/index.ts
 src/service
 src/wsdl
+tsconfig.tsbuildinfo
 .yarn/*
 !.yarn/cache
 !.yarn/patches
