@@ -11,10 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      pull-requests: write
     steps:
       - name: Checkout project
         uses: actions/checkout@v6
+        with:
+          ref: master
 
       - name: Install Node.js
         uses: actions/setup-node@v6
@@ -34,22 +35,16 @@ jobs:
           JWT_KEY: ${{ secrets.JWT_KEY }}
           NETWORK_CODE: ${{ secrets.NETWORK_CODE }}
 
+      - name: Setup git user
+        uses: fregante/setup-git-user@v2
+
       - name: Update state
         id: state
         run: | # shell
           COMMIT="$(yarn commit:state)"
-          COMMIT="${COMMIT//'%'/'%25'}"
-          COMMIT="${COMMIT//$'\n'/'%0A'}"
-          COMMIT="${COMMIT//$'\r'/'%0D'}"
-          echo "commit=${COMMIT}" >> $GITHUB_OUTPUT
-
-      - name: Create Pull Request
-        if: steps.state.outputs.commit != ''
-        uses: peter-evans/create-pull-request@v8
-        with:
-          body: ${{ fromJson(steps.state.outputs.commit).prBody }}
-          branch: ${{ fromJson(steps.state.outputs.commit).branch }}
-          commit-message: ${{ fromJson(steps.state.outputs.commit).commitMessage }}
-          labels: ${{ fromJson(steps.state.outputs.commit).labels }}
-          title: ${{ fromJson(steps.state.outputs.commit).prTitle }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+          if [[ -n "$COMMIT" ]]; then
+            MESSAGE="$(echo "$COMMIT" | jq -r '.commitMessage')"
+            git add -A
+            git commit -m "$MESSAGE"
+            git push
+          fi
