@@ -1,18 +1,31 @@
-name: Publish
+name: Release
 
 on:
   push:
     branches: [master]
 
 jobs:
-  npm:
-    name: NPM
+  release-github:
     runs-on: ubuntu-latest
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
     permissions:
       contents: write
-      id-token: write
       issues: write
       pull-requests: write
+    steps:
+      - uses: googleapis/release-please-action@v4
+        id: release
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+  release-npm:
+    needs: release-github
+    if: needs.release-github.outputs.release_created == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
     steps:
       - name: Checkout project
         uses: actions/checkout@v6
@@ -35,17 +48,5 @@ jobs:
           JWT_KEY: ${{ secrets.JWT_KEY }}
           NETWORK_CODE: ${{ secrets.NETWORK_CODE }}
 
-      - name: Setup git user
-        uses: fregante/setup-git-user@v2
-
-      - name: Check for new/removed versions
-        run: yarn commit:state
-
-      - name: Release
-        uses: cycjimmy/semantic-release-action@v6
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          extra_plugins: |
-            @semantic-release/git
-            semantic-release-yarn
+      - name: Publish to NPM
+        run: yarn npm publish
