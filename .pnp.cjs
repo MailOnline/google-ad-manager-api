@@ -58,10 +58,10 @@ const RAW_RUNTIME_STATE =
           ["rimraf", "npm:6.1.3"],\
           ["soap", "npm:1.1.4"],\
           ["source-map-support", "npm:0.5.21"],\
-          ["ts-node", "virtual:2d60f142ea6d5d907620d04575b5c57fe6066ba715bfed0d844b296771de045b5fa0ed73224ea30336ab41bc5fdb9e92139e33681803661d337ff0b212a5631d#npm:10.9.2"],\
           ["ts-toolbelt", "npm:9.6.0"],\
           ["tslib", "npm:2.8.1"],\
           ["typescript", "patch:typescript@npm%3A6.0.2#optional!builtin<compat/typescript>::version=6.0.2&hash=5786d5"],\
+          ["vite-node", "npm:6.0.0"],\
           ["vitest", "virtual:2d60f142ea6d5d907620d04575b5c57fe6066ba715bfed0d844b296771de045b5fa0ed73224ea30336ab41bc5fdb9e92139e33681803661d337ff0b212a5631d#npm:4.1.1"],\
           ["wsdl-tsclient", "https://github.com/johngeorgewright/wsdl-tsclient.git#commit=7ac32b0626aa87e14753dce2665b15e7ee0239ff"]\
         ],\
@@ -439,10 +439,10 @@ const RAW_RUNTIME_STATE =
           ["rimraf", "npm:6.1.3"],\
           ["soap", "npm:1.1.4"],\
           ["source-map-support", "npm:0.5.21"],\
-          ["ts-node", "virtual:2d60f142ea6d5d907620d04575b5c57fe6066ba715bfed0d844b296771de045b5fa0ed73224ea30336ab41bc5fdb9e92139e33681803661d337ff0b212a5631d#npm:10.9.2"],\
           ["ts-toolbelt", "npm:9.6.0"],\
           ["tslib", "npm:2.8.1"],\
           ["typescript", "patch:typescript@npm%3A6.0.2#optional!builtin<compat/typescript>::version=6.0.2&hash=5786d5"],\
+          ["vite-node", "npm:6.0.0"],\
           ["vitest", "virtual:2d60f142ea6d5d907620d04575b5c57fe6066ba715bfed0d844b296771de045b5fa0ed73224ea30336ab41bc5fdb9e92139e33681803661d337ff0b212a5631d#npm:4.1.1"],\
           ["wsdl-tsclient", "https://github.com/johngeorgewright/wsdl-tsclient.git#commit=7ac32b0626aa87e14753dce2665b15e7ee0239ff"]\
         ],\
@@ -1465,6 +1465,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/buffer-from-npm-1.1.2-03d2f20d7e-10c0.zip/node_modules/buffer-from/",\
         "packageDependencies": [\
           ["buffer-from", "npm:1.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["cac", [\
+      ["npm:7.0.0", {\
+        "packageLocation": "../../.yarn/berry/cache/cac-npm-7.0.0-6bd0c0700a-10c0.zip/node_modules/cac/",\
+        "packageDependencies": [\
+          ["cac", "npm:7.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -5621,49 +5630,6 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["npm:10.9.2", {\
-        "packageLocation": "../../.yarn/berry/cache/ts-node-npm-10.9.2-3f3890b9ac-10c0.zip/node_modules/ts-node/",\
-        "packageDependencies": [\
-          ["ts-node", "npm:10.9.2"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["virtual:2d60f142ea6d5d907620d04575b5c57fe6066ba715bfed0d844b296771de045b5fa0ed73224ea30336ab41bc5fdb9e92139e33681803661d337ff0b212a5631d#npm:10.9.2", {\
-        "packageLocation": "./.yarn/__virtual__/ts-node-virtual-d334b28702/3/.yarn/berry/cache/ts-node-npm-10.9.2-3f3890b9ac-10c0.zip/node_modules/ts-node/",\
-        "packageDependencies": [\
-          ["@cspotcode/source-map-support", "npm:0.8.1"],\
-          ["@swc/core", null],\
-          ["@swc/wasm", null],\
-          ["@tsconfig/node10", "npm:1.0.9"],\
-          ["@tsconfig/node12", "npm:1.0.11"],\
-          ["@tsconfig/node14", "npm:1.0.3"],\
-          ["@tsconfig/node16", "npm:1.0.4"],\
-          ["@types/node", "npm:24.12.0"],\
-          ["@types/swc__core", null],\
-          ["@types/swc__wasm", null],\
-          ["@types/typescript", null],\
-          ["acorn", "npm:8.10.0"],\
-          ["acorn-walk", "npm:8.2.0"],\
-          ["arg", "npm:4.1.3"],\
-          ["create-require", "npm:1.1.1"],\
-          ["diff", "npm:4.0.2"],\
-          ["make-error", "npm:1.3.6"],\
-          ["ts-node", "virtual:2d60f142ea6d5d907620d04575b5c57fe6066ba715bfed0d844b296771de045b5fa0ed73224ea30336ab41bc5fdb9e92139e33681803661d337ff0b212a5631d#npm:10.9.2"],\
-          ["typescript", "patch:typescript@npm%3A6.0.2#optional!builtin<compat/typescript>::version=6.0.2&hash=5786d5"],\
-          ["v8-compile-cache-lib", "npm:3.0.1"],\
-          ["yn", "npm:3.1.1"]\
-        ],\
-        "packagePeers": [\
-          "@swc/core",\
-          "@swc/wasm",\
-          "@types/node",\
-          "@types/swc__core",\
-          "@types/swc__wasm",\
-          "@types/typescript",\
-          "typescript"\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["virtual:ab0b138988568fc1d4a212e374a9748df3d17d8eab9398c02e7d835ca66140c74a2db9f53d3b50b59c81589c32fe7f482677f061dc62255bf92b9e9634042916#npm:10.9.1", {\
         "packageLocation": "./.yarn/__virtual__/ts-node-virtual-8b41a9146d/3/.yarn/berry/cache/ts-node-npm-10.9.1-6c268be7f4-10c0.zip/node_modules/ts-node/",\
         "packageDependencies": [\
@@ -5938,6 +5904,81 @@ const RAW_RUNTIME_STATE =
           "terser",\
           "tsx",\
           "yaml"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:732091fe06b885ad446497a4d1ed9652e5c3bdcbdc82dd943fcffeb7050d8a53abd0fcfe149bc89c343118c426a9da0b7d2dec19e71ac78990ddf4656ee556cb#npm:8.0.2", {\
+        "packageLocation": "./.yarn/__virtual__/vite-virtual-71d937d406/3/.yarn/berry/cache/vite-npm-8.0.2-c6bbbff1e5-10c0.zip/node_modules/vite/",\
+        "packageDependencies": [\
+          ["@types/esbuild", null],\
+          ["@types/jiti", null],\
+          ["@types/less", null],\
+          ["@types/node", null],\
+          ["@types/sass", null],\
+          ["@types/sass-embedded", null],\
+          ["@types/stylus", null],\
+          ["@types/sugarss", null],\
+          ["@types/terser", null],\
+          ["@types/tsx", null],\
+          ["@types/vitejs__devtools", null],\
+          ["@types/yaml", null],\
+          ["@vitejs/devtools", null],\
+          ["esbuild", null],\
+          ["fsevents", "patch:fsevents@npm%3A2.3.3#optional!builtin<compat/fsevents>::version=2.3.3&hash=df0bf1"],\
+          ["jiti", null],\
+          ["less", null],\
+          ["lightningcss", "npm:1.32.0"],\
+          ["picomatch", "npm:4.0.3"],\
+          ["postcss", "npm:8.5.8"],\
+          ["rolldown", "npm:1.0.0-rc.11"],\
+          ["sass", null],\
+          ["sass-embedded", null],\
+          ["stylus", null],\
+          ["sugarss", null],\
+          ["terser", null],\
+          ["tinyglobby", "npm:0.2.15"],\
+          ["tsx", null],\
+          ["vite", "virtual:732091fe06b885ad446497a4d1ed9652e5c3bdcbdc82dd943fcffeb7050d8a53abd0fcfe149bc89c343118c426a9da0b7d2dec19e71ac78990ddf4656ee556cb#npm:8.0.2"],\
+          ["yaml", null]\
+        ],\
+        "packagePeers": [\
+          "@types/esbuild",\
+          "@types/jiti",\
+          "@types/less",\
+          "@types/node",\
+          "@types/sass-embedded",\
+          "@types/sass",\
+          "@types/stylus",\
+          "@types/sugarss",\
+          "@types/terser",\
+          "@types/tsx",\
+          "@types/vitejs__devtools",\
+          "@types/yaml",\
+          "@vitejs/devtools",\
+          "esbuild",\
+          "jiti",\
+          "less",\
+          "sass-embedded",\
+          "sass",\
+          "stylus",\
+          "sugarss",\
+          "terser",\
+          "tsx",\
+          "yaml"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["vite-node", [\
+      ["npm:6.0.0", {\
+        "packageLocation": "../../.yarn/berry/cache/vite-node-npm-6.0.0-732091fe06-10c0.zip/node_modules/vite-node/",\
+        "packageDependencies": [\
+          ["cac", "npm:7.0.0"],\
+          ["es-module-lexer", "npm:2.0.0"],\
+          ["obug", "npm:2.1.1"],\
+          ["pathe", "npm:2.0.3"],\
+          ["vite", "virtual:732091fe06b885ad446497a4d1ed9652e5c3bdcbdc82dd943fcffeb7050d8a53abd0fcfe149bc89c343118c426a9da0b7d2dec19e71ac78990ddf4656ee556cb#npm:8.0.2"],\
+          ["vite-node", "npm:6.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
