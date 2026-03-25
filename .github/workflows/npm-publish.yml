@@ -49,4 +49,4 @@ jobs:
           NETWORK_CODE: ${{ secrets.NETWORK_CODE }}
 
       - name: Publish to NPM
-        run: yarn npm publish
+        run: yarn npm publish --access public
