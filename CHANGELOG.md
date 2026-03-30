@@ -1,5 +1,12 @@
 # Changelog
 
+## [12.0.1](https://github.com/MailOnline/google-ad-manager-api/compare/google-ad-manager-api-v12.0.0...google-ad-manager-api-v12.0.1) (2026-03-26)
+
+
+### Bug Fixes
+
+* build ([b026ba4](https://github.com/MailOnline/google-ad-manager-api/commit/b026ba42094917b3b0fd95cf9519587a45d779eb))
+
 ## [12.0.0](https://github.com/MailOnline/google-ad-manager-api/compare/google-ad-manager-api-v11.1.0...google-ad-manager-api-v12.0.0) (2026-03-25)
 
 
