@@ -48,7 +48,7 @@ const RAW_RUNTIME_STATE =
           ["google-auth-library", "npm:10.6.2"],\
           ["husky", "npm:9.1.7"],\
           ["lint-staged", "npm:16.4.0"],\
-          ["lodash", "npm:4.17.23"],\
+          ["lodash", "npm:4.18.1"],\
           ["mkdirp", "npm:3.0.1"],\
           ["prettier", "npm:3.8.1"],\
           ["prettier-2", [\
@@ -429,7 +429,7 @@ const RAW_RUNTIME_STATE =
           ["google-auth-library", "npm:10.6.2"],\
           ["husky", "npm:9.1.7"],\
           ["lint-staged", "npm:16.4.0"],\
-          ["lodash", "npm:4.17.23"],\
+          ["lodash", "npm:4.18.1"],\
           ["mkdirp", "npm:3.0.1"],\
           ["prettier", "npm:3.8.1"],\
           ["prettier-2", [\
@@ -3506,7 +3506,7 @@ const RAW_RUNTIME_STATE =
           ["external-editor", "npm:3.1.0"],\
           ["figures", "npm:3.2.0"],\
           ["inquirer", "npm:8.2.5"],\
-          ["lodash", "npm:4.17.21"],\
+          ["lodash", "npm:4.18.1"],\
           ["mute-stream", "npm:0.0.8"],\
           ["ora", "npm:5.4.1"],\
           ["run-async", "npm:2.4.1"],\
@@ -3975,10 +3975,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:4.17.23", {\
-        "packageLocation": "../../.yarn/berry/cache/lodash-npm-4.17.23-50bdb1c01a-10c0.zip/node_modules/lodash/",\
+      ["npm:4.18.1", {\
+        "packageLocation": "../../.yarn/berry/cache/lodash-npm-4.18.1-a64c3070ac-10c0.zip/node_modules/lodash/",\
         "packageDependencies": [\
-          ["lodash", "npm:4.17.23"]\
+          ["lodash", "npm:4.18.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -5277,7 +5277,7 @@ const RAW_RUNTIME_STATE =
           ["debug", "virtual:6f4cf9c40835a8edbe8e18fef32aa01eb053269bfa15b9a85caae17ddb597374d58b6fc2a8202144cfd9366b7fd4332b547e90a9734848decbd7b3a18a49ed28#npm:4.3.6"],\
           ["formidable", "npm:3.5.1"],\
           ["get-stream", "npm:6.0.1"],\
-          ["lodash", "npm:4.17.21"],\
+          ["lodash", "npm:4.18.1"],\
           ["sax", "npm:1.4.1"],\
           ["soap", "npm:1.1.4"],\
           ["strip-bom", "npm:3.0.0"],\
