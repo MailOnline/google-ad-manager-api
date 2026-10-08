@@ -1,9 +1,4 @@
 {
-  "typescript.tsdk": ".yarn/sdks/typescript/lib",
-  "search.exclude": {
-    "**/.yarn": true,
-    "**/.pnp.*": true
-  },
-  "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs",
-  "typescript.enablePromptUseWorkspaceTsdk": true
+  "js/ts.tsdk.promptToUseWorkspaceVersion": true,
+  "zizmor.enable": true
 }

@@ -2,7 +2,6 @@ import axios from 'axios'
 import { mkdirp } from 'mkdirp'
 import { writeFile } from 'node:fs/promises'
 import { basePath, baseURL, origin } from './wsdl-path'
-import { CheerioAPI } from 'cheerio'
 ;(async () => {
   const { default: Crawler } = await import('crawler')
 
@@ -17,7 +16,7 @@ import { CheerioAPI } from 'cheerio'
         return done()
       }
 
-      const $: CheerioAPI = res.$
+      const $: cheerio.CheerioAPI = res.$
       const elements = $(`a[href$="?wsdl"]`)
 
       if (!elements.length) {
@@ -51,5 +50,5 @@ import { CheerioAPI } from 'cheerio'
     },
   })
 
-  crawler.add(baseURL)
+  crawler.queue(baseURL)
 })()

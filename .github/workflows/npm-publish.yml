@@ -6,7 +6,7 @@ on:
 
 jobs:
   release-github:
-    runs-on: ubuntu-latest
+    runs-on: dmg-arc-ubuntu
     outputs:
       release_created: ${{ steps.release.outputs.release_created }}
     permissions:
@@ -14,7 +14,7 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-      - uses: googleapis/release-please-action@v4
+      - uses: MailOnline/workflows/release-please@master
         id: release
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -22,31 +22,17 @@ jobs:
   release-npm:
     needs: release-github
     if: needs.release-github.outputs.release_created == 'true'
-    runs-on: ubuntu-latest
+    runs-on: dmg-arc-ubuntu
     permissions:
       contents: read
       id-token: write
     steps:
-      - name: Checkout project
-        uses: actions/checkout@v6
-
-      - name: Install Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version-file: .nvmrc
-
-      - name: Setup
-        run: yarn --immutable
-
-      - name: Build
-        run: yarn build
-
-      - name: Test
-        run: yarn test
+      - uses: MailOnline/workflows/checkout@master
+      - uses: MailOnline/workflows/npm-install@master
+      - run: npm run build
+      - run: npm test
         env:
           JWT_EMAIL: ${{ secrets.JWT_EMAIL }}
           JWT_KEY: ${{ secrets.JWT_KEY }}
           NETWORK_CODE: ${{ secrets.NETWORK_CODE }}
-
-      - name: Publish to NPM
-        run: yarn npm publish --access public
+      - run: npm publish --access public

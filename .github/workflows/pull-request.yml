@@ -6,27 +6,17 @@ on:
 jobs:
   test:
     name: Test
-    runs-on: ubuntu-latest
+    runs-on: dmg-arc-ubuntu
+    permissions:
+      contents: read
     strategy:
       matrix:
         node-version: [22, 24]
     steps:
-      - name: Checkout project
-        uses: actions/checkout@v6
-
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v6
-        with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: Setup
-        run: yarn --immutable
-
-      - name: Build
-        run: yarn build
-
-      - name: Test
-        run: yarn test
+      - uses: MailOnline/workflows/checkout@master
+      - uses: MailOnline/workflows/npm-install@master
+      - run: npm run build
+      - run: npm test
         env:
           JWT_EMAIL: ${{ secrets.JWT_EMAIL }}
           JWT_KEY: ${{ secrets.JWT_KEY }}
