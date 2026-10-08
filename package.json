@@ -34,7 +34,7 @@
   "devDependencies": {
     "@commitlint/cli": "20.5.0",
     "@commitlint/config-conventional": "20.5.0",
-    "@commitlint/types": "20.5.0",
+    "@commitlint/types": "21.2.3",
     "@johngw/fs": "3.0.1",
     "@types/lodash": "^4.17.24",
     "@types/node": "24.12.0",
