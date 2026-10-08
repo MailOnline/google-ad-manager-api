@@ -1,4 +1,16 @@
 {
   "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "rootDir": "..",
+    // dotenv-extended ships its types but its `exports` map omits a `types`
+    // condition, so NodeNext can't find them. Point the bare specifier at the
+    // shipped declarations (type resolution only — runtime still uses exports).
+    "paths": {
+      "dotenv-extended": [
+        "../node_modules/dotenv-extended/dotenv-extended.d.ts"
+      ]
+    }
+  },
   "include": ["../src", "."]
 }

@@ -1,4 +1,2 @@
 dist
 *.log
-.pnp.cjs
-.yarn/*

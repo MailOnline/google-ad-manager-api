@@ -50,18 +50,18 @@ The build must run in strict order: `build:wsdl` → `build:service` → `build:
 ## Build and Test
 
 ```bash
-yarn build          # Full pipeline: clean → wsdl → service → api → tsc
-yarn test           # Run vitest
-yarn start          # Watch mode: concurrent build + test
-yarn commit:state   # Output commit metadata after version changes
+npm run build          # Full pipeline: clean → wsdl → service → api → tsc
+npm test               # Run vitest
+npm start              # Watch mode: concurrent build + test
+npm run commit:state   # Output commit metadata after version changes
 ```
 
 Individual build stages (rarely needed):
 
 ```bash
-yarn build:wsdl     # Download WSDLs only
-yarn build:service  # Generate service clients only
-yarn build:api      # Generate API wrappers only
+npm run build:wsdl     # Download WSDLs only
+npm run build:service  # Generate service clients only
+npm run build:api      # Generate API wrappers only
 ```
 
 ## Conventions
@@ -101,7 +101,7 @@ Array of `where` clauses produces OR: `[{...}, {...}]` → `(…) OR (…)`.
 
 ## Pitfalls
 
-- **Never edit generated files** — `src/api/`, `src/service/`, `src/wsdl/`, `src/index.ts` are overwritten by `yarn build`
+- **Never edit generated files** — `src/api/`, `src/service/`, `src/wsdl/`, `src/index.ts` are overwritten by `npm run build`
 - **Build order matters** — WSDL → service → api; running out of order produces empty output
 - **WSDL crawler is fragile** — depends on Google's site structure; if it finds 0 WSDLs, check the crawler selector
 - **`state.json` is not auto-updated** — must be manually synced after build

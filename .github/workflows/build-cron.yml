@@ -15,9 +15,9 @@ jobs:
         with:
           ref: master
 
-      - uses: MailOnline/workflows/yarn-install@master
-      - run: yarn build
-      - run: yarn test
+      - uses: MailOnline/workflows/npm-install@master
+      - run: npm run build
+      - run: npm test
         env:
           JWT_EMAIL: ${{ secrets.JWT_EMAIL }}
           JWT_KEY: ${{ secrets.JWT_KEY }}
@@ -30,7 +30,7 @@ jobs:
       - name: Update state
         id: state
         run: | # shell
-          COMMIT="$(yarn commit:state)"
+          COMMIT="$(npm run --silent commit:state)"
           if [[ -n "$COMMIT" ]]; then
             MESSAGE="$(echo "$COMMIT" | jq -r '.commitMessage')"
             git add -A
