@@ -7,36 +7,25 @@ on:
 
 jobs:
   build:
-    name: Build
-    runs-on: ubuntu-latest
+    runs-on: dmg-arc-ubuntu
     permissions:
       contents: write
     steps:
-      - name: Checkout project
-        uses: actions/checkout@v6
+      - uses: MailOnline/workflows/checkout@master
         with:
           ref: master
 
-      - name: Install Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version-file: .nvmrc
-
-      - name: Setup
-        run: yarn --immutable
-
-      - name: Build
-        run: yarn build
-
-      - name: Test
-        run: yarn test
+      - uses: MailOnline/workflows/yarn-install@master
+      - run: yarn build
+      - run: yarn test
         env:
           JWT_EMAIL: ${{ secrets.JWT_EMAIL }}
           JWT_KEY: ${{ secrets.JWT_KEY }}
           NETWORK_CODE: ${{ secrets.NETWORK_CODE }}
 
-      - name: Setup git user
-        uses: fregante/setup-git-user@v2
+      - uses: MailOnline/workflows/configure-git@master
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Update state
         id: state
