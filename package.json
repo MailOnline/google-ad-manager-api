@@ -47,7 +47,7 @@
     "crawler": "2.0.2",
     "cz-conventional-changelog": "3.3.0",
     "dotenv-extended": "3.1.0",
-    "google-auth-library": "10.6.2",
+    "google-auth-library": "11.1.0",
     "husky": "9.1.7",
     "lint-staged": "16.4.0",
     "lodash": "^4.17.23",
