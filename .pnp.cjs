@@ -45,7 +45,7 @@ const RAW_RUNTIME_STATE =
           ["crawler", "npm:2.0.2"],\
           ["cz-conventional-changelog", "npm:3.3.0"],\
           ["dotenv-extended", "npm:3.1.0"],\
-          ["google-auth-library", "npm:10.6.2"],\
+          ["google-auth-library", "npm:11.1.0"],\
           ["husky", "npm:9.1.7"],\
           ["lint-staged", "npm:16.4.0"],\
           ["lodash", "npm:4.17.23"],\
@@ -426,7 +426,7 @@ const RAW_RUNTIME_STATE =
           ["crawler", "npm:2.0.2"],\
           ["cz-conventional-changelog", "npm:3.3.0"],\
           ["dotenv-extended", "npm:3.1.0"],\
-          ["google-auth-library", "npm:10.6.2"],\
+          ["google-auth-library", "npm:11.1.0"],\
           ["husky", "npm:9.1.7"],\
           ["lint-staged", "npm:16.4.0"],\
           ["lodash", "npm:4.17.23"],\
@@ -2934,16 +2934,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["gaxios", [\
-      ["npm:7.1.1", {\
-        "packageLocation": "../../.yarn/berry/cache/gaxios-npm-7.1.1-79ea2e2934-10c0.zip/node_modules/gaxios/",\
-        "packageDependencies": [\
-          ["extend", "npm:3.0.2"],\
-          ["gaxios", "npm:7.1.1"],\
-          ["https-proxy-agent", "npm:7.0.2"],\
-          ["node-fetch", "npm:3.3.2"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:7.1.4", {\
         "packageLocation": "../../.yarn/berry/cache/gaxios-npm-7.1.4-9643c9d840-10c0.zip/node_modules/gaxios/",\
         "packageDependencies": [\
@@ -2954,15 +2944,25 @@ const RAW_RUNTIME_STATE =
           ["undici-types", "npm:7.24.5"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:7.3.1", {\
+        "packageLocation": "../../.yarn/berry/cache/gaxios-npm-7.3.1-94b1daa94b-10c0.zip/node_modules/gaxios/",\
+        "packageDependencies": [\
+          ["extend", "npm:3.0.2"],\
+          ["gaxios", "npm:7.3.1"],\
+          ["https-proxy-agent", "npm:7.0.2"],\
+          ["node-fetch", "npm:3.3.2"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["gcp-metadata", [\
-      ["npm:8.1.2", {\
-        "packageLocation": "../../.yarn/berry/cache/gcp-metadata-npm-8.1.2-76bda3c80f-10c0.zip/node_modules/gcp-metadata/",\
+      ["npm:9.0.4", {\
+        "packageLocation": "../../.yarn/berry/cache/gcp-metadata-npm-9.0.4-84d02f5143-10c0.zip/node_modules/gcp-metadata/",\
         "packageDependencies": [\
-          ["gaxios", "npm:7.1.1"],\
-          ["gcp-metadata", "npm:8.1.2"],\
-          ["google-logging-utils", "npm:1.1.1"],\
+          ["gaxios", "npm:7.3.1"],\
+          ["gcp-metadata", "npm:9.0.4"],\
+          ["google-logging-utils", "npm:2.0.1"],\
           ["json-bigint", "npm:1.0.0"]\
         ],\
         "linkType": "HARD"\
@@ -3177,32 +3177,25 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["google-auth-library", [\
-      ["npm:10.6.2", {\
-        "packageLocation": "../../.yarn/berry/cache/google-auth-library-npm-10.6.2-cc438704e8-10c0.zip/node_modules/google-auth-library/",\
+      ["npm:11.1.0", {\
+        "packageLocation": "../../.yarn/berry/cache/google-auth-library-npm-11.1.0-961c13e39a-10c0.zip/node_modules/google-auth-library/",\
         "packageDependencies": [\
           ["base64-js", "npm:1.5.1"],\
           ["ecdsa-sig-formatter", "npm:1.0.11"],\
           ["gaxios", "npm:7.1.4"],\
-          ["gcp-metadata", "npm:8.1.2"],\
-          ["google-auth-library", "npm:10.6.2"],\
-          ["google-logging-utils", "npm:1.1.3"],\
+          ["gcp-metadata", "npm:9.0.4"],\
+          ["google-auth-library", "npm:11.1.0"],\
+          ["google-logging-utils", "npm:2.0.1"],\
           ["jws", "npm:4.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["google-logging-utils", [\
-      ["npm:1.1.1", {\
-        "packageLocation": "../../.yarn/berry/cache/google-logging-utils-npm-1.1.1-682a9ca48c-10c0.zip/node_modules/google-logging-utils/",\
+      ["npm:2.0.1", {\
+        "packageLocation": "../../.yarn/berry/cache/google-logging-utils-npm-2.0.1-0c4df84165-10c0.zip/node_modules/google-logging-utils/",\
         "packageDependencies": [\
-          ["google-logging-utils", "npm:1.1.1"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:1.1.3", {\
-        "packageLocation": "../../.yarn/berry/cache/google-logging-utils-npm-1.1.3-965b63457a-10c0.zip/node_modules/google-logging-utils/",\
-        "packageDependencies": [\
-          ["google-logging-utils", "npm:1.1.3"]\
+          ["google-logging-utils", "npm:2.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\
